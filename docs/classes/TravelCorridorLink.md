@@ -4,6 +4,8 @@ A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorr
 
 ![TravelCorridorLink Diagram](../diagrams/TravelCorridorLink.svg)
 
+<a href="../../diagrams/TravelCorridorLink.svg">Open interactive TravelCorridorLink diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

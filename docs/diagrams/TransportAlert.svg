@@ -36,9 +36,12 @@
 <!-- NetworkElement -->
 <g id="node4" class="node">
 <title>NetworkElement</title>
+<g id="a_node4"><a xlink:href="../classes/NetworkElement" xlink:title="NetworkElement">
 <polygon fill="lightgray" stroke="none" points="103.38,-25.88 103.38,-42.12 199.12,-42.12 199.12,-25.88 103.38,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="104.38" y="-30.73" font-family="Arial" font-weight="bold" font-style="italic" font-size="12.00">NetworkElement</text>
 <polygon fill="none" stroke="black" points="102.38,-24.88 102.38,-43.12 200.12,-43.12 200.12,-24.88 102.38,-24.88"/>
+</a>
+</g>
 </g>
 <!-- TransportAlert&#45;&gt;NetworkElement -->
 <g id="edge4" class="edge">

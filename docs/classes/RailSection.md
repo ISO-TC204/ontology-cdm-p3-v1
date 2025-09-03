@@ -4,6 +4,8 @@ A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackS
 
 ![RailSection Diagram](../diagrams/RailSection.svg)
 
+<a href="../../diagrams/RailSection.svg">Open interactive RailSection diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

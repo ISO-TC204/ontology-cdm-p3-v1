@@ -36,9 +36,12 @@
 <!-- RailNetwork -->
 <g id="node4" class="node">
 <title>RailNetwork</title>
+<g id="a_node4"><a xlink:href="../classes/RailNetwork" xlink:title="RailNetwork">
 <polygon fill="lightgray" stroke="none" points="201.5,-171.88 201.5,-188.12 272.5,-188.12 272.5,-171.88 201.5,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="202.5" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">RailNetwork</text>
 <polygon fill="none" stroke="black" points="200.5,-170.88 200.5,-189.12 273.5,-189.12 273.5,-170.88 200.5,-170.88"/>
+</a>
+</g>
 </g>
 <!-- RailSection&#45;&gt;RailNetwork -->
 <g id="edge9" class="edge">
@@ -66,17 +69,23 @@
 <!-- TrackLink -->
 <g id="node5" class="node">
 <title>TrackLink</title>
+<g id="a_node5"><a xlink:href="../classes/TrackLink" xlink:title="TrackLink">
 <polygon fill="lightgray" stroke="none" points="213.88,-98.88 213.88,-115.12 272.12,-115.12 272.12,-98.88 213.88,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="214.88" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">TrackLink</text>
 <polygon fill="none" stroke="black" points="212.88,-97.88 212.88,-116.12 273.12,-116.12 273.12,-97.88 212.88,-97.88"/>
+</a>
+</g>
 </g>
 <!-- RailNetwork&#45;&gt;TrackLink -->
 <!-- TrackSegment -->
 <g id="node6" class="node">
 <title>TrackSegment</title>
+<g id="a_node6"><a xlink:href="../classes/TrackSegment" xlink:title="TrackSegment">
 <polygon fill="lightgray" stroke="none" points="200.75,-25.88 200.75,-42.12 285.25,-42.12 285.25,-25.88 200.75,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="201.75" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">TrackSegment</text>
 <polygon fill="none" stroke="black" points="199.75,-24.88 199.75,-43.12 286.25,-43.12 286.25,-24.88 199.75,-24.88"/>
+</a>
+</g>
 </g>
 <!-- TrackLink&#45;&gt;TrackSegment -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;TrackLink -->

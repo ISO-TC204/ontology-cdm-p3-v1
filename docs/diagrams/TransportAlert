@@ -11,7 +11,7 @@ digraph {
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B><I>NetworkElement</I></B></TD></TR></TABLE>> margin=0]
+		NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B><I>NetworkElement</I></B></TD></TR></TABLE>> URL="../classes/NetworkElement" margin=0 tooltip=NetworkElement]
 	}
 	TransportAlert -> Alert [arrowhead=onormal style=solid]
 	TransportAlert -> Invis [style=invis]

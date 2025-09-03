@@ -4,6 +4,8 @@ A RoadSection is a type of TravelledWaySection that groups RoadLinks and RoadSeg
 
 ![RoadSection Diagram](../diagrams/RoadSection.svg)
 
+<a href="../../diagrams/RoadSection.svg">Open interactive RoadSection diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

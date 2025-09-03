@@ -4,6 +4,8 @@ A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute.
 
 ![PointOnRoute Diagram](../diagrams/PointOnRoute.svg)
 
+<a href="../../diagrams/PointOnRoute.svg">Open interactive PointOnRoute diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

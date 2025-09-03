@@ -4,6 +4,8 @@ A Road is a type of TravelledWay and transinfras:Road that is made up of RoadLin
 
 ![Road Diagram](../diagrams/Road.svg)
 
+<a href="../../diagrams/Road.svg">Open interactive Road diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

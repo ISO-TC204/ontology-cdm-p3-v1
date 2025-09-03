@@ -4,6 +4,8 @@ A RoutePoint represents a point of interest along a PublicTransportRoute.
 
 ![RoutePoint Diagram](../diagrams/RoutePoint.svg)
 
+<a href="../../diagrams/RoutePoint.svg">Open interactive RoutePoint diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

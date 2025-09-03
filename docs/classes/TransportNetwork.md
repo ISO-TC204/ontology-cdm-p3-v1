@@ -4,6 +4,8 @@ A TransportNetwork is a NetworkElement that is a collection of other network ele
 
 ![TransportNetwork Diagram](../diagrams/TransportNetwork.svg)
 
+<a href="../../diagrams/TransportNetwork.svg">Open interactive TransportNetwork diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

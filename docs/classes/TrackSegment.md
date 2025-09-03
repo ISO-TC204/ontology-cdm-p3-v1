@@ -4,6 +4,8 @@ A TrackSegment is a type of TravelledWaySegment that represents a portion of a T
 
 ![TrackSegment Diagram](../diagrams/TrackSegment.svg)
 
+<a href="../../diagrams/TrackSegment.svg">Open interactive TrackSegment diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

@@ -51,9 +51,12 @@
 <!-- RoadSegment -->
 <g id="node4" class="node">
 <title>RoadSegment</title>
+<g id="a_node4"><a xlink:href="../classes/RoadSegment" xlink:title="RoadSegment">
 <polygon fill="lightgray" stroke="none" points="409,-25.88 409,-42.12 492.75,-42.12 492.75,-25.88 409,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="410" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">RoadSegment</text>
 <polygon fill="none" stroke="black" points="408,-24.88 408,-43.12 493.75,-43.12 493.75,-24.88 408,-24.88"/>
+</a>
+</g>
 </g>
 <!-- RoadLane&#45;&gt;RoadSegment -->
 <g id="edge6" class="edge">

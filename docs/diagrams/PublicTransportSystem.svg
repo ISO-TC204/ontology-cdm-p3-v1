@@ -51,17 +51,23 @@
 <!-- GroupOfLines -->
 <g id="node4" class="node">
 <title>GroupOfLines</title>
+<g id="a_node4"><a xlink:href="../classes/GroupOfLines" xlink:title="GroupOfLines">
 <polygon fill="lightgray" stroke="none" points="194.88,-98.88 194.88,-115.12 277.12,-115.12 277.12,-98.88 194.88,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="195.88" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">GroupOfLines</text>
 <polygon fill="none" stroke="black" points="193.88,-97.88 193.88,-116.12 278.12,-116.12 278.12,-97.88 193.88,-97.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;GroupOfLines -->
 <!-- PublicTransportLine -->
 <g id="node5" class="node">
 <title>PublicTransportLine</title>
+<g id="a_node5"><a xlink:href="../classes/PublicTransportLine" xlink:title="PublicTransportLine">
 <polygon fill="lightgray" stroke="none" points="176.88,-25.88 176.88,-42.12 295.12,-42.12 295.12,-25.88 176.88,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="177.88" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">PublicTransportLine</text>
 <polygon fill="none" stroke="black" points="175.88,-24.88 175.88,-43.12 296.12,-43.12 296.12,-24.88 175.88,-24.88"/>
+</a>
+</g>
 </g>
 <!-- GroupOfLines&#45;&gt;PublicTransportLine -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;GroupOfLines -->

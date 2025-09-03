@@ -11,9 +11,9 @@ digraph {
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		RailCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>RailCorridor</B></TD></TR></TABLE>> margin=0]
-		RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>RailSection</B></TD></TR></TABLE>> margin=0]
-		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>TrackLink</B></TD></TR></TABLE>> margin=0]
+		RailCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>RailCorridor</B></TD></TR></TABLE>> URL="../classes/RailCorridor" margin=0 tooltip=RailCorridor]
+		RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>RailSection</B></TD></TR></TABLE>> URL="../classes/RailSection" margin=0 tooltip=RailSection]
+		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>TrackLink</B></TD></TR></TABLE>> URL="../classes/TrackLink" margin=0 tooltip=TrackLink]
 	}
 	RailNetwork -> TransportNetwork [arrowhead=onormal style=solid]
 	RailNetwork -> Invis [style=invis]

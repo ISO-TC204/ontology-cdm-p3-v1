@@ -36,9 +36,12 @@
 <!-- FootpathSegment -->
 <g id="node4" class="node">
 <title>FootpathSegment</title>
+<g id="a_node4"><a xlink:href="../classes/FootpathSegment" xlink:title="FootpathSegment">
 <polygon fill="lightgray" stroke="none" points="150.09,-25.88 150.09,-42.12 254.84,-42.12 254.84,-25.88 150.09,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="151.09" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">FootpathSegment</text>
 <polygon fill="none" stroke="black" points="149.09,-24.88 149.09,-43.12 255.84,-43.12 255.84,-24.88 149.09,-24.88"/>
+</a>
+</g>
 </g>
 <!-- FootpathLane&#45;&gt;FootpathSegment -->
 <g id="edge4" class="edge">

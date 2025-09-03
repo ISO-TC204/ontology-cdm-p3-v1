@@ -4,6 +4,8 @@ A TravelledWaySection is a type of NetworkElement that represents an aggregation
 
 ![TravelledWaySection Diagram](../diagrams/TravelledWaySection.svg)
 
+<a href="../../diagrams/TravelledWaySection.svg">Open interactive TravelledWaySection diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

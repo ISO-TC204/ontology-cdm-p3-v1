@@ -4,6 +4,8 @@ A PublicTransportSystem provides transport services to members of the public.
 
 ![PublicTransportSystem Diagram](../diagrams/PublicTransportSystem.svg)
 
+<a href="../../diagrams/PublicTransportSystem.svg">Open interactive PublicTransportSystem diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

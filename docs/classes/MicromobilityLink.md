@@ -4,6 +4,8 @@ A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.
 
 ![MicromobilityLink Diagram](../diagrams/MicromobilityLink.svg)
 
+<a href="../../diagrams/MicromobilityLink.svg">Open interactive MicromobilityLink diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

@@ -4,6 +4,8 @@ A RoadSegment is a type of TravelledWaySegment and transinfas:RoadSegment that r
 
 ![RoadSegment Diagram](../diagrams/RoadSegment.svg)
 
+<a href="../../diagrams/RoadSegment.svg">Open interactive RoadSegment diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

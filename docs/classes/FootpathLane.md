@@ -4,6 +4,8 @@ A FootpathLane is a type of TravelledWayLane that forms part of a FootpathSegmen
 
 ![FootpathLane Diagram](../diagrams/FootpathLane.svg)
 
+<a href="../../diagrams/FootpathLane.svg">Open interactive FootpathLane diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

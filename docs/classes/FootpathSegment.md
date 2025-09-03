@@ -4,6 +4,8 @@ A FootpathSegment is a type of TravelledWaySegment that represents a portion of 
 
 ![FootpathSegment Diagram](../diagrams/FootpathSegment.svg)
 
+<a href="../../diagrams/FootpathSegment.svg">Open interactive FootpathSegment diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

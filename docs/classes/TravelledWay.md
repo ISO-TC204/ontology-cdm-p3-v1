@@ -4,6 +4,8 @@ A TravelledWay is a type of NetworkElement and transinfras:TravelledWay that rep
 
 ![TravelledWay Diagram](../diagrams/TravelledWay.svg)
 
+<a href="../../diagrams/TravelledWay.svg">Open interactive TravelledWay diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

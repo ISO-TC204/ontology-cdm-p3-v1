@@ -4,6 +4,8 @@ A Junction is a TransportNode that allows a traveller to connect from one Travel
 
 ![Junction Diagram](../diagrams/Junction.svg)
 
+<a href="../../diagrams/Junction.svg">Open interactive Junction diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

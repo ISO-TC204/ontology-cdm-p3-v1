@@ -4,6 +4,8 @@ A FootpathSection is a type of TravelledWaySection that groups FootpathLinks and
 
 ![FootpathSection Diagram](../diagrams/FootpathSection.svg)
 
+<a href="../../diagrams/FootpathSection.svg">Open interactive FootpathSection diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

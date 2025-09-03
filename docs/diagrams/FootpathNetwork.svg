@@ -36,9 +36,12 @@
 <!-- FootpathLink -->
 <g id="node5" class="node">
 <title>FootpathLink</title>
+<g id="a_node5"><a xlink:href="../classes/FootpathLink" xlink:title="FootpathLink">
 <polygon fill="lightgray" stroke="none" points="219.12,-98.88 219.12,-115.12 297.62,-115.12 297.62,-98.88 219.12,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="220.12" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">FootpathLink</text>
 <polygon fill="none" stroke="black" points="218.12,-97.88 218.12,-116.12 298.62,-116.12 298.62,-97.88 218.12,-97.88"/>
+</a>
+</g>
 </g>
 <!-- FootpathNetwork&#45;&gt;FootpathLink -->
 <g id="edge10" class="edge">
@@ -65,18 +68,24 @@
 <!-- Footpath -->
 <g id="node4" class="node">
 <title>Footpath</title>
+<g id="a_node4"><a xlink:href="../classes/Footpath" xlink:title="Footpath">
 <polygon fill="lightgray" stroke="none" points="248.5,-171.88 248.5,-188.12 302.25,-188.12 302.25,-171.88 248.5,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="249.5" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">Footpath</text>
 <polygon fill="none" stroke="black" points="247.5,-170.88 247.5,-189.12 303.25,-189.12 303.25,-170.88 247.5,-170.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;Footpath -->
 <!-- Footpath&#45;&gt;FootpathLink -->
 <!-- FootpathSection -->
 <g id="node6" class="node">
 <title>FootpathSection</title>
+<g id="a_node6"><a xlink:href="../classes/FootpathSection" xlink:title="FootpathSection">
 <polygon fill="lightgray" stroke="none" points="204.75,-25.88 204.75,-42.12 302,-42.12 302,-25.88 204.75,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="205.75" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">FootpathSection</text>
 <polygon fill="none" stroke="black" points="203.75,-24.88 203.75,-43.12 303,-43.12 303,-24.88 203.75,-24.88"/>
+</a>
+</g>
 </g>
 <!-- FootpathLink&#45;&gt;FootpathSection -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;Footpath -->

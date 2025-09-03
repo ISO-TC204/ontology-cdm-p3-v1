@@ -37,9 +37,12 @@
 <!-- RoutePoint -->
 <g id="node4" class="node">
 <title>RoutePoint</title>
+<g id="a_node4"><a xlink:href="../classes/RoutePoint" xlink:title="RoutePoint">
 <polygon fill="lightgray" stroke="none" points="197.88,-98.88 197.88,-115.12 264.38,-115.12 264.38,-98.88 197.88,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="198.88" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">RoutePoint</text>
 <polygon fill="none" stroke="black" points="196.88,-97.88 196.88,-116.12 265.38,-116.12 265.38,-97.88 196.88,-97.88"/>
+</a>
+</g>
 </g>
 <!-- PointOnRoute&#45;&gt;RoutePoint -->
 <g id="edge5" class="edge">

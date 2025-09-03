@@ -36,9 +36,12 @@
 <!-- FootpathNetwork -->
 <g id="node5" class="node">
 <title>FootpathNetwork</title>
+<g id="a_node5"><a xlink:href="../classes/FootpathNetwork" xlink:title="FootpathNetwork">
 <polygon fill="lightgray" stroke="none" points="214.5,-98.88 214.5,-115.12 315.5,-115.12 315.5,-98.88 214.5,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="215.5" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">FootpathNetwork</text>
 <polygon fill="none" stroke="black" points="213.5,-97.88 213.5,-116.12 316.5,-116.12 316.5,-97.88 213.5,-97.88"/>
+</a>
+</g>
 </g>
 <!-- FootpathSection&#45;&gt;FootpathNetwork -->
 <g id="edge9" class="edge">
@@ -65,18 +68,24 @@
 <!-- FootpathLink -->
 <g id="node4" class="node">
 <title>FootpathLink</title>
+<g id="a_node4"><a xlink:href="../classes/FootpathLink" xlink:title="FootpathLink">
 <polygon fill="lightgray" stroke="none" points="238.75,-171.88 238.75,-188.12 317.25,-188.12 317.25,-171.88 238.75,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="239.75" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">FootpathLink</text>
 <polygon fill="none" stroke="black" points="237.75,-170.88 237.75,-189.12 318.25,-189.12 318.25,-170.88 237.75,-170.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;FootpathLink -->
 <!-- FootpathLink&#45;&gt;FootpathNetwork -->
 <!-- FootpathSegment -->
 <g id="node6" class="node">
 <title>FootpathSegment</title>
+<g id="a_node6"><a xlink:href="../classes/FootpathSegment" xlink:title="FootpathSegment">
 <polygon fill="lightgray" stroke="none" points="212.62,-25.88 212.62,-42.12 317.38,-42.12 317.38,-25.88 212.62,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="213.62" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">FootpathSegment</text>
 <polygon fill="none" stroke="black" points="211.62,-24.88 211.62,-43.12 318.38,-43.12 318.38,-24.88 211.62,-24.88"/>
+</a>
+</g>
 </g>
 <!-- FootpathNetwork&#45;&gt;FootpathSegment -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;FootpathLink -->

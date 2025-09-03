@@ -4,6 +4,8 @@ A MicromobilityPath is a type of Road that is made up of MicromobilityPathLinks.
 
 ![MicromobilityPath Diagram](../diagrams/MicromobilityPath.svg)
 
+<a href="../../diagrams/MicromobilityPath.svg">Open interactive MicromobilityPath diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

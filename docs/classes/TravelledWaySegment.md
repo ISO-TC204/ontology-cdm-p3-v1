@@ -4,6 +4,8 @@ A TravelledWaySegment is a type of a transinfras:TravelledWaySegment and Network
 
 ![TravelledWaySegment Diagram](../diagrams/TravelledWaySegment.svg)
 
+<a href="../../diagrams/TravelledWaySegment.svg">Open interactive TravelledWaySegment diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

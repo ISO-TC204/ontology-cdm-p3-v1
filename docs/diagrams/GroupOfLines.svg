@@ -36,9 +36,12 @@
 <!-- PublicTransportLine -->
 <g id="node4" class="node">
 <title>PublicTransportLine</title>
+<g id="a_node4"><a xlink:href="../classes/PublicTransportLine" xlink:title="PublicTransportLine">
 <polygon fill="lightgray" stroke="none" points="186.88,-98.88 186.88,-115.12 305.12,-115.12 305.12,-98.88 186.88,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="187.88" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">PublicTransportLine</text>
 <polygon fill="none" stroke="black" points="185.88,-97.88 185.88,-116.12 306.12,-116.12 306.12,-97.88 185.88,-97.88"/>
+</a>
+</g>
 </g>
 <!-- GroupOfLines&#45;&gt;PublicTransportLine -->
 <g id="edge5" class="edge">
@@ -50,9 +53,12 @@
 <!-- PublicTransportSystem -->
 <g id="node5" class="node">
 <title>PublicTransportSystem</title>
+<g id="a_node5"><a xlink:href="../classes/PublicTransportSystem" xlink:title="PublicTransportSystem">
 <polygon fill="lightgray" stroke="none" points="172.88,-25.88 172.88,-42.12 309.12,-42.12 309.12,-25.88 172.88,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="173.88" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">PublicTransportSystem</text>
 <polygon fill="none" stroke="black" points="171.88,-24.88 171.88,-43.12 310.12,-43.12 310.12,-24.88 171.88,-24.88"/>
+</a>
+</g>
 </g>
 <!-- GroupOfLines&#45;&gt;PublicTransportSystem -->
 <g id="edge6" class="edge">

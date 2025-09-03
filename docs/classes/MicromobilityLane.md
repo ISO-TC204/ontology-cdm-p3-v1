@@ -4,6 +4,8 @@ A MicromobilityLane is a type of RoadLane that forms part of a MicromobilityPath
 
 ![MicromobilityLane Diagram](../diagrams/MicromobilityLane.svg)
 
+<a href="../../diagrams/MicromobilityLane.svg">Open interactive MicromobilityLane diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

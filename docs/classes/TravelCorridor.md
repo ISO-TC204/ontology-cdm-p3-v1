@@ -6,6 +6,8 @@ NOTE: The extent of a TravelCorridor is defined by the extent of the path that s
 
 ![TravelCorridor Diagram](../diagrams/TravelCorridor.svg)
 
+<a href="../../diagrams/TravelCorridor.svg">Open interactive TravelCorridor diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

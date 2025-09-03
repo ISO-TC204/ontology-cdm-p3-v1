@@ -36,9 +36,12 @@
 <!-- MicromobilityPathSegment -->
 <g id="node7" class="node">
 <title>MicromobilityPathSegment</title>
+<g id="a_node7"><a xlink:href="../classes/MicromobilityPathSegment" xlink:title="MicromobilityPathSegment">
 <polygon fill="lightgray" stroke="none" points="189.12,-25.88 189.12,-42.12 344.88,-42.12 344.88,-25.88 189.12,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="190.12" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityPathSegment</text>
 <polygon fill="none" stroke="black" points="188.12,-24.88 188.12,-43.12 345.88,-43.12 345.88,-24.88 188.12,-24.88"/>
+</a>
+</g>
 </g>
 <!-- MicromobilityLink&#45;&gt;MicromobilityPathSegment -->
 <g id="edge7" class="edge">
@@ -65,25 +68,34 @@
 <!-- MicromobilityNetwork -->
 <g id="node4" class="node">
 <title>MicromobilityNetwork</title>
+<g id="a_node4"><a xlink:href="../classes/MicromobilityNetwork" xlink:title="MicromobilityNetwork">
 <polygon fill="lightgray" stroke="none" points="189.12,-244.88 189.12,-261.12 314.88,-261.12 314.88,-244.88 189.12,-244.88"/>
 <text xml:space="preserve" text-anchor="start" x="190.12" y="-249.72" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityNetwork</text>
 <polygon fill="none" stroke="black" points="188.12,-243.88 188.12,-262.12 315.88,-262.12 315.88,-243.88 188.12,-243.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;MicromobilityNetwork -->
 <!-- MicromobilityPath -->
 <g id="node5" class="node">
 <title>MicromobilityPath</title>
+<g id="a_node5"><a xlink:href="../classes/MicromobilityPath" xlink:title="MicromobilityPath">
 <polygon fill="lightgray" stroke="none" points="240.62,-171.88 240.62,-188.12 345.38,-188.12 345.38,-171.88 240.62,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="241.62" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityPath</text>
 <polygon fill="none" stroke="black" points="239.62,-170.88 239.62,-189.12 346.38,-189.12 346.38,-170.88 239.62,-170.88"/>
+</a>
+</g>
 </g>
 <!-- MicromobilityNetwork&#45;&gt;MicromobilityPath -->
 <!-- MicromobilityPathSection -->
 <g id="node6" class="node">
 <title>MicromobilityPathSection</title>
+<g id="a_node6"><a xlink:href="../classes/MicromobilityPathSection" xlink:title="MicromobilityPathSection">
 <polygon fill="lightgray" stroke="none" points="196.88,-98.88 196.88,-115.12 345.12,-115.12 345.12,-98.88 196.88,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="197.88" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityPathSection</text>
 <polygon fill="none" stroke="black" points="195.88,-97.88 195.88,-116.12 346.12,-116.12 346.12,-97.88 195.88,-97.88"/>
+</a>
+</g>
 </g>
 <!-- MicromobilityPath&#45;&gt;MicromobilityPathSection -->
 <!-- MicromobilityPathSection&#45;&gt;MicromobilityPathSegment -->

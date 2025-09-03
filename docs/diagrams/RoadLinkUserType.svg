@@ -36,9 +36,12 @@
 <!-- RoadLink -->
 <g id="node4" class="node">
 <title>RoadLink</title>
+<g id="a_node4"><a xlink:href="../classes/RoadLink" xlink:title="RoadLink">
 <polygon fill="lightgray" stroke="none" points="17.25,-255.88 17.25,-272.12 74.75,-272.12 74.75,-255.88 17.25,-255.88"/>
 <text xml:space="preserve" text-anchor="start" x="18.25" y="-260.73" font-family="Arial" font-weight="bold" font-size="12.00">RoadLink</text>
 <polygon fill="none" stroke="black" points="16.25,-254.88 16.25,-273.12 75.75,-273.12 75.75,-254.88 16.25,-254.88"/>
+</a>
+</g>
 </g>
 <!-- RoadLinkUserType&#45;&gt;RoadLink -->
 <g id="edge10" class="edge">

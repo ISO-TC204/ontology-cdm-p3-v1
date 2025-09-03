@@ -4,6 +4,8 @@ A TrackLink is a type of TravelledWayLink that uses rails on a stabilized base.
 
 ![TrackLink Diagram](../diagrams/TrackLink.svg)
 
+<a href="../../diagrams/TrackLink.svg">Open interactive TrackLink diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

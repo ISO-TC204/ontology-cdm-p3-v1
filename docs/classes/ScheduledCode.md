@@ -4,6 +4,8 @@ The operational status of an entity, e.g., open or closed.
 
 ![ScheduledCode Diagram](../diagrams/ScheduledCode.svg)
 
+<a href="../../diagrams/ScheduledCode.svg">Open interactive ScheduledCode diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

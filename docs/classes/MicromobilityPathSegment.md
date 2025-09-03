@@ -4,6 +4,8 @@ A MicromobilityPathSegment is a type of RoadSegment that represents a portion of
 
 ![MicromobilityPathSegment Diagram](../diagrams/MicromobilityPathSegment.svg)
 
+<a href="../../diagrams/MicromobilityPathSegment.svg">Open interactive MicromobilityPathSegment diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

@@ -36,9 +36,12 @@
 <!-- RailNetwork -->
 <g id="node4" class="node">
 <title>RailNetwork</title>
+<g id="a_node4"><a xlink:href="../classes/RailNetwork" xlink:title="RailNetwork">
 <polygon fill="lightgray" stroke="none" points="238.72,-98.88 238.72,-115.12 309.72,-115.12 309.72,-98.88 238.72,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="239.72" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">RailNetwork</text>
 <polygon fill="none" stroke="black" points="237.72,-97.88 237.72,-116.12 310.72,-116.12 310.72,-97.88 237.72,-97.88"/>
+</a>
+</g>
 </g>
 <!-- RailCorridor&#45;&gt;RailNetwork -->
 <g id="edge6" class="edge">
@@ -50,9 +53,12 @@
 <!-- TrackLink -->
 <g id="node5" class="node">
 <title>TrackLink</title>
+<g id="a_node5"><a xlink:href="../classes/TrackLink" xlink:title="TrackLink">
 <polygon fill="lightgray" stroke="none" points="241.1,-25.88 241.1,-42.12 299.35,-42.12 299.35,-25.88 241.1,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="242.1" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">TrackLink</text>
 <polygon fill="none" stroke="black" points="240.1,-24.88 240.1,-43.12 300.35,-43.12 300.35,-24.88 240.1,-24.88"/>
+</a>
+</g>
 </g>
 <!-- RailCorridor&#45;&gt;TrackLink -->
 <g id="edge5" class="edge">

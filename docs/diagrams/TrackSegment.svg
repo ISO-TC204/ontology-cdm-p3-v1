@@ -36,9 +36,12 @@
 <!-- TrackLink -->
 <g id="node5" class="node">
 <title>TrackLink</title>
+<g id="a_node5"><a xlink:href="../classes/TrackLink" xlink:title="TrackLink">
 <polygon fill="lightgray" stroke="none" points="229.1,-25.88 229.1,-42.12 287.35,-42.12 287.35,-25.88 229.1,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="230.1" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">TrackLink</text>
 <polygon fill="none" stroke="black" points="228.1,-24.88 228.1,-43.12 288.35,-43.12 288.35,-24.88 228.1,-24.88"/>
+</a>
+</g>
 </g>
 <!-- TrackSegment&#45;&gt;TrackLink -->
 <g id="edge8" class="edge">
@@ -65,9 +68,12 @@
 <!-- RailSection -->
 <g id="node4" class="node">
 <title>RailSection</title>
+<g id="a_node4"><a xlink:href="../classes/RailSection" xlink:title="RailSection">
 <polygon fill="lightgray" stroke="none" points="224.6,-98.88 224.6,-115.12 291.85,-115.12 291.85,-98.88 224.6,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="225.6" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">RailSection</text>
 <polygon fill="none" stroke="black" points="223.6,-97.88 223.6,-116.12 292.85,-116.12 292.85,-97.88 223.6,-97.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;RailSection -->
 <!-- RailSection&#45;&gt;TrackLink -->

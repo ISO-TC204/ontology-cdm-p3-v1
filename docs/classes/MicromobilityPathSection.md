@@ -4,6 +4,8 @@ A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLi
 
 ![MicromobilityPathSection Diagram](../diagrams/MicromobilityPathSection.svg)
 
+<a href="../../diagrams/MicromobilityPathSection.svg">Open interactive MicromobilityPathSection diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

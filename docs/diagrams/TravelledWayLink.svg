@@ -49,9 +49,12 @@
 <!-- TransportNetwork -->
 <g id="node5" class="node">
 <title>TransportNetwork</title>
+<g id="a_node5"><a xlink:href="../classes/TransportNetwork" xlink:title="TransportNetwork">
 <polygon fill="lightgray" stroke="none" points="188.12,-412.88 188.12,-429.12 292.88,-429.12 292.88,-412.88 188.12,-412.88"/>
 <text xml:space="preserve" text-anchor="start" x="189.12" y="-417.73" font-family="Arial" font-weight="bold" font-size="12.00">TransportNetwork</text>
 <polygon fill="none" stroke="black" points="187.12,-411.88 187.12,-430.12 293.88,-430.12 293.88,-411.88 187.12,-411.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWayLink&#45;&gt;TransportNetwork -->
 <g id="edge18" class="edge">
@@ -63,9 +66,12 @@
 <!-- TransportNode -->
 <g id="node6" class="node">
 <title>TransportNode</title>
+<g id="a_node6"><a xlink:href="../classes/TransportNode" xlink:title="TransportNode">
 <polygon fill="lightgray" stroke="none" points="223.38,-328.88 223.38,-345.12 311.62,-345.12 311.62,-328.88 223.38,-328.88"/>
 <text xml:space="preserve" text-anchor="start" x="224.38" y="-333.73" font-family="Arial" font-weight="bold" font-size="12.00">TransportNode</text>
 <polygon fill="none" stroke="black" points="222.38,-327.88 222.38,-346.12 312.62,-346.12 312.62,-327.88 222.38,-327.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWayLink&#45;&gt;TransportNode -->
 <g id="edge11" class="edge">
@@ -84,9 +90,12 @@
 <!-- TravelledWaySegment -->
 <g id="node9" class="node">
 <title>TravelledWaySegment</title>
+<g id="a_node9"><a xlink:href="../classes/TravelledWaySegment" xlink:title="TravelledWaySegment">
 <polygon fill="lightgray" stroke="none" points="188.75,-98.88 188.75,-115.12 318.25,-115.12 318.25,-98.88 188.75,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="189.75" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWaySegment</text>
 <polygon fill="none" stroke="black" points="187.75,-97.88 187.75,-116.12 319.25,-116.12 319.25,-97.88 187.75,-97.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWayLink&#45;&gt;TravelledWaySegment -->
 <g id="edge13" class="edge">
@@ -129,17 +138,23 @@
 <!-- TravelledWay -->
 <g id="node7" class="node">
 <title>TravelledWay</title>
+<g id="a_node7"><a xlink:href="../classes/TravelledWay" xlink:title="TravelledWay">
 <polygon fill="lightgray" stroke="none" points="211.25,-244.88 211.25,-261.12 289.75,-261.12 289.75,-244.88 211.25,-244.88"/>
 <text xml:space="preserve" text-anchor="start" x="212.25" y="-249.72" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWay</text>
 <polygon fill="none" stroke="black" points="210.25,-243.88 210.25,-262.12 290.75,-262.12 290.75,-243.88 210.25,-243.88"/>
+</a>
+</g>
 </g>
 <!-- TransportNode&#45;&gt;TravelledWay -->
 <!-- TravelledWaySection -->
 <g id="node8" class="node">
 <title>TravelledWaySection</title>
+<g id="a_node8"><a xlink:href="../classes/TravelledWaySection" xlink:title="TravelledWaySection">
 <polygon fill="lightgray" stroke="none" points="189.5,-171.88 189.5,-188.12 311.5,-188.12 311.5,-171.88 189.5,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="190.5" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWaySection</text>
 <polygon fill="none" stroke="black" points="188.5,-170.88 188.5,-189.12 312.5,-189.12 312.5,-170.88 188.5,-170.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWay&#45;&gt;TravelledWaySection -->
 <!-- TravelledWaySection&#45;&gt;TravelledWaySegment -->

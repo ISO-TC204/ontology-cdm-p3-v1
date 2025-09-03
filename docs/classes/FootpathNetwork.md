@@ -4,6 +4,8 @@ A FootpathNetwork is a type of TransportNetwork designed for the use of pedestri
 
 ![FootpathNetwork Diagram](../diagrams/FootpathNetwork.svg)
 
+<a href="../../diagrams/FootpathNetwork.svg">Open interactive FootpathNetwork diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

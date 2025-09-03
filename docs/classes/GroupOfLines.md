@@ -4,6 +4,8 @@ A GroupOfLines is a logical grouping of PublicTransportLines for any useful purp
 
 ![GroupOfLines Diagram](../diagrams/GroupOfLines.svg)
 
+<a href="../../diagrams/GroupOfLines.svg">Open interactive GroupOfLines diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

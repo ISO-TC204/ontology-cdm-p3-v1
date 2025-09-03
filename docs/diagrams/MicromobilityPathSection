@@ -11,9 +11,9 @@ digraph {
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		MicromobilityLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>MicromobilityLink</B></TD></TR></TABLE>> margin=0]
-		MicromobilityNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>MicromobilityNetwork</B></TD></TR></TABLE>> margin=0]
-		MicromobilityPathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>MicromobilityPathSegment</B></TD></TR></TABLE>> margin=0]
+		MicromobilityLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>MicromobilityLink</B></TD></TR></TABLE>> URL="../classes/MicromobilityLink" margin=0 tooltip=MicromobilityLink]
+		MicromobilityNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>MicromobilityNetwork</B></TD></TR></TABLE>> URL="../classes/MicromobilityNetwork" margin=0 tooltip=MicromobilityNetwork]
+		MicromobilityPathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>MicromobilityPathSegment</B></TD></TR></TABLE>> URL="../classes/MicromobilityPathSegment" margin=0 tooltip=MicromobilityPathSegment]
 	}
 	MicromobilityPathSection -> RoadSection [arrowhead=onormal style=solid]
 	MicromobilityPathSection -> Invis [style=invis]

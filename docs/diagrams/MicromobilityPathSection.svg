@@ -36,9 +36,12 @@
 <!-- MicromobilityNetwork -->
 <g id="node5" class="node">
 <title>MicromobilityNetwork</title>
+<g id="a_node5"><a xlink:href="../classes/MicromobilityNetwork" xlink:title="MicromobilityNetwork">
 <polygon fill="lightgray" stroke="none" points="208.25,-98.88 208.25,-115.12 334,-115.12 334,-98.88 208.25,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="209.25" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityNetwork</text>
 <polygon fill="none" stroke="black" points="207.25,-97.88 207.25,-116.12 335,-116.12 335,-97.88 207.25,-97.88"/>
+</a>
+</g>
 </g>
 <!-- MicromobilityPathSection&#45;&gt;MicromobilityNetwork -->
 <g id="edge9" class="edge">
@@ -65,18 +68,24 @@
 <!-- MicromobilityLink -->
 <g id="node4" class="node">
 <title>MicromobilityLink</title>
+<g id="a_node4"><a xlink:href="../classes/MicromobilityLink" xlink:title="MicromobilityLink">
 <polygon fill="lightgray" stroke="none" points="222.5,-171.88 222.5,-188.12 325.75,-188.12 325.75,-171.88 222.5,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="223.5" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityLink</text>
 <polygon fill="none" stroke="black" points="221.5,-170.88 221.5,-189.12 326.75,-189.12 326.75,-170.88 221.5,-170.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;MicromobilityLink -->
 <!-- MicromobilityLink&#45;&gt;MicromobilityNetwork -->
 <!-- MicromobilityPathSegment -->
 <g id="node6" class="node">
 <title>MicromobilityPathSegment</title>
+<g id="a_node6"><a xlink:href="../classes/MicromobilityPathSegment" xlink:title="MicromobilityPathSegment">
 <polygon fill="lightgray" stroke="none" points="201.25,-25.88 201.25,-42.12 357,-42.12 357,-25.88 201.25,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="202.25" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityPathSegment</text>
 <polygon fill="none" stroke="black" points="200.25,-24.88 200.25,-43.12 358,-43.12 358,-24.88 200.25,-24.88"/>
+</a>
+</g>
 </g>
 <!-- MicromobilityNetwork&#45;&gt;MicromobilityPathSegment -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;MicromobilityLink -->

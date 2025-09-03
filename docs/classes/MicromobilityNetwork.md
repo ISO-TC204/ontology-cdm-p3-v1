@@ -4,6 +4,8 @@ A MicromobilityNetwork is a type of RoadNetwork designed for the use of micromob
 
 ![MicromobilityNetwork Diagram](../diagrams/MicromobilityNetwork.svg)
 
+<a href="../../diagrams/MicromobilityNetwork.svg">Open interactive MicromobilityNetwork diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

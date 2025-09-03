@@ -4,6 +4,8 @@ A NetworkElement represents any element of a transport network. It can be a part
 
 ![NetworkElement Diagram](../diagrams/NetworkElement.svg)
 
+<a href="../../diagrams/NetworkElement.svg">Open interactive NetworkElement diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

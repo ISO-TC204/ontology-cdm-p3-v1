@@ -4,6 +4,8 @@ A RoadLink is a type of TravelledWayLink and transinfras:RoadLink using a stabil
 
 ![RoadLink Diagram](../diagrams/RoadLink.svg)
 
+<a href="../../diagrams/RoadLink.svg">Open interactive RoadLink diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

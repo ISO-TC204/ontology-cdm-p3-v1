@@ -4,6 +4,8 @@ A RailCorridor is a type of TravelledWay that is made up of TrackLinks.
 
 ![RailCorridor Diagram](../diagrams/RailCorridor.svg)
 
+<a href="../../diagrams/RailCorridor.svg">Open interactive RailCorridor diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

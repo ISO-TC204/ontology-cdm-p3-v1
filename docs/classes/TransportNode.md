@@ -4,6 +4,8 @@ A TransportNode is a NetworkElement that represents a node on the transport netw
 
 ![TransportNode Diagram](../diagrams/TransportNode.svg)
 
+<a href="../../diagrams/TransportNode.svg">Open interactive TransportNode diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

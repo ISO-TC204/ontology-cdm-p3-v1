@@ -4,6 +4,8 @@ A Footpath Link is a type of TravelledWayLink designed for pedestrians.
 
 ![FootpathLink Diagram](../diagrams/FootpathLink.svg)
 
+<a href="../../diagrams/FootpathLink.svg">Open interactive FootpathLink diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

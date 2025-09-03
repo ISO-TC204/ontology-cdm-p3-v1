@@ -36,9 +36,12 @@
 <!-- TravelCorridorLink -->
 <g id="node4" class="node">
 <title>TravelCorridorLink</title>
+<g id="a_node4"><a xlink:href="../classes/TravelCorridorLink" xlink:title="TravelCorridorLink">
 <polygon fill="lightgray" stroke="none" points="152.54,-25.88 152.54,-42.12 261.79,-42.12 261.79,-25.88 152.54,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="153.54" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">TravelCorridorLink</text>
 <polygon fill="none" stroke="black" points="151.54,-24.88 151.54,-43.12 262.79,-43.12 262.79,-24.88 151.54,-24.88"/>
+</a>
+</g>
 </g>
 <!-- TravelCorridor&#45;&gt;TravelCorridorLink -->
 <g id="edge4" class="edge">

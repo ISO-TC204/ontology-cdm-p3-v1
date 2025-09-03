@@ -4,6 +4,8 @@ A RoadLinkUserType represents the unique combination of a RoadLink and a UserTyp
 
 ![RoadLinkUserType Diagram](../diagrams/RoadLinkUserType.svg)
 
+<a href="../../diagrams/RoadLinkUserType.svg">Open interactive RoadLinkUserType diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

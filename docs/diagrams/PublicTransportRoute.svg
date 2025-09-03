@@ -36,9 +36,12 @@
 <!-- PointOnRoute -->
 <g id="node4" class="node">
 <title>PointOnRoute</title>
+<g id="a_node4"><a xlink:href="../classes/PointOnRoute" xlink:title="PointOnRoute">
 <polygon fill="lightgray" stroke="none" points="34.5,-182.88 34.5,-199.12 117.5,-199.12 117.5,-182.88 34.5,-182.88"/>
 <text xml:space="preserve" text-anchor="start" x="35.5" y="-187.72" font-family="Arial" font-weight="bold" font-size="12.00">PointOnRoute</text>
 <polygon fill="none" stroke="black" points="33.5,-181.88 33.5,-200.12 118.5,-200.12 118.5,-181.88 33.5,-181.88"/>
+</a>
+</g>
 </g>
 <!-- PublicTransportRoute&#45;&gt;PointOnRoute -->
 <g id="edge7" class="edge">
@@ -50,9 +53,12 @@
 <!-- PublicTransportLine -->
 <g id="node5" class="node">
 <title>PublicTransportLine</title>
+<g id="a_node5"><a xlink:href="../classes/PublicTransportLine" xlink:title="PublicTransportLine">
 <polygon fill="lightgray" stroke="none" points="16.88,-98.88 16.88,-115.12 135.12,-115.12 135.12,-98.88 16.88,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="17.88" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">PublicTransportLine</text>
 <polygon fill="none" stroke="black" points="15.88,-97.88 15.88,-116.12 136.12,-116.12 136.12,-97.88 15.88,-97.88"/>
+</a>
+</g>
 </g>
 <!-- PublicTransportRoute&#45;&gt;PublicTransportLine -->
 <g id="edge8" class="edge">

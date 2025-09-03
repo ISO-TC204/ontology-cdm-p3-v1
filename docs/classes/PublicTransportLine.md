@@ -4,6 +4,8 @@ A PublicTransportLine is one or more routes used by public transport vehicles to
 
 ![PublicTransportLine Diagram](../diagrams/PublicTransportLine.svg)
 
+<a href="../../diagrams/PublicTransportLine.svg">Open interactive PublicTransportLine diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

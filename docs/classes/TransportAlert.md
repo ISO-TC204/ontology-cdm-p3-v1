@@ -4,6 +4,8 @@ A TransportAlert is a type of alert that can be used to notify people of importa
 
 ![TransportAlert Diagram](../diagrams/TransportAlert.svg)
 
+<a href="../../diagrams/TransportAlert.svg">Open interactive TransportAlert diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

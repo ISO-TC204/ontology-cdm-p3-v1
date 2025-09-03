@@ -4,6 +4,8 @@ A Footpath is a type of TravelledWay that is made up of FootpathLinks.
 
 ![Footpath Diagram](../diagrams/Footpath.svg)
 
+<a href="../../diagrams/Footpath.svg">Open interactive Footpath diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

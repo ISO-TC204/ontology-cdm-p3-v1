@@ -58,33 +58,45 @@
 <!-- TransportNode -->
 <g id="node4" class="node">
 <title>TransportNode</title>
+<g id="a_node4"><a xlink:href="../classes/TransportNode" xlink:title="TransportNode">
 <polygon fill="lightgray" stroke="none" points="438.75,-255.88 438.75,-272.12 527,-272.12 527,-255.88 438.75,-255.88"/>
 <text xml:space="preserve" text-anchor="start" x="439.75" y="-260.73" font-family="Arial" font-weight="bold" font-size="12.00">TransportNode</text>
 <polygon fill="none" stroke="black" points="437.75,-254.88 437.75,-273.12 528,-273.12 528,-254.88 437.75,-254.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;TransportNode -->
 <!-- TravelledWay -->
 <g id="node5" class="node">
 <title>TravelledWay</title>
+<g id="a_node5"><a xlink:href="../classes/TravelledWay" xlink:title="TravelledWay">
 <polygon fill="lightgray" stroke="none" points="431.62,-171.88 431.62,-188.12 510.12,-188.12 510.12,-171.88 431.62,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="432.62" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWay</text>
 <polygon fill="none" stroke="black" points="430.62,-170.88 430.62,-189.12 511.12,-189.12 511.12,-170.88 430.62,-170.88"/>
+</a>
+</g>
 </g>
 <!-- TransportNode&#45;&gt;TravelledWay -->
 <!-- TravelledWayLink -->
 <g id="node6" class="node">
 <title>TravelledWayLink</title>
+<g id="a_node6"><a xlink:href="../classes/TravelledWayLink" xlink:title="TravelledWayLink">
 <polygon fill="lightgray" stroke="none" points="419.25,-98.88 419.25,-115.12 522.5,-115.12 522.5,-98.88 419.25,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="420.25" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWayLink</text>
 <polygon fill="none" stroke="black" points="418.25,-97.88 418.25,-116.12 523.5,-116.12 523.5,-97.88 418.25,-97.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWay&#45;&gt;TravelledWayLink -->
 <!-- TravelledWaySection -->
 <g id="node7" class="node">
 <title>TravelledWaySection</title>
+<g id="a_node7"><a xlink:href="../classes/TravelledWaySection" xlink:title="TravelledWaySection">
 <polygon fill="lightgray" stroke="none" points="416.88,-25.88 416.88,-42.12 538.88,-42.12 538.88,-25.88 416.88,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="417.88" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWaySection</text>
 <polygon fill="none" stroke="black" points="415.88,-24.88 415.88,-43.12 539.88,-43.12 539.88,-24.88 415.88,-24.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWayLink&#45;&gt;TravelledWaySection -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;TransportNetwork -->

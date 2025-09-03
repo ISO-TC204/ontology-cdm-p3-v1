@@ -6,6 +6,8 @@ NOTE: For example, a PublicTransportLine might use an alternate PublicTransportR
 
 ![PublicTransportRoute Diagram](../diagrams/PublicTransportRoute.svg)
 
+<a href="../../diagrams/PublicTransportRoute.svg">Open interactive PublicTransportRoute diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

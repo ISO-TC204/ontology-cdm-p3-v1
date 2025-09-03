@@ -12,8 +12,8 @@ digraph {
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		TransportNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>TransportNetwork</B></TD></TR></TABLE>> margin=0]
-		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>TravelledWayLink</B></TD></TR></TABLE>> margin=0]
+		TransportNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>TransportNetwork</B></TD></TR></TABLE>> URL="../classes/TransportNetwork" margin=0 tooltip=TransportNetwork]
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>TravelledWayLink</B></TD></TR></TABLE>> URL="../classes/TravelledWayLink" margin=0 tooltip=TravelledWayLink]
 	}
 	TravelledWay -> NetworkElement [arrowhead=onormal style=solid]
 	TravelledWay -> transinfras_TravelledWay [arrowhead=onormal style=solid]

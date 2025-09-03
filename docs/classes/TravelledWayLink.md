@@ -4,6 +4,8 @@ A TravelledWayLink is a type of NetworkElement and transinfras:TravelledWayLink.
 
 ![TravelledWayLink Diagram](../diagrams/TravelledWayLink.svg)
 
+<a href="../../diagrams/TravelledWayLink.svg">Open interactive TravelledWayLink diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

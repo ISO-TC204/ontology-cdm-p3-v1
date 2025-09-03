@@ -36,9 +36,12 @@
 <!-- RoadNetwork -->
 <g id="node5" class="node">
 <title>RoadNetwork</title>
+<g id="a_node5"><a xlink:href="../classes/RoadNetwork" xlink:title="RoadNetwork">
 <polygon fill="lightgray" stroke="none" points="215,-98.88 215,-115.12 295,-115.12 295,-98.88 215,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="216" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">RoadNetwork</text>
 <polygon fill="none" stroke="black" points="214,-97.88 214,-116.12 296,-116.12 296,-97.88 214,-97.88"/>
+</a>
+</g>
 </g>
 <!-- RoadSection&#45;&gt;RoadNetwork -->
 <g id="edge9" class="edge">
@@ -65,18 +68,24 @@
 <!-- RoadLink -->
 <g id="node4" class="node">
 <title>RoadLink</title>
+<g id="a_node4"><a xlink:href="../classes/RoadLink" xlink:title="RoadLink">
 <polygon fill="lightgray" stroke="none" points="239.25,-171.88 239.25,-188.12 296.75,-188.12 296.75,-171.88 239.25,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="240.25" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">RoadLink</text>
 <polygon fill="none" stroke="black" points="238.25,-170.88 238.25,-189.12 297.75,-189.12 297.75,-170.88 238.25,-170.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;RoadLink -->
 <!-- RoadLink&#45;&gt;RoadNetwork -->
 <!-- RoadSegment -->
 <g id="node6" class="node">
 <title>RoadSegment</title>
+<g id="a_node6"><a xlink:href="../classes/RoadSegment" xlink:title="RoadSegment">
 <polygon fill="lightgray" stroke="none" points="213.12,-25.88 213.12,-42.12 296.88,-42.12 296.88,-25.88 213.12,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="214.12" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">RoadSegment</text>
 <polygon fill="none" stroke="black" points="212.12,-24.88 212.12,-43.12 297.88,-43.12 297.88,-24.88 212.12,-24.88"/>
+</a>
+</g>
 </g>
 <!-- RoadNetwork&#45;&gt;RoadSegment -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;RoadLink -->

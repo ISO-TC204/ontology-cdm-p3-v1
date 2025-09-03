@@ -4,6 +4,8 @@ An Alert can be used to notify people of important information.
 
 ![Alert Diagram](../diagrams/Alert.svg)
 
+<a href="../../diagrams/Alert.svg">Open interactive Alert diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

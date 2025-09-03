@@ -36,9 +36,12 @@
 <!-- TransportNetwork -->
 <g id="node4" class="node">
 <title>TransportNetwork</title>
+<g id="a_node4"><a xlink:href="../classes/TransportNetwork" xlink:title="TransportNetwork">
 <polygon fill="lightgray" stroke="none" points="155.5,-171.88 155.5,-188.12 260.25,-188.12 260.25,-171.88 155.5,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="156.5" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">TransportNetwork</text>
 <polygon fill="none" stroke="black" points="154.5,-170.88 154.5,-189.12 261.25,-189.12 261.25,-170.88 154.5,-170.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWaySection&#45;&gt;TransportNetwork -->
 <g id="edge9" class="edge">
@@ -66,17 +69,23 @@
 <!-- TravelledWayLink -->
 <g id="node5" class="node">
 <title>TravelledWayLink</title>
+<g id="a_node5"><a xlink:href="../classes/TravelledWayLink" xlink:title="TravelledWayLink">
 <polygon fill="lightgray" stroke="none" points="169.25,-98.88 169.25,-115.12 272.5,-115.12 272.5,-98.88 169.25,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="170.25" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWayLink</text>
 <polygon fill="none" stroke="black" points="168.25,-97.88 168.25,-116.12 273.5,-116.12 273.5,-97.88 168.25,-97.88"/>
+</a>
+</g>
 </g>
 <!-- TransportNetwork&#45;&gt;TravelledWayLink -->
 <!-- TravelledWaySegment -->
 <g id="node6" class="node">
 <title>TravelledWaySegment</title>
+<g id="a_node6"><a xlink:href="../classes/TravelledWaySegment" xlink:title="TravelledWaySegment">
 <polygon fill="lightgray" stroke="none" points="156.12,-25.88 156.12,-42.12 285.62,-42.12 285.62,-25.88 156.12,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="157.12" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">TravelledWaySegment</text>
 <polygon fill="none" stroke="black" points="155.12,-24.88 155.12,-43.12 286.62,-43.12 286.62,-24.88 155.12,-24.88"/>
+</a>
+</g>
 </g>
 <!-- TravelledWayLink&#45;&gt;TravelledWaySegment -->
 <!-- Union_partwhole_hasProperPart&#45;&gt;TravelledWayLink -->

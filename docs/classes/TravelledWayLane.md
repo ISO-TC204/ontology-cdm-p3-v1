@@ -4,6 +4,8 @@ A TravelledWayLane is a NetworkElement that is a portion of TravelledWaySegment 
 
 ![TravelledWayLane Diagram](../diagrams/TravelledWayLane.svg)
 
+<a href="../../diagrams/TravelledWayLane.svg">Open interactive TravelledWayLane diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

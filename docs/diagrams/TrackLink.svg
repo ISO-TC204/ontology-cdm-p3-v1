@@ -36,9 +36,12 @@
 <!-- TrackSegment -->
 <g id="node7" class="node">
 <title>TrackSegment</title>
+<g id="a_node7"><a xlink:href="../classes/TrackSegment" xlink:title="TrackSegment">
 <polygon fill="lightgray" stroke="none" points="198.75,-25.88 198.75,-42.12 283.25,-42.12 283.25,-25.88 198.75,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="199.75" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">TrackSegment</text>
 <polygon fill="none" stroke="black" points="197.75,-24.88 197.75,-43.12 284.25,-43.12 284.25,-24.88 197.75,-24.88"/>
+</a>
+</g>
 </g>
 <!-- TrackLink&#45;&gt;TrackSegment -->
 <g id="edge7" class="edge">
@@ -65,25 +68,34 @@
 <!-- RailCorridor -->
 <g id="node4" class="node">
 <title>RailCorridor</title>
+<g id="a_node4"><a xlink:href="../classes/RailCorridor" xlink:title="RailCorridor">
 <polygon fill="lightgray" stroke="none" points="211.12,-244.88 211.12,-261.12 282.88,-261.12 282.88,-244.88 211.12,-244.88"/>
 <text xml:space="preserve" text-anchor="start" x="212.12" y="-249.72" font-family="Arial" font-weight="bold" font-size="12.00">RailCorridor</text>
 <polygon fill="none" stroke="black" points="210.12,-243.88 210.12,-262.12 283.88,-262.12 283.88,-243.88 210.12,-243.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;RailCorridor -->
 <!-- RailNetwork -->
 <g id="node5" class="node">
 <title>RailNetwork</title>
+<g id="a_node5"><a xlink:href="../classes/RailNetwork" xlink:title="RailNetwork">
 <polygon fill="lightgray" stroke="none" points="211.5,-171.88 211.5,-188.12 282.5,-188.12 282.5,-171.88 211.5,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="212.5" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">RailNetwork</text>
 <polygon fill="none" stroke="black" points="210.5,-170.88 210.5,-189.12 283.5,-189.12 283.5,-170.88 210.5,-170.88"/>
+</a>
+</g>
 </g>
 <!-- RailCorridor&#45;&gt;RailNetwork -->
 <!-- RailSection -->
 <g id="node6" class="node">
 <title>RailSection</title>
+<g id="a_node6"><a xlink:href="../classes/RailSection" xlink:title="RailSection">
 <polygon fill="lightgray" stroke="none" points="213.38,-98.88 213.38,-115.12 280.62,-115.12 280.62,-98.88 213.38,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="214.38" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">RailSection</text>
 <polygon fill="none" stroke="black" points="212.38,-97.88 212.38,-116.12 281.62,-116.12 281.62,-97.88 212.38,-97.88"/>
+</a>
+</g>
 </g>
 <!-- RailNetwork&#45;&gt;RailSection -->
 <!-- RailSection&#45;&gt;TrackSegment -->

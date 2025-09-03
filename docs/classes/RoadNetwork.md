@@ -4,6 +4,8 @@ A RoadNetwork is a type of TransportNetwork using a stabilized base designed for
 
 ![RoadNetwork Diagram](../diagrams/RoadNetwork.svg)
 
+<a href="../../diagrams/RoadNetwork.svg">Open interactive RoadNetwork diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |

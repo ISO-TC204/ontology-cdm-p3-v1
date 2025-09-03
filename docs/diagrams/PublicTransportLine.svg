@@ -36,9 +36,12 @@
 <!-- PublicTransportRoute -->
 <g id="node5" class="node">
 <title>PublicTransportRoute</title>
+<g id="a_node5"><a xlink:href="../classes/PublicTransportRoute" xlink:title="PublicTransportRoute">
 <polygon fill="lightgray" stroke="none" points="303,-171.88 303,-188.12 431,-188.12 431,-171.88 303,-171.88"/>
 <text xml:space="preserve" text-anchor="start" x="304" y="-176.72" font-family="Arial" font-weight="bold" font-size="12.00">PublicTransportRoute</text>
 <polygon fill="none" stroke="black" points="302,-170.88 302,-189.12 432,-189.12 432,-170.88 302,-170.88"/>
+</a>
+</g>
 </g>
 <!-- PublicTransportLine&#45;&gt;PublicTransportRoute -->
 <g id="edge8" class="edge">
@@ -79,18 +82,24 @@
 <!-- GroupOfLines -->
 <g id="node4" class="node">
 <title>GroupOfLines</title>
+<g id="a_node4"><a xlink:href="../classes/GroupOfLines" xlink:title="GroupOfLines">
 <polygon fill="lightgray" stroke="none" points="327.88,-244.88 327.88,-261.12 410.12,-261.12 410.12,-244.88 327.88,-244.88"/>
 <text xml:space="preserve" text-anchor="start" x="328.88" y="-249.72" font-family="Arial" font-weight="bold" font-size="12.00">GroupOfLines</text>
 <polygon fill="none" stroke="black" points="326.88,-243.88 326.88,-262.12 411.12,-262.12 411.12,-243.88 326.88,-243.88"/>
+</a>
+</g>
 </g>
 <!-- Invis&#45;&gt;GroupOfLines -->
 <!-- GroupOfLines&#45;&gt;PublicTransportRoute -->
 <!-- PublicTransportSystem -->
 <g id="node6" class="node">
 <title>PublicTransportSystem</title>
+<g id="a_node6"><a xlink:href="../classes/PublicTransportSystem" xlink:title="PublicTransportSystem">
 <polygon fill="lightgray" stroke="none" points="294.88,-98.88 294.88,-115.12 431.12,-115.12 431.12,-98.88 294.88,-98.88"/>
 <text xml:space="preserve" text-anchor="start" x="295.88" y="-103.72" font-family="Arial" font-weight="bold" font-size="12.00">PublicTransportSystem</text>
 <polygon fill="none" stroke="black" points="293.88,-97.88 293.88,-116.12 432.12,-116.12 432.12,-97.88 293.88,-97.88"/>
+</a>
+</g>
 </g>
 <!-- PublicTransportRoute&#45;&gt;PublicTransportSystem -->
 <!-- PublicTransportSystem&#45;&gt;code_Code -->

@@ -36,9 +36,12 @@
 <!-- MicromobilityPathSegment -->
 <g id="node4" class="node">
 <title>MicromobilityPathSegment</title>
+<g id="a_node4"><a xlink:href="../classes/MicromobilityPathSegment" xlink:title="MicromobilityPathSegment">
 <polygon fill="lightgray" stroke="none" points="135.62,-25.88 135.62,-42.12 291.38,-42.12 291.38,-25.88 135.62,-25.88"/>
 <text xml:space="preserve" text-anchor="start" x="136.62" y="-30.73" font-family="Arial" font-weight="bold" font-size="12.00">MicromobilityPathSegment</text>
 <polygon fill="none" stroke="black" points="134.62,-24.88 134.62,-43.12 292.38,-43.12 292.38,-24.88 134.62,-24.88"/>
+</a>
+</g>
 </g>
 <!-- MicromobilityLane&#45;&gt;MicromobilityPathSegment -->
 <g id="edge4" class="edge">

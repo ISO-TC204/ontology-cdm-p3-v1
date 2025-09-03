@@ -4,6 +4,8 @@ A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.
 
 ![RoadLane Diagram](../diagrams/RoadLane.svg)
 
+<a href="../../diagrams/RoadLane.svg">Open interactive RoadLane diagram</a>
+
 ## Formalization
 
 | Property | Value Restriction |
