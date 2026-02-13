@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityNetworkPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service-level concepts for transport - Micromobility network pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the micromobility network pattern of the transport service of the city data model.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified> <!-- Date of this ontology file -->
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityNetworkPattern/r0.0"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkPattern/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+     <!-- https://w3id.org/citydata/part3/v1/MicromobilityLane -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityLane">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/RoadLane"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityPathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityPathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A MicromobilityLane is a type of RoadLane that forms part of a MicromobilityPathSegment.</dcterms:description>
+        <xsd:pattern>MicromobilityNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/MicromobilityLink -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/RoadLink"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityPathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityNetwork"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPath"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPathSection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityPathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.</dcterms:description>
+        <xsd:pattern>MicromobilityNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/MicromobilityNetwork -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityNetwork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/RoadNetwork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPath"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPathSection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A MicromobilityNetwork is a type of RoadNetwork designed for the use of micromobility vehicles, which have more limited performance characteristics than motor vehicles.</dcterms:description>
+        <xsd:pattern>MicromobilityNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/MicromobilityPath -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPath">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/Road"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A MicromobilityPath is a type of Road that is made up of MicromobilityPathLinks.</dcterms:description>
+        <xsd:pattern>MicromobilityNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/MicromobilityPathSection -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPathSection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/RoadSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPathSegment"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLinks and MicromobilityPathSegments for a useful operational purpose (e.g., assigning a speed limit, designating areas of shared use).</dcterms:description>
+        <xsd:pattern>MicromobilityNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/MicromobilityPathSegment -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPathSegment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/RoadSegment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityLane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/MicromobilityPathSection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityLane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A MicromobilityPathSegment is a type of RoadSegment that represents a portion of a MicromobilityLink with common physical characteristics.</dcterms:description>
+        <rdfs:comment>A MicromobilityPathSegment can be defined to be a part of a MicromobilityPathSection, especially when the MicromobilityPathSection does not span an entire MicromobilityLink.</rdfs:comment>
+        <xsd:pattern>MicromobilityNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+</rdf:RDF>

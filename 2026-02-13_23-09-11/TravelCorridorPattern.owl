@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:geo="https://www.opengis.net/ont/geosparql#"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/TravelCorridorPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service-level concepts for transport - Travel corridor pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the service-level concepts for the travel corridor pattern in the city data model.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified> 
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorPattern/r0.0"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+         <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkPattern/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelCorridorObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/TravelCorridorObjectProperty">
+        <skos:definition>Added for organizational purposes, to identify all object properties defined in the Travel Corridor Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/corridorElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/corridorElement">
+        <dcterms:description>An NetworkElement that is considered to be part of the larger transport corridor.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelCorridorThing -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/TravelCorridorThing">
+        <skos:definition>Added for organizational purposes, to identify all classes defined in the Travel Corridor Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSThing"/>
+    </owl:ObjectProperty>
+    
+
+     <!-- https://w3id.org/citydata/part3/v1/TravelCorridor -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelCorridor">
+        <dcterms:description>A TravelCorridor is a type of TravelledWay that is made up of TravelCorridorLinks.</dcterms:description>
+        <skos:note>The extent of a TravelCorridor is defined by the extent of the path that shares the designator assigned to the TravelCorridor.</skos:note>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorThing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelCorridorLink -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelCorridorLink">
+        <dcterms:description>A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorridorSegments.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorThing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelCorridorSegment -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelCorridorSegment">
+        <dcterms:description>A TravelCorridorSegment is a type of TravelledWaySegment that logically groups multiple TravelledWaySegments together as being co-located or side-by-side.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorThing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/corridorElement"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+</rdf:RDF>
