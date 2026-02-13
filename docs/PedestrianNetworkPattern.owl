@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:geo="https://www.opengis.net/ont/geosparql#"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/PedestrianNetworkPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service-level concepts for transport - Pedestrian network pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the pedestrian network pattern of the transport service in the city data model.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified> 
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/PedestrianNetworkPattern/r0.0"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkPattern/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/citydata/part3/v1/Footpath -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/Footpath">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A Footpath is a type of TravelledWay that is made up of FootpathLinks.</dcterms:description>
+        <xsd:pattern>PedestrianNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/FootpathLane -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/FootpathLane">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLane"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A FootpathLane is a type of TravelledWayLane that forms part of a FootpathSegment.</dcterms:description>
+        <xsd:pattern>PedestrianNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/FootpathLink -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/FootpathLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/Footpath"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathNetwork"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathSection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A Footpath Link is a type of TravelledWayLink designed for pedestrians.</dcterms:description>
+        <xsd:pattern>PedestrianNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/FootpathNetwork -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/FootpathNetwork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/Footpath"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathSection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A FootpathNetwork is a type of TransportNetwork designed for the use of pedestrians but may be used by others as well.</dcterms:description>
+        <xsd:pattern>PedestrianNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/FootpathSection -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/FootpathSection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A FootpathSection is a type of TravelledWaySection that groups FootpathLinks and FootpathSegments for a useful operational purpose.</dcterms:description>
+        <xsd:pattern>PedestrianNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/FootpathSegment -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/FootpathSegment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/FootpathSection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A FootpathSegment is a type of TravelledWaySegment that represents a portion of a FootpathLink with common physical characteristics.</dcterms:description>
+        <rdfs:comment>A FootpathSegment can be defined to be a part of a FootpathSection, especially when the FootpathSection does not span an entire FootpathLink.</rdfs:comment>
+        <xsd:pattern>PedestrianNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+</rdf:RDF>

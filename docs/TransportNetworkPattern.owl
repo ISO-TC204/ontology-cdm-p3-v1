@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/"
+     xmlns:geo="https://www.opengis.net/ont/geosparql#"
+     xmlns:time="https://www.w3.org/2006/time#">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/TransportNetworkPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service-level concepts for transport - Transport network pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the transport network pattern of the transport service of the city data model.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified> <!-- Date of this ontology file -->
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkPattern/r0.0/"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part2/v1/TransportInfrastructurePattern/"/>
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/Core/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty">
+        <skos:definition>Added for organizational purposes, to identify all object properties defined in the Transport Network Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/allowedDirections -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/allowedDirections">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>A code list indicating the allowed directions for a particular line.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/egress -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/egress">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>An exit link from a node.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/TravelledWayLink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/from -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/from">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>the starting node of a link.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/TransportNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/ingress -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/ingress">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>An entry link to a node.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/TravelledWayLink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/status -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/status">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+        <dcterms:description>The operational status.</dcterms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/timeInterval -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/timeInterval">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>The time interval during which the code applies.</dcterms:description>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#DateTimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/to -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/to">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>The end node of a link.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/TransportNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/travelCorridorSegment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/travelCorridorSegment">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>TravelCorridorSegments to which this TravelledWaySegment is associated.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/TravelCorridorSegment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TransportNetworkDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part3/v1/TransportNetworkDataProperty">
+        <skos:definition>Added for organizational purposes, to identify all data properties defined in the Transport Network Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/designator -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part3/v1/designator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dcterms:description>A name assigned to the object.</dcterms:description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TransportNetworkThing -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TransportNetworkThing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSThing"/>
+        <dcterms:description>The Transport Network Pattern models the core concepts involved in describing a transport network. This includes an identification of both physical and administrative characteristics. The most general class is that of the NetworkElement, which can be further classified as one of several types of NetworkElements.
+        A key feature of this pattern is the formalization of the hasProperPart relationship from a NetworkElement to another NetworkElement. This allows for a representation of networks at multiple levels of detail. For example, at one level, a motorway interchange can be modelled as a single Node. But that node is a NetworkElement that can be defined to consist of an entire TransportNetwork that has a node for each junction within the interchange.</dcterms:description>
+    </owl:Class>
+    
+
+     <!-- https://w3id.org/citydata/part3/v1/Junction -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/Junction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNode"/>
+        <dcterms:description>A Junction is a TransportNode that allows a traveller to connect from one TravelledWayLink to another.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/NetworkElement -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/NetworkElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSThing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/status"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/ScheduledCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/hasProperPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/GenericProperties/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/GenericProperties/hasIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dash:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dash:abstract>
+        <dcterms:description>A NetworkElement represents any element of a transport network. It can be a part of another NetworkElement and can be decomposed into smaller NetworkElements.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/ScheduledCode -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/ScheduledCode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSThing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/timeInterval"/>
+                <owl:allValuesFrom rdf:resource="https://www.w3.org/2006/time#DateTimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/timeInterval"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3.org/2006/time#DateTimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>The operational status of an entity, e.g., open or closed.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TransportNetwork -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TransportNetwork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/hasProperPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TransportNode"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWay"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWaySection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TransportNetwork is a NetworkElement that is a collection of other network elements that jointly represent a network of paths along which entities (e.g., vehicles, pedestrians) of a specified mode can operate.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TransportNode -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TransportNode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/egress"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/ingress"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/egress"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/ingress"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TransportNode is a NetworkElement that represents a node on the transport network that can be used to designate an end to a link or to join links.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelledWay -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelledWay">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/TravelledWay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/hasProperPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/designator"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/designator"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TravelledWay is a type of NetworkElement and transinfras:TravelledWay that represents the curvilinear length of a transport route that is identified by a specific designator.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelledWayLane -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelledWayLane">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TravelledWayLane is a NetworkElement that is a portion of TravelledWaySegment intended to accommodate a single line of moving material entities (e.g., vehicles) along its length.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelledWayLink -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelledWayLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/TravelledWayLink"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/allowedDirections"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/from"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TransportNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/to"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TransportNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/hasProperPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWay"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWaySection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/from"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TransportNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/to"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TransportNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/allowedDirections"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TravelledWayLink is a type of NetworkElement and transinfras:TravelledWayLink. It represents a contiguous length of a TravelledWay between two TransportNodes of operational or managerial significance.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelledWaySection -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelledWaySection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/hasProperPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TravelledWaySection is a type of NetworkElement that represents an aggregation of TravelledWayLinks and TravelledWaySegments that jointly represent a contiguous length of a path that shares the same management and operational strategies (within the scope of interest of the implementation).</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TravelledWaySegment -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TravelledWaySegment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/TravelledWaySegment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/travelCorridorSegment"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/hasProperPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TravelledWaySection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/hasProperPart"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/Mereology/properPartOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TravelledWaySegment is a type of a transinfras:TravelledWaySegment and NetworkElement that represents a contiguous length of a TravelledWayLink characterized by the same physical characteristics.</dcterms:description>
+        <xsd:pattern>TransportNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+</rdf:RDF>

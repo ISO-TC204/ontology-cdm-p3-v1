@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:geo="https://www.opengis.net/ont/geosparql#"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service-level concepts for transport - Transport network pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the service-level concepts for transport in the city data model.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified> <!-- Date of this ontology file -->
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/r0.0"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkPattern/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+     <!-- https://w3id.org/citydata/part3/v1/PublicTransportSystemObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportSystemObjectProperty">
+        <skos:definition>Added for organizational purposes, to identify all object properties defined in the Public Transport System Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/direction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/direction">
+        <dcterms:description>A code representing the direction of operation.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/routePoint -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/routePoint">
+        <dcterms:description>A TransportNode that represents a point of interest along a PublicTransportRoute.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part3/v1/RoutePoint"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/routePointType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/routePointType">
+        <dcterms:description>An indication of the type of route point.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/routePoints -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/routePoints">
+        <dcterms:description>An ordered series of route points along a PublicTransportRoute.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part3/v1/PointOnRoute"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/PublicTransportSystemDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportSystemDataProperty">
+        <skos:definition>Added for organizational purposes, to identify all data properties defined in the Public Transport System Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/index -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part3/v1/index">
+        <dcterms:description>integer value that indicates the order of the item in a list</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/isBorderCrossing -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part3/v1/isBorderCrossing">
+        <dcterms:description>A boolean value that indicates whether the node serves as a border crossing.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/isViaPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part3/v1/isViaPoint">
+        <dcterms:description>A boolean value that indicates whether the node is referenced as a part-way point on a route.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/PublicTransportSystemThing -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportSystemThing">
+        <skos:definition>Added for organizational purposes, to identify classes defined in the Public Transport System Pattern ontology.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSThing"/>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/PublicTransportElement -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportElement">
+        <skos:definition>A PublicTransportElement represents any element of a public transport system. It can be a part of another PublicTransportElement and can be decomposed into smaller PublicTransportElement.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemThing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/InfrastructureElement"/>
+    </owl:Class>
+    
+
+     <!-- https://w3id.org/citydata/part3/v1/GroupOfLines -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/GroupOfLines">
+        <dcterms:description>A GroupOfLines is a logical grouping of PublicTransportLines for any useful purpose.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportLine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportLine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/PointOnRoute -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/PointOnRoute">
+        <dcterms:description>A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/routePointType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/routePoint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/RoutePoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/index"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/PublicTransportLine -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportLine">
+        <dcterms:description>A PublicTransportLine is one or more routes used by public transport vehicles to transport passengers to and from designated locations.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/GroupOfLines"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportRoute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportRoute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/allowedDirections"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/PublicTransportRoute -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportRoute">
+        <dcterms:description>A PublicTransportRoute represents one specific path used by a public transport vehicle to transport passengers to and from designated locations.</dcterms:description>
+        <skos:note>For example, a PublicTransportLine might use an alternate PublicTransportRoute to reach its next stop during periods of congestion.</skos:note>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportLine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportLine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/direction"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/routePoints"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/PointOnRoute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/PublicTransportSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportSystem">
+        <dcterms:description>A PublicTransportSystem provides transport services to members of the public.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/GroupOfLines"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/PublicTransportLine"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part3/v1/RoutePoint -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/RoutePoint">
+        <dcterms:description>A RoutePoint represents a point of interest along a PublicTransportRoute.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/isBorderCrossing"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/isViaPoint"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+</rdf:RDF>

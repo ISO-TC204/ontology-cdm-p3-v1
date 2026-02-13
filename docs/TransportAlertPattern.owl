@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+
+     xmlns:activity="https://w3id.org/citydata/part1/v1/Activity/"
+     xmlns:cityunits="https://w3id.org/citydata/part1/v1/CityUnits/"
+     xmlns:code="https://w3id.org/citydata/part2/v1/Code/"
+     xmlns:genProp="https://w3id.org/citydata/part1/v1/GenericProperties/"
+     xmlns:geo="https://www.opengis.net/ont/geosparql#"
+     xmlns:partwhole="https://w3id.org/citydata/part1/v1/Mereology/"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:transinfras="https://w3id.org/citydata/part2/v1/TransInfras/">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/TransportAlertPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service-level concepts - Transport - Transport Alert pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the city-level concepts for the transport alert pattern for the transport domain.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/TransportAlertPattern/r0.0/"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part2/v1/AlertPattern/"/>
+        <owl:imports rdf:resource="https://w3id.org/citydata/part2/v1/TransportNetworkPattern/"/>
+    </owl:Ontology>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TransportAlertObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/TransportAlertObjectProperty">
+        <skos:definition>Added for organizational purposes, to identify all object properties defined in the Transport Alert Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/affects -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part3/v1/affects">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportAlertObjectProperty"/>
+        <dcterms:description>The NetworkElements affected by the effect</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TransportAlertThing -->
+    
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TransportAlertThing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/ITSThing"/>
+        <dcterms:description>The transport alert pattern addresses the need for public agencies to alert groups to unusual transport-related conditions. Most of the features of the transport alert pattern can also be used for other types of alerts (e.g., meteorological events) and as such, its design includes the definition of a generalized alert.</dcterms:description>
+    </owl:Class>
+    
+
+     <!-- https://w3id.org/citydata/part3/v1/TransportAlert -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TransportAlert">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/Alert"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/affects"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/NetworkElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TransportAlert is a type of alert that can be used to notify people of important transport information.</dcterms:description>
+        <xsd:pattern>TransportAlertPattern</xsd:pattern>
+    </owl:Class>
+    
+
+</rdf:RDF>

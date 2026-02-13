@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part2/v1/"
+     xml:base="https://w3id.org/citydata/part2/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/"
+     xmlns:geo="https://www.opengis.net/ont/geosparql#"
+     xmlns:time="https://www.w3.org/2006/time#">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part2/v1/AlertPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 2: City-level concepts - Alert pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the city-level concepts for the alert pattern of the city data model.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part2/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm2</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part2/v1/AlertPattern/r0.0/"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part2/v1/Code/"/>
+</owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part2/v1/AlertObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/AlertObjectProperty">
+        <skos:definition>Added for organizational purposes, to identify all object properties defined in the Alert Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/CityObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/activities -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/activities">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>activities that caused the described object</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part1/v1/Activity"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/beginInstant -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/beginInstant">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>The time that the described object began or is expected to begin. If not specified, the object is assumed to begin at the creation time.</dcterms:description>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/category -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/category">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>A code indicating the category of the described object.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/cause -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/cause">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>A code indicating the cause (e.g., construction, collision, weather) of the described object.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/certainty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/certainty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>The likelihood of the condition occurring.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/creationTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/creationInstant">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>The time that the described object was created.</dcterms:description>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/distribution -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/distribution">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>A code indicating the groups who are authorized to receive the object.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/effect -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/effect">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>A code indicating the effect of the alert (e.g., congestion, delays).</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/endInstant -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/endInstant">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>The time that the described object is expected to end; if no end time is specified, it is assumed to be indeterminate.</dcterms:description>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/expiryInstant -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/expiryInstant">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>The time at which the information for the described object is considered no longer valid unless this value is updated.</dcterms:description>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/issuer -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/issuer">
+        <dcterms:description>Entity that issued the alert</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertDataProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part1/v1/Agent"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/lastUpdateTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/lastUpdateInstant">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>The time at which the alert was last updated.</dcterms:description>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/location -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/location">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>A geographic area associated with the alert.</dcterms:description>
+        <rdfs:range rdf:resource="https://www.opengis.net/ont/geosparql#Geometry"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/recommendation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/recommendation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>A code providing advice on actions to take (e.g., evacuate, shelter in-place).</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/referencedAlert -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/referencedAlert">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>Other alerts associated with this alert.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Alert"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/resources -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/resources">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertDataProperty"/>
+        <dcterms:description>additional files that provide additional information</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part1/v1/Resource"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/severity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/severity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>A code indicating the expected severity of the condition (e.g., life threatening, injury potential).</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/status -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/status">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/TransportNetworkObjectProperty"/>
+        <dcterms:description>The operational status.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/urgency -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/urgency">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
+        <dcterms:description>The urgency associated with distributing the alert.</dcterms:description>
+        <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- https://w3id.org/citydata/part2/v1/AlertDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part2/v1/AlertDataProperty">
+        <skos:definition>Added for organizational purposes, to identify all data properties defined in the Alert Pattern.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/CityDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- https://w3id.org/citydata/part2/v1/headline -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part2/v1/headline">
+        <dcterms:description>short textual caption</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/website -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part2/v1/website">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dcterms:description>URI that identifies a website</dcterms:description>
+    </owl:DatatypeProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/citydata/part2/v1/AlertThing -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part2/v1/AlertThing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/CityThing"/>
+        <skos:definition>Added for organizational purposes, to identify classes defined for the Alert Pattern.</skos:definition>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/citydata/part2/v1/Alert -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part2/v1/Alert">
+        <dcterms:description>An Alert can be used to notify people of important information.</dcterms:description>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/activities"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part1/v1/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/beginInstant"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/category"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/cause"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/certainty"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/creationInstant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/distribution"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/effect"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/endInstant"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/expiryInstant"/>
+                <owl:allValuesFrom rdf:resource="https://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/headline"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/issuer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part1/v1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/lastUpdateInstant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/location"/>
+                <owl:allValuesFrom rdf:resource="https://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/recommendation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/referencedAlert"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Alert"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/resources"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part1/v1/Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/severity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/status"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/urgency"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part2/v1/website"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+</rdf:RDF>

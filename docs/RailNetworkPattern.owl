@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:geo="https://www.opengis.net/ont/geosparql#"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/">
+
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/RailNetworkPattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service-level concepts for transport - Rail network pattern</dcterms:title>
+    	<skos:definition>This ontology specifies the service-level concepts for rail transport in the city data model.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</dcterms:modified> <!-- Date of this ontology file -->
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/RailNetworkPattern/r0.0"/>
+        
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+         <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetworkPattern/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/citydata/part3/v1/RailCorridor -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/RailCorridor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TrackLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RailNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TrackLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A RailCorridor is a type of TravelledWay that is made up of TrackLinks.</dcterms:description>
+        <xsd:pattern>RailNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/RailNetwork -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/RailNetwork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/RailCorridor"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/RailSection"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TrackLink"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TrackLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A RailNetwork is a type of TransportNetwork using rails on a stabilized base.</dcterms:description>
+        <xsd:pattern>RailNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/RailSection -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/RailSection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TrackLink"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TrackSegment"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RailNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackSegments for a useful operational purpose (e.g., assigning a speed limit, designating a traffic control scheme).</dcterms:description>
+        <xsd:pattern>RailNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TrackLink -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TrackLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/TrackSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/RailCorridor"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/RailNetwork"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/RailSection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TrackLink is a type of TravelledWayLink that uses rails on a stabilized base.</dcterms:description>
+        <rdfs:comment>Due to the nature of rail, each TrackLink consists of a single lane, but multiple TrackLinks can exist along the same RailCorridor.</rdfs:comment>
+        <xsd:pattern>RailNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/citydata/part3/v1/TrackSegment -->
+
+    <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/TrackSegment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/RailSection"/>
+                            <rdf:Description rdf:about="https://w3id.org/citydata/part3/v1/TrackLink"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/TrackLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dcterms:description>A TrackSegment is a type of TravelledWaySegment that represents a portion of a TrackLink with common physical characteristics.</dcterms:description>
+        <xsd:pattern>RailNetworkPattern</xsd:pattern>
+    </owl:Class>
+    
+</rdf:RDF>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/citydata/part3/v1/"
+     xml:base="https://w3id.org/citydata/part3/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/">
+    	<!-- Identity -->
+    	<dcterms:title>Information technology - City data model - Part 3: Service level concepts - Transport</dcterms:title>
+    	<skos:definition>This ontology specifies the service-level concepts defined for the transport service of the city data model.</skos:definition>
+        <rdfs:seeAlso rdf:resource="https://www.iso.org/standard/87441.html"/>
+        <dcterms:bibliographicCitation>ISO/IEC 5087-3</dcterms:bibliographicCitation>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part3/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>cdm3</vann:preferredNamespacePrefix>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:creator>Tom Lusco</dcterms:creator>
+        <dcterms:creator>Megan Katsumi</dcterms:creator>
+        <dcterms:creator>Mark Fox</dcterms:creator>
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-12</dcterms:modified> 
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part3/v1/Transport/r0.0"/>
+   
+        <!-- License -->
+        <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/MicromobilityNetworkPattern/"/>
+        <!-- which includes the following cascade of imports:
+            TransportNetworkPattern
+                Core(3)
+                TransportInfrastructurePattern
+                    InfrastructurePattern
+                        ContactPattern
+                            CityPattern
+                                LandUsePattern
+                                    CodePattern
+                                        Core(2)
+                                        OrganizationStructurePattern
+                                            AgentPattern
+                                                GenericPropertiesPattern
+                                                ResourcePattern
+                                                    ActivityPattern
+                                                        ChangePattern
+                                                        SpatialLocPattern
+                                                            MereologyPattern
+                                                    CityUnitsPattern
+                                                        ISO21972
+        -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/PedestrianNetworkPattern/"/>
+        <!-- which includes the following cascade of imports:
+            TransportNetworkPattern (as above)
+        -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/"/>
+        <!-- which includes the following cascade of imports:
+            TransportNetworkPattern (as above)
+        -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/RailNetworkPattern/"/>
+        <!-- which includes the following cascade of imports:
+            TransportNetworkPattern (as above)
+        -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/RoadNetworkPattern/"/>
+        <!-- which includes the following cascade of imports:
+            TransportNetworkPattern (as above)
+        -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/TransportAlertPattern/"/>
+        <!-- which includes the following cascade of imports:
+            TransportNetworkPattern (as above)
+            AlertPattern
+                Core(3)
+                CodePattern (as above)
+        -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part3/v1/TravelCorridorPattern/"/>
+        <!-- which includes the following cascade of imports:
+            TransportNetworkPattern (as above)
+        -->
+    </owl:Ontology>
+
+    
+
+
+</rdf:RDF>
