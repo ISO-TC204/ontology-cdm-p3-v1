@@ -37,7 +37,7 @@
         <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
         
         <!-- Imports -->
-        <owl:imports rdf:resource="https://w3id.org/citydata/part2/v1/Code/"/>
+        <owl:imports rdf:resource="https://w3id.org/citydata/part2/v1/CodePattern/"/>
 </owl:Ontology>
     
     <!-- 
@@ -213,7 +213,7 @@
     <!-- https://w3id.org/citydata/part2/v1/status -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/status">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/TransportNetworkObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part2/v1/AlertObjectProperty"/>
         <dcterms:description>The operational status.</dcterms:description>
         <rdfs:range rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
     </owl:ObjectProperty>

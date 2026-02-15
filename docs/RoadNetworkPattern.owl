@@ -213,22 +213,22 @@
     <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/Road">
         <dcterms:description>A Road is a type of TravelledWay and cdm2:Road that is made up of RoadLinks. Roads form a proper part of RoadNetworks.</dcterms:description>
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWay"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/TransInfras/Road"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/Road"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RoadLink"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RoadNetwork"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/RoadLink"/>
             </owl:Restriction>
@@ -255,13 +255,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RoadSegment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/RoadSegment"/>
             </owl:Restriction>
@@ -270,7 +270,7 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/width"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part1/v1/Speed"/>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -281,16 +281,16 @@
     <owl:Class rdf:about="https://w3id.org/citydata/part3/v1/RoadLink">
         <dcterms:description>A RoadLink is a type of TravelledWayLink and cdm2:RoadLink using a stabilized base designed for the movement of vehicles that conform to a specified set of requirements but may be used by others as well.</dcterms:description>
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/TransInfras/RoadLink"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/RoadLink"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RoadSegment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -382,7 +382,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -396,7 +396,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/RoadLink"/>
             </owl:Restriction>
@@ -411,7 +411,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -424,7 +424,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RoadNetwork"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -438,16 +438,16 @@
         <dcterms:description>A RoadSegment is a type of TravelledWaySegment and transinfas:RoadSegment that represents a portion of a RoadLink with common physical characteristics.</dcterms:description>
         <rdfs:comment>A RoadSegment can be defined to be a part of a RoadSection, for example, when the RoadSection does not span an entire RoadLink.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/TransInfras/RoadSegment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/RoadSegment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/RoadLane"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -460,14 +460,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/RoadLane"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/RoadLink"/>
             </owl:Restriction>
@@ -490,7 +490,7 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/citydata/part3/v1/width"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>

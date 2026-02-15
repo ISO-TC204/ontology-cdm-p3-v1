@@ -56,19 +56,19 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWay"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathNetwork"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
             </owl:Restriction>
@@ -85,13 +85,13 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLane"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
             </owl:Restriction>
@@ -108,13 +108,13 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWayLink"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -128,7 +128,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathSegment"/>
             </owl:Restriction>
@@ -145,7 +145,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TransportNetwork"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -159,7 +159,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
             </owl:Restriction>
@@ -176,7 +176,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -189,7 +189,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathNetwork"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -205,13 +205,13 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part3/v1/TravelledWaySegment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLane"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -224,14 +224,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregationOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasProperPart"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLane"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/aggregateOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/properPartOf"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/citydata/part3/v1/FootpathLink"/>
             </owl:Restriction>

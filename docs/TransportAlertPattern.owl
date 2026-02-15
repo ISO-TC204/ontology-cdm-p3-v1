@@ -10,15 +10,10 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-
-     xmlns:activity="https://w3id.org/citydata/part1/v1/Activity/"
-     xmlns:cityunits="https://w3id.org/citydata/part1/v1/CityUnits/"
-     xmlns:code="https://w3id.org/citydata/part2/v1/Code/"
-     xmlns:genProp="https://w3id.org/citydata/part1/v1/GenericProperties/"
      xmlns:geo="https://www.opengis.net/ont/geosparql#"
-     xmlns:partwhole="https://w3id.org/citydata/part1/v1/Mereology/"
      xmlns:time="https://www.w3.org/2006/time#"
-     xmlns:transinfras="https://w3id.org/citydata/part2/v1/TransInfras/">
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/">
 
     <owl:Ontology rdf:about="https://w3id.org/citydata/part3/v1/TransportAlertPattern/">
     	<!-- Identity -->
