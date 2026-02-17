@@ -3,15 +3,15 @@
     <uri id="User Entered Import Resolution" name="https://w3id.org/citydata/part2/v1/TransportNetworkPattern/" uri="TransportNetworkPattern.owl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/citydata/part2/v1/AlertPattern/" uri="AlertPattern.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="PublicTransportSystemPattern.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="RoadNetworkPattern.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="TravelCorridorPattern.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="5087-3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="RailNetworkPattern.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="Core.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="TransportNetworkPattern.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="MicromobilityNetworkPattern.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="TransportAlertPattern.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1771211918779" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="PedestrianNetworkPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="PublicTransportSystemPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="RoadNetworkPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="TravelCorridorPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="5087-3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="RailNetworkPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="Core.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="TransportNetworkPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="MicromobilityNetworkPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="TransportAlertPattern.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="PedestrianNetworkPattern.owl"/>
     </group>
 </catalog>

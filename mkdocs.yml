@@ -1,64 +1,78 @@
 site_name: City Data Model (CDM) - Transport
 site_description: The ontology for the Transport portion of the City Data Model
-repo_url: https://github.com/k-vaughn/ontology-cdm-p3
+repo_url: https://github.com/ISO-TC204/ontology-cdm-p3-v1
 nav:
 - Home: index.md
-- Micromobility Network Pattern (transportnetwork):
-  - Micromobility Lane: classes/transportnetwork__MicromobilityLane.md
-  - Micromobility Link: classes/transportnetwork__MicromobilityLink.md
-  - Micromobility Network: classes/transportnetwork__MicromobilityNetwork.md
-  - Micromobility Path: classes/transportnetwork__MicromobilityPath.md
-  - Micromobility Path Section: classes/transportnetwork__MicromobilityPathSection.md
-  - Micromobility Path Segment: classes/transportnetwork__MicromobilityPathSegment.md
-- Pedestrian Network Pattern (transportnetwork):
-  - Footpath: classes/transportnetwork__Footpath.md
-  - Footpath Lane: classes/transportnetwork__FootpathLane.md
-  - Footpath Link: classes/transportnetwork__FootpathLink.md
-  - Footpath Network: classes/transportnetwork__FootpathNetwork.md
-  - Footpath Section: classes/transportnetwork__FootpathSection.md
-  - Footpath Segment: classes/transportnetwork__FootpathSegment.md
-- Public Transport System Pattern (transportnetwork):
-  - Group Of Lines: classes/transportnetwork__GroupOfLines.md
-  - Point On Route: classes/transportnetwork__PointOnRoute.md
-  - Public Transport Element: classes/transportnetwork__PublicTransportElement.md
-  - Public Transport Line: classes/transportnetwork__PublicTransportLine.md
-  - Public Transport Route: classes/transportnetwork__PublicTransportRoute.md
-  - Public Transport System: classes/transportnetwork__PublicTransportSystem.md
-  - Route Point: classes/transportnetwork__RoutePoint.md
-- Rail Network Pattern (transportnetwork):
-  - Rail Corridor: classes/transportnetwork__RailCorridor.md
-  - Rail Network: classes/transportnetwork__RailNetwork.md
-  - Rail Section: classes/transportnetwork__RailSection.md
-  - Track Link: classes/transportnetwork__TrackLink.md
-  - Track Segment: classes/transportnetwork__TrackSegment.md
-- Road Network Pattern (transportnetwork):
-  - Road: classes/transportnetwork__Road.md
-  - Road Lane: classes/transportnetwork__RoadLane.md
-  - Road Link: classes/transportnetwork__RoadLink.md
-  - Road Link User Type: classes/transportnetwork__RoadLinkUserType.md
-  - Road Network: classes/transportnetwork__RoadNetwork.md
-  - Road Section: classes/transportnetwork__RoadSection.md
-  - Road Segment: classes/transportnetwork__RoadSegment.md
-- Transport Alert Pattern (transportnetwork):
-  - Alert: classes/transportnetwork__Alert.md
-  - Transport Alert: classes/transportnetwork__TransportAlert.md
-- Transport Network Pattern (transportnetwork):
-  - Junction: classes/transportnetwork__Junction.md
-  - Network Element: classes/transportnetwork__NetworkElement.md
-  - Scheduled Code: classes/transportnetwork__ScheduledCode.md
-  - Transport Network: classes/transportnetwork__TransportNetwork.md
-  - Transport Node: classes/transportnetwork__TransportNode.md
-  - Travelled Way: classes/transportnetwork__TravelledWay.md
-  - Travelled Way Lane: classes/transportnetwork__TravelledWayLane.md
-  - Travelled Way Link: classes/transportnetwork__TravelledWayLink.md
-  - Travelled Way Section: classes/transportnetwork__TravelledWaySection.md
-  - Travelled Way Segment: classes/transportnetwork__TravelledWaySegment.md
-- Travel Corridor Pattern (transportnetwork):
-  - Travel Corridor: classes/transportnetwork__TravelCorridor.md
-  - Travel Corridor Link: classes/transportnetwork__TravelCorridorLink.md
-  - Travel Corridor Segment: classes/transportnetwork__TravelCorridorSegment.md
-- ITS Pattern (transportnetwork): classes/transportnetwork__ITSPattern.md
-site_url: https://github.com/k-vaughn/ontology-cdm-p3
+- 5087-3:
+  - 5087-3: 5087-3.md
+- Core:
+  - Core: Core.md
+- Micromobility Network Pattern:
+  - Micromobility Network Pattern: MicromobilityNetworkPattern.md
+  - Micromobility Lane: MicromobilityLane.md
+  - Micromobility Link: MicromobilityLink.md
+  - Micromobility Network: MicromobilityNetwork.md
+  - Micromobility Path: MicromobilityPath.md
+  - Micromobility Path Section: MicromobilityPathSection.md
+  - Micromobility Path Segment: MicromobilityPathSegment.md
+- Pedestrian Network Pattern:
+  - Pedestrian Network Pattern: PedestrianNetworkPattern.md
+  - Footpath: Footpath.md
+  - Footpath Lane: FootpathLane.md
+  - Footpath Link: FootpathLink.md
+  - Footpath Network: FootpathNetwork.md
+  - Footpath Section: FootpathSection.md
+  - Footpath Segment: FootpathSegment.md
+- Public Transport System Pattern:
+  - Public Transport System Pattern: PublicTransportSystemPattern.md
+  - Group Of Lines: GroupOfLines.md
+  - Point On Route: PointOnRoute.md
+  - Public Transport Element: PublicTransportElement.md
+  - Public Transport Line: PublicTransportLine.md
+  - Public Transport Route: PublicTransportRoute.md
+  - Public Transport System: PublicTransportSystem.md
+  - Public Transport System Thing: PublicTransportSystemThing.md
+  - Route Point: RoutePoint.md
+- Rail Network Pattern:
+  - Rail Network Pattern: RailNetworkPattern.md
+  - Rail Corridor: RailCorridor.md
+  - Rail Network: RailNetwork.md
+  - Rail Section: RailSection.md
+  - Track Link: TrackLink.md
+  - Track Segment: TrackSegment.md
+- Road Network Pattern:
+  - Road Network Pattern: RoadNetworkPattern.md
+  - Road: Road.md
+  - Road Lane: RoadLane.md
+  - Road Link: RoadLink.md
+  - Road Link User Type: RoadLinkUserType.md
+  - Road Network: RoadNetwork.md
+  - Road Section: RoadSection.md
+  - Road Segment: RoadSegment.md
+  - Vehicle Flow Rate: VehicleFlowRate.md
+- Transport Alert Pattern:
+  - Transport Alert Pattern: TransportAlertPattern.md
+  - Transport Alert: TransportAlert.md
+  - Transport Alert Thing: TransportAlertThing.md
+- Transport Network Pattern:
+  - Transport Network Pattern: TransportNetworkPattern.md
+  - Junction: Junction.md
+  - Network Element: NetworkElement.md
+  - Scheduled Code: ScheduledCode.md
+  - Transport Network: TransportNetwork.md
+  - Transport Network Thing: TransportNetworkThing.md
+  - Transport Node: TransportNode.md
+  - Travelled Way: TravelledWay.md
+  - Travelled Way Lane: TravelledWayLane.md
+  - Travelled Way Link: TravelledWayLink.md
+  - Travelled Way Section: TravelledWaySection.md
+  - Travelled Way Segment: TravelledWaySegment.md
+- Travel Corridor Pattern:
+  - Travel Corridor Pattern: TravelCorridorPattern.md
+  - Travel Corridor: TravelCorridor.md
+  - Travel Corridor Link: TravelCorridorLink.md
+  - Travel Corridor Segment: TravelCorridorSegment.md
+site_url: https://isotc204.org/ontology-cdm-p3-v1
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
   rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
