@@ -1,0 +1,21 @@
+// Diagram for TravelCorridorSegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TravelCorridorSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelCorridorSegment</TD></TR></TABLE>> URL="../TravelCorridorSegment.md" margin=0]
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	TravelCorridorThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorThing</TD></TR></TABLE>> margin=0]
+	TravelCorridorSegment -> TravelCorridorThing [arrowhead=onormal style=solid]
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../TravelledWaySegment.md" margin=0]
+	TravelCorridorSegment -> TravelledWaySegment [arrowhead=onormal style=solid]
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../TravelledWaySegment.md" margin=0]
+	TravelCorridorSegment -> TravelledWaySegment [label=" corridorElement 
+ «min 1»  " arrowhead=normal style=solid]
+}
