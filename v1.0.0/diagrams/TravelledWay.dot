@@ -1,0 +1,18 @@
+// Diagram for TravelledWay
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelledWay</TD></TR><HR/><TR><TD ALIGN="LEFT">«only» designator: xsd:string</TD></TR><TR><TD ALIGN="LEFT">«exactly 1» designator: xsd:string</TD></TR></TABLE>> URL="../TravelledWay.md" margin=0]
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	cdm2_TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:TravelledWay</TD></TR></TABLE>> margin=0]
+	TravelledWay -> cdm2_TravelledWay [arrowhead=onormal style=solid]
+	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../NetworkElement.md" margin=0]
+	TravelledWay -> NetworkElement [arrowhead=onormal style=solid]
+}

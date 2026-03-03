@@ -1,0 +1,33 @@
+// Diagram for RoadLink
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RoadLink</TD></TR><HR/><TR><TD ALIGN="LEFT">«exactly 1» maxLanes: xsd:nonNegativeInteger</TD></TR></TABLE>> URL="../RoadLink.md" margin=0]
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		"cdm1_CityUnits/Duration" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:CityUnits/Duration</TD></TR></TABLE>> margin=0]
+		RoadLinkUserType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLinkUserType</TD></TR></TABLE>> URL="../RoadLinkUserType.md" margin=0]
+		VehicleFlowRate [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">VehicleFlowRate</TD></TR></TABLE>> URL="../VehicleFlowRate.md" margin=0]
+	}
+	cdm2_RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:RoadLink</TD></TR></TABLE>> margin=0]
+	RoadLink -> cdm2_RoadLink [arrowhead=onormal style=solid]
+	TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../TravelledWayLink.md" margin=0]
+	RoadLink -> TravelledWayLink [arrowhead=onormal style=solid]
+	RoadLink -> Invis [style=invis]
+	Invis -> "cdm1_CityUnits/Duration" [style=invis]
+	"cdm1_CityUnits/Duration" -> RoadLinkUserType [style=invis]
+	RoadLinkUserType -> VehicleFlowRate [style=invis]
+	RoadLink -> VehicleFlowRate [label=" capacity 
+ «exactly 1»  " arrowhead=normal style=solid]
+	RoadLink -> RoadLinkUserType [label=" primaryUser 
+ «only»  " arrowhead=normal style=solid]
+	RoadLink -> "cdm1_CityUnits/Duration" [label=" travelTime 
+ «max 1»  " arrowhead=normal style=solid]
+	RoadLink -> RoadLinkUserType [label=" usedBy 
+ «only»  " arrowhead=normal style=solid]
+}
