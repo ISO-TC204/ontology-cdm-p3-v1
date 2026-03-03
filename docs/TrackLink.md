@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # TrackLink
 
 A TrackLink is a type of TravelledWayLink that uses rails on a stabilized base.

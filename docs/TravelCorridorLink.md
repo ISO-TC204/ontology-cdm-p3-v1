@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # TravelCorridorLink
 
 A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorridorSegments.

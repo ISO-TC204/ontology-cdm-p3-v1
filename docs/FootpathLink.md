@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # FootpathLink
 
 A Footpath Link is a type of TravelledWayLink designed for pedestrians.

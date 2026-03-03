@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # FootpathNetwork
 
 A FootpathNetwork is a type of TransportNetwork designed for the use of pedestrians but may be used by others as well.

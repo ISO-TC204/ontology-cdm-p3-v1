@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # PublicTransportLine
 
 A PublicTransportLine is one or more routes used by public transport vehicles to transport passengers to and from designated locations.

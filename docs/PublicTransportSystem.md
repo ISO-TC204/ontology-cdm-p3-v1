@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # PublicTransportSystem
 
 A PublicTransportSystem provides transport services to members of the public.

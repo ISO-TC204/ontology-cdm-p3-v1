@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # RoadLane
 
 A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.

@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Transport Alert Pattern
 
 This ontology specifies the city-level concepts for the transport alert pattern for the transport domain.

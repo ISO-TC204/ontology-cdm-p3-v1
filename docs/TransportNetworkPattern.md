@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Transport Network Pattern
 
 This ontology specifies the transport network pattern of the transport service of the city data model.

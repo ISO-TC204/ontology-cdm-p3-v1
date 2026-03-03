@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # ScheduledCode
 
 The operational status of an entity, e.g., open or closed.

@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Core
 
 This ontology specifies the service-level concepts defined for the transport service of the city data model.

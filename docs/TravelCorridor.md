@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # TravelCorridor
 
 A TravelCorridor is a type of TravelledWay that is made up of TravelCorridorLinks.

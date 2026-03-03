@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Travel Corridor Pattern
 
 This ontology specifies the service-level concepts for the travel corridor pattern in the city data model.

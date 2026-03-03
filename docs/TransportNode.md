@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # TransportNode
 
 A TransportNode is a NetworkElement that represents a node on the transport network that can be used to designate an end to a link or to join links.

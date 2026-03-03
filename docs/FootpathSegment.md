@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # FootpathSegment
 
 A FootpathSegment is a type of TravelledWaySegment that represents a portion of a FootpathLink with common physical characteristics.

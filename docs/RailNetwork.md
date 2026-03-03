@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # RailNetwork
 
 A RailNetwork is a type of TransportNetwork using rails on a stabilized base.

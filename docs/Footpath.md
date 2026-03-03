@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Footpath
 
 A Footpath is a type of TravelledWay that is made up of FootpathLinks.

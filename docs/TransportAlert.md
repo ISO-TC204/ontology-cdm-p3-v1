@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # TransportAlert
 
 A TransportAlert is a type of alert that can be used to notify people of important transport information.

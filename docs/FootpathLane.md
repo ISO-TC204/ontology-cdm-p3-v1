@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # FootpathLane
 
 A FootpathLane is a type of TravelledWayLane that forms part of a FootpathSegment.

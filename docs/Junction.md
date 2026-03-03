@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Junction
 
 A Junction is a TransportNode that allows a traveller to connect from one TravelledWayLink to another.

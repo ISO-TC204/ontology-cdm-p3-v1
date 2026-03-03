@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Public Transport System Pattern
 
 This ontology specifies the service-level concepts for transport in the city data model.

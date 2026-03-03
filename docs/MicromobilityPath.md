@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # MicromobilityPath
 
 A MicromobilityPath is a type of Road that is made up of MicromobilityPathLinks.

@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # RailCorridor
 
 A RailCorridor is a type of TravelledWay that is made up of TrackLinks.

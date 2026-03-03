@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # Rail Network Pattern
 
 This ontology specifies the service-level concepts for rail transport in the city data model.

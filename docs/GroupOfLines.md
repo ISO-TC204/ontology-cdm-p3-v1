@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # GroupOfLines
 
 A GroupOfLines is a logical grouping of PublicTransportLines for any useful purpose.

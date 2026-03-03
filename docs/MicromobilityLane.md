@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # MicromobilityLane
 
 A MicromobilityLane is a type of RoadLane that forms part of a MicromobilityPathSegment.

@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # PointOnRoute
 
 A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute.

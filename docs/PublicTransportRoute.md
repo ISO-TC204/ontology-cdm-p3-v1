@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # PublicTransportRoute
 
 A PublicTransportRoute represents one specific path used by a public transport vehicle to transport passengers to and from designated locations.

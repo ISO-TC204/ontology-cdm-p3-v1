@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # RoutePoint
 
 A RoutePoint represents a point of interest along a PublicTransportRoute.

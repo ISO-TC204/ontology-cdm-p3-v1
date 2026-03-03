@@ -1,5 +1,3 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 # TrackSegment
 
 A TrackSegment is a type of TravelledWaySegment that represents a portion of a TrackLink with common physical characteristics.

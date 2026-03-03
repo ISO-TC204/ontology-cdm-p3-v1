@@ -1,7 +1,5 @@
 # Information technology - City data model - Part 3: Service level concepts - Transport
 
-![Draft for review only](/assets/img/draft_for_review.svg)
-
 The Information technology - City data model - Part 3: Service level concepts - Transport ontology consists of the following:
 
 - [5087-3](5087-3.md)
