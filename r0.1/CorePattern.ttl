@@ -1,0 +1,59 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part3/v1/Core/>
+    rdf:type                     owl:Ontology ;
+    dcterms:title                "Information technology - City data model - Part 3: Service level concepts - Core" ;
+    skos:definition              "This ontology specifies the service-level concepts defined for the transport service of the city data model."@en ;
+    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    dcterms:creator              "Kenneth Vaughn" ;
+    dcterms:creator              "Mark Fox" ;
+    dcterms:creator              "Megan Katsumi" ;
+    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified             "2026-02-12"^^xsd:date ;
+    owl:versionInfo              "1.0.0" ;
+    owl:versionIRI               <https://w3id.org/citydata/part3/v1/Core/r0.0> ;
+    owl:imports                  <https://w3id.org/citydata/part2/v1/Core/> .
+
+
+# ================================================
+#                Object Properties
+# ================================================
+
+:ITSObjectProperty
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           cdm1:CdmObjectProperty ;
+    skos:definition              "Added for organizational purposes, to identify all object properties defined for the transport service of the City Data Model."@en .
+
+
+# ================================================
+#                Data Properties
+# ================================================
+
+:ITSDataProperty
+    rdf:type                     owl:DatatypeProperty ;
+    rdfs:subPropertyOf           cdm1:CdmDataProperty ;
+    skos:definition              "Added for organizational purposes, to identify all data properties defined for the transport service of the City Data Model."@en .
+
+
+# ================================================
+#                Classes
+# ================================================
+
+:ITSThing
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              cdm1:CdmThing ;
+    skos:definition              "Added for organizational purposes, to identify all classes defined for the transport service of the City Data Model."@en .

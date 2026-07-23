@@ -1,0 +1,32 @@
+// Diagram for PublicTransportRoute
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		PublicTransportElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportElement</TD></TR></TABLE>> URL="../PublicTransportElement" margin=0]
+	}
+	PublicTransportRoute [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportRoute</TD></TR></TABLE>> URL="../PublicTransportRoute" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
+		PointOnRoute [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointOnRoute</TD></TR></TABLE>> URL="../PointOnRoute" margin=0]
+		PublicTransportLine [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportLine</TD></TR></TABLE>> URL="../PublicTransportLine" margin=0]
+	}
+	PublicTransportRoute -> PublicTransportElement [arrowhead=onormal style=solid]
+	PublicTransportRoute -> Invis [style=invis]
+	Invis -> cdm2_Code [style=invis]
+	cdm2_Code -> PointOnRoute [style=invis]
+	PointOnRoute -> PublicTransportLine [style=invis]
+	PublicTransportLine [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportLine</TD></TR></TABLE>> URL="../PublicTransportLine" margin=0]
+	PublicTransportRoute -> PublicTransportLine [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=solid]
+	PointOnRoute [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointOnRoute</TD></TR></TABLE>> URL="../PointOnRoute" margin=0]
+	PublicTransportRoute -> PointOnRoute [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">routePoints</TD></TR><TR><TD ALIGN="CENTER">2..*</TD></TR></TABLE>> arrowhead=normal style=solid]
+	cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
+	PublicTransportRoute -> cdm2_Code [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">direction</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

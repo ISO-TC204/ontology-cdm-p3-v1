@@ -1,0 +1,113 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part3/v1/TravelCorridorPattern/>
+    rdf:type                     owl:Ontology ;
+    dcterms:title                "Information technology - City data model - Part 3: Service-level concepts for transport - Travel corridor pattern" ;
+    skos:definition              "This ontology specifies the service-level concepts for the travel corridor pattern in the city data model."@en ;
+    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    dcterms:creator              "Kenneth Vaughn" ;
+    dcterms:creator              "Mark Fox" ;
+    dcterms:creator              "Megan Katsumi" ;
+    dcterms:creator              "Tom Lusco" ;
+    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified             "2026-02-13"^^xsd:date ;
+    owl:versionInfo              "1.0.0" ;
+    owl:versionIRI               <https://w3id.org/citydata/part3/v1/TravelCorridorPattern/r0.0> ;
+    owl:imports                  <https://w3id.org/citydata/part3/v1/TransportNetworkPattern/> .
+
+
+# ================================================
+#                Object Properties
+# ================================================
+
+:TravelCorridorObjectProperty
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :ITSObjectProperty ;
+    skos:definition              "Added for organizational purposes, to identify all object properties defined in the Travel Corridor Pattern."@en .
+
+:TravelCorridorThing
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :ITSThing ;
+    skos:definition              "Added for organizational purposes, to identify all classes defined in the Travel Corridor Pattern."@en .
+
+:corridorElement
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TravelCorridorObjectProperty ;
+    rdfs:range                   :TravelledWaySegment ;
+    skos:definition              "An NetworkElement that is considered to be part of the larger transport corridor."@en .
+
+
+# ================================================
+#                Classes
+# ================================================
+
+:TravelCorridor
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelCorridorThing ;
+    rdfs:subClassOf              :TravelledWay ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelCorridorLink
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelCorridorLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "A TravelCorridor is a type of TravelledWay that is made up of TravelCorridorLinks."@en ;
+    skos:note                    "The extent of a TravelCorridor is defined by the extent of the path that shares the designator assigned to the TravelCorridor." .
+
+:TravelCorridorLink
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelCorridorThing ;
+    rdfs:subClassOf              :TravelledWayLink ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelCorridorSegment
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelCorridorSegment ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelCorridor
+    ] ;
+    skos:definition              "A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorridorSegments."@en .
+
+:TravelCorridorSegment
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelCorridorThing ;
+    rdfs:subClassOf              :TravelledWaySegment ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :corridorElement ;
+        owl:onClass                  :TravelledWaySegment ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TravelCorridorLink
+    ] ;
+    skos:definition              "A TravelCorridorSegment is a type of TravelledWaySegment that logically groups multiple TravelledWaySegments together as being co-located or side-by-side."@en .

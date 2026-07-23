@@ -1,0 +1,36 @@
+// Diagram for RoadLinkUserType
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		ITSThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ITSThing</TD></TR></TABLE>> URL="../ITSThing" margin=0]
+	}
+	RoadLinkUserType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLinkUserType</TD></TR></TABLE>> URL="../RoadLinkUserType" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		"cdm1_CityUnits/Duration" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:CityUnits/Duration</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/CityUnits/Duration" margin=0]
+		"cdm1_CityUnits/Speed" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:CityUnits/Speed</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/CityUnits/Speed" margin=0]
+		cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
+		RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../RoadLink" margin=0]
+	}
+	RoadLinkUserType -> ITSThing [arrowhead=onormal style=solid]
+	RoadLinkUserType -> Invis [style=invis]
+	Invis -> "cdm1_CityUnits/Duration" [style=invis]
+	"cdm1_CityUnits/Duration" -> "cdm1_CityUnits/Speed" [style=invis]
+	"cdm1_CityUnits/Speed" -> cdm2_Code [style=invis]
+	cdm2_Code -> RoadLink [style=invis]
+	"cdm1_CityUnits/Duration" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:CityUnits/Duration</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/CityUnits/Duration" margin=0]
+	RoadLinkUserType -> "cdm1_CityUnits/Duration" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">travelTime</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../RoadLink" margin=0]
+	RoadLinkUserType -> RoadLink [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">uses</TD></TR></TABLE>> arrowhead=normal style=solid]
+	"cdm1_CityUnits/Speed" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:CityUnits/Speed</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/CityUnits/Speed" margin=0]
+	RoadLinkUserType -> "cdm1_CityUnits/Speed" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">speedLimit</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
+	RoadLinkUserType -> cdm2_Code [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">userCategory</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

@@ -1,0 +1,54 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix cdm3: <https://w3id.org/citydata/part3/v1/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+:TravelCorridorSHACL
+    rdf:type owl:Ontology ;
+    dcterms:title "City Data Model Part 3 - TravelCorridor Pattern - SHACL constraints" ;
+    skos:definition "SHACL validation shapes for the TravelCorridor Pattern module." ;
+    vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    owl:imports <https://w3id.org/citydata/part3/v1/TravelCorridorPattern/> ;
+    owl:imports :CoreSHACL .
+
+:TravelCorridorShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :TravelCorridor ;
+    sh:property [
+        sh:path cdm1:hasProperPart ;
+        sh:node :MinOneShape ;
+        sh:class :TravelCorridorLink
+    ] .
+
+:TravelCorridorLinkShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :TravelCorridorLink ;
+    sh:property [
+        sh:path cdm1:hasProperPart ;
+        sh:node :MinOneShape ;
+        sh:class :TravelCorridorSegment
+    ] .
+
+:TravelCorridorSegmentShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :TravelCorridorSegment ;
+    sh:property [
+        sh:path cdm1:properPartOf ;
+        sh:class :TravelCorridorLink
+    ] ;
+    sh:property [
+        sh:path :corridorElement ;
+        sh:node :MinOneShape ;
+        sh:class :TravelledWaySegment
+    ] .

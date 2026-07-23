@@ -1,0 +1,24 @@
+// Diagram for MicromobilityLane
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		RoadLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLane</TD></TR></TABLE>> URL="../RoadLane" margin=0]
+	}
+	MicromobilityLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityLane</TD></TR></TABLE>> URL="../MicromobilityLane" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		MicromobilityPathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityPathSegment</TD></TR></TABLE>> URL="../MicromobilityPathSegment" margin=0]
+	}
+	MicromobilityLane -> RoadLane [arrowhead=onormal style=solid]
+	MicromobilityLane -> Invis [style=invis]
+	Invis -> MicromobilityPathSegment [style=invis]
+	MicromobilityPathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityPathSegment</TD></TR></TABLE>> URL="../MicromobilityPathSegment" margin=0]
+	MicromobilityLane -> MicromobilityPathSegment [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=dashed]
+}

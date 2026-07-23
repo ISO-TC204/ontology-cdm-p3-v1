@@ -1,0 +1,68 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part3/v1/TransportAlertPattern/>
+    rdf:type                     owl:Ontology ;
+    dcterms:title                "Information technology - City data model - Part 3: Service-level concepts - Transport - Transport Alert pattern" ;
+    skos:definition              "This ontology specifies the city-level concepts for the transport alert pattern for the transport domain."@en ;
+    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    dcterms:creator              "Kenneth Vaughn" ;
+    dcterms:creator              "Mark Fox" ;
+    dcterms:creator              "Megan Katsumi" ;
+    dcterms:creator              "Tom Lusco" ;
+    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified             "2026-02-13"^^xsd:date ;
+    owl:versionInfo              "1.0.0" ;
+    owl:versionIRI               <https://w3id.org/citydata/part3/v1/TransportAlertPattern/r0.0/> ;
+    owl:imports                  <https://w3id.org/citydata/part2/v1/AlertPattern/> ;
+    owl:imports                  <https://w3id.org/citydata/part3/v1/TransportNetworkPattern/> .
+
+
+# ================================================
+#                Object Properties
+# ================================================
+
+:TransportAlertObjectProperty
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :ITSObjectProperty ;
+    skos:definition              "Added for organizational purposes, to identify all object properties defined in the Transport Alert Pattern."@en .
+
+:affects
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportAlertObjectProperty ;
+    rdfs:range                   :NetworkElement ;
+    skos:definition              "The NetworkElements affected by the effect"@en .
+
+
+# ================================================
+#                Classes
+# ================================================
+
+:TransportAlert
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :Alert ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :affects ;
+        owl:onClass                  :NetworkElement
+    ] ;
+    skos:definition              "A TransportAlert is a type of alert that can be used to notify people of important transport information."@en ;
+    xsd:pattern                  "TransportAlertPattern" .
+
+:TransportAlertThing
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :ITSThing ;
+    skos:definition              "The transport alert pattern addresses the need for public agencies to alert groups to unusual transport-related conditions. Most of the features of the transport alert pattern can also be used for other types of alerts (e.g., meteorological events) and as such, its design includes the definition of a generalized alert."@en .

@@ -1,0 +1,53 @@
+// Diagram for RoadLink
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		cdm2_RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:RoadLink</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/RoadLink" margin=0]
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../TravelledWayLink" margin=0]
+	}
+	RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR><TR><TD ALIGN="LEFT">maxLanes : xsd:nonNegativeInteger [1]</TD></TR></TABLE>> URL="../RoadLink" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		"cdm1_CityUnits/Duration" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:CityUnits/Duration</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/CityUnits/Duration" margin=0]
+		Road [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Road</TD></TR></TABLE>> URL="../Road" margin=0]
+		RoadLinkUserType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLinkUserType</TD></TR></TABLE>> URL="../RoadLinkUserType" margin=0]
+		RoadNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadNetwork</TD></TR></TABLE>> URL="../RoadNetwork" margin=0]
+		RoadSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSection</TD></TR></TABLE>> URL="../RoadSection" margin=0]
+		RoadSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSegment</TD></TR></TABLE>> URL="../RoadSegment" margin=0]
+		VehicleFlowRate [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">VehicleFlowRate</TD></TR></TABLE>> URL="../VehicleFlowRate" margin=0]
+	}
+	RoadLink -> cdm2_RoadLink [arrowhead=onormal style=solid]
+	RoadLink -> TravelledWayLink [arrowhead=onormal style=solid]
+	RoadLink -> Invis [style=invis]
+	Invis -> "cdm1_CityUnits/Duration" [style=invis]
+	"cdm1_CityUnits/Duration" -> Road [style=invis]
+	Road -> RoadLinkUserType [style=invis]
+	RoadLinkUserType -> RoadNetwork [style=invis]
+	RoadNetwork -> RoadSection [style=invis]
+	RoadSection -> RoadSegment [style=invis]
+	RoadSegment -> VehicleFlowRate [style=invis]
+	RoadLinkUserType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLinkUserType</TD></TR></TABLE>> URL="../RoadLinkUserType" margin=0]
+	RoadLink -> RoadLinkUserType [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">usedBy</TD></TR></TABLE>> arrowhead=normal style=solid]
+	RoadSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSegment</TD></TR></TABLE>> URL="../RoadSegment" margin=0]
+	RoadLink -> RoadSegment [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	neeae970be7f1404abb59572b2a28fc09b13 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Road [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Road</TD></TR></TABLE>> URL="../Road" margin=0]
+	neeae970be7f1404abb59572b2a28fc09b13 -> Road [label=member arrowhead=normal style=dotted]
+	RoadNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadNetwork</TD></TR></TABLE>> URL="../RoadNetwork" margin=0]
+	neeae970be7f1404abb59572b2a28fc09b13 -> RoadNetwork [label=member arrowhead=normal style=dotted]
+	RoadSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSection</TD></TR></TABLE>> URL="../RoadSection" margin=0]
+	neeae970be7f1404abb59572b2a28fc09b13 -> RoadSection [label=member arrowhead=normal style=dotted]
+	RoadLink -> neeae970be7f1404abb59572b2a28fc09b13 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	"cdm1_CityUnits/Duration" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:CityUnits/Duration</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/CityUnits/Duration" margin=0]
+	RoadLink -> "cdm1_CityUnits/Duration" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">travelTime</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	RoadLink -> RoadLinkUserType [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">primaryUser</TD></TR></TABLE>> arrowhead=normal style=solid]
+	VehicleFlowRate [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">VehicleFlowRate</TD></TR></TABLE>> URL="../VehicleFlowRate" margin=0]
+	RoadLink -> VehicleFlowRate [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">capacity</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}
