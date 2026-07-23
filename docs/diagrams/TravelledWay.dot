@@ -4,15 +4,27 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		cdm2_TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:TravelledWay</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/TravelledWay" margin=0]
+		NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../NetworkElement" margin=0]
+	}
+	TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWay</TD></TR><TR><TD ALIGN="LEFT">designator : xsd:string [1]</TD></TR></TABLE>> URL="../TravelledWay" margin=0]
+	{
 		rank=max
-		TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelledWay</TD></TR><HR/><TR><TD ALIGN="LEFT">«only» designator: xsd:string</TD></TR><TR><TD ALIGN="LEFT">«exactly 1» designator: xsd:string</TD></TR></TABLE>> URL="../TravelledWay.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TransportNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportNetwork</TD></TR></TABLE>> URL="../TransportNetwork" margin=0]
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../TravelledWayLink" margin=0]
 	}
-	cdm2_TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:TravelledWay</TD></TR></TABLE>> margin=0]
 	TravelledWay -> cdm2_TravelledWay [arrowhead=onormal style=solid]
-	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../NetworkElement.md" margin=0]
 	TravelledWay -> NetworkElement [arrowhead=onormal style=solid]
+	TravelledWay -> Invis [style=invis]
+	Invis -> TransportNetwork [style=invis]
+	TransportNetwork -> TravelledWayLink [style=invis]
+	TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../TravelledWayLink" margin=0]
+	TravelledWay -> TravelledWayLink [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	TransportNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportNetwork</TD></TR></TABLE>> URL="../TransportNetwork" margin=0]
+	TravelledWay -> TransportNetwork [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=dashed]
 }

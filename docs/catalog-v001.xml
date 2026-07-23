@@ -2,6 +2,7 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="User Entered Import Resolution" name="https://w3id.org/citydata/part2/v1/TransportNetworkPattern/" uri="TransportNetworkPattern.owl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/citydata/part2/v1/AlertPattern/" uri="AlertPattern.owl"/>
+    <uri name="http://www.opengis.net/ont/geosparql#" uri="../../ontology-import-geo/docs/geo.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
         <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="PublicTransportSystemPattern.owl"/>
         <uri id="Automatically generated entry, Timestamp=1771213350135" name="duplicate:https://w3id.org/citydata/part3/v1/" uri="RoadNetworkPattern.owl"/>
