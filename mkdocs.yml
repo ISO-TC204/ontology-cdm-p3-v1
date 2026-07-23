@@ -2,76 +2,134 @@ site_name: City Data Model (CDM) - Transport
 site_description: The ontology for the Transport portion of the City Data Model
 repo_url: https://github.com/ISO-TC204/ontology-cdm-p3-v1
 nav:
-- Home: index.md
-- 5087-3:
-  - 5087-3: 5087-3.md
-- Core:
-  - Core: Core.md
-- Micromobility Network Pattern:
-  - Micromobility Network Pattern: MicromobilityNetworkPattern.md
-  - Micromobility Lane: MicromobilityLane.md
-  - Micromobility Link: MicromobilityLink.md
-  - Micromobility Network: MicromobilityNetwork.md
-  - Micromobility Path: MicromobilityPath.md
-  - Micromobility Path Section: MicromobilityPathSection.md
-  - Micromobility Path Segment: MicromobilityPathSegment.md
-- Pedestrian Network Pattern:
-  - Pedestrian Network Pattern: PedestrianNetworkPattern.md
-  - Footpath: Footpath.md
-  - Footpath Lane: FootpathLane.md
-  - Footpath Link: FootpathLink.md
-  - Footpath Network: FootpathNetwork.md
-  - Footpath Section: FootpathSection.md
-  - Footpath Segment: FootpathSegment.md
-- Public Transport System Pattern:
-  - Public Transport System Pattern: PublicTransportSystemPattern.md
-  - Group Of Lines: GroupOfLines.md
-  - Point On Route: PointOnRoute.md
-  - Public Transport Element: PublicTransportElement.md
-  - Public Transport Line: PublicTransportLine.md
-  - Public Transport Route: PublicTransportRoute.md
-  - Public Transport System: PublicTransportSystem.md
-  - Public Transport System Thing: PublicTransportSystemThing.md
-  - Route Point: RoutePoint.md
-- Rail Network Pattern:
-  - Rail Network Pattern: RailNetworkPattern.md
-  - Rail Corridor: RailCorridor.md
-  - Rail Network: RailNetwork.md
-  - Rail Section: RailSection.md
-  - Track Link: TrackLink.md
-  - Track Segment: TrackSegment.md
-- Road Network Pattern:
-  - Road Network Pattern: RoadNetworkPattern.md
-  - Road: Road.md
-  - Road Lane: RoadLane.md
-  - Road Link: RoadLink.md
-  - Road Link User Type: RoadLinkUserType.md
-  - Road Network: RoadNetwork.md
-  - Road Section: RoadSection.md
-  - Road Segment: RoadSegment.md
-  - Vehicle Flow Rate: VehicleFlowRate.md
-- Transport Alert Pattern:
-  - Transport Alert Pattern: TransportAlertPattern.md
-  - Transport Alert: TransportAlert.md
-  - Transport Alert Thing: TransportAlertThing.md
-- Transport Network Pattern:
-  - Transport Network Pattern: TransportNetworkPattern.md
-  - Junction: Junction.md
-  - Network Element: NetworkElement.md
-  - Scheduled Code: ScheduledCode.md
-  - Transport Network: TransportNetwork.md
-  - Transport Network Thing: TransportNetworkThing.md
-  - Transport Node: TransportNode.md
-  - Travelled Way: TravelledWay.md
-  - Travelled Way Lane: TravelledWayLane.md
-  - Travelled Way Link: TravelledWayLink.md
-  - Travelled Way Section: TravelledWaySection.md
-  - Travelled Way Segment: TravelledWaySegment.md
-- Travel Corridor Pattern:
-  - Travel Corridor Pattern: TravelCorridorPattern.md
-  - Travel Corridor: TravelCorridor.md
-  - Travel Corridor Link: TravelCorridorLink.md
-  - Travel Corridor Segment: TravelCorridorSegment.md
+- TC204 on ISO.org: https://www.iso.org/committee/54706.html
+- TC 204 Home: https://isotc204.org/
+- RITSO Home: https://isotc204.org/ritso/
+- City Data Model (CDM) - Transport:
+  - Home: index.md
+  - Core Pattern:
+    - Core Pattern Overview: classes/CorePattern.md
+    - Properties:
+      - ITSDataProperty: properties/ITSDataProperty.md
+      - ITSObjectProperty: properties/ITSObjectProperty.md
+  - Micromobility Network Pattern:
+    - Micromobility Network Pattern Overview: classes/MicromobilityNetworkPattern.md
+    - Classes:
+      - Micromobility Lane: classes/MicromobilityLane.md
+      - Micromobility Link: classes/MicromobilityLink.md
+      - Micromobility Network: classes/MicromobilityNetwork.md
+      - Micromobility Path: classes/MicromobilityPath.md
+      - Micromobility Path Section: classes/MicromobilityPathSection.md
+      - Micromobility Path Segment: classes/MicromobilityPathSegment.md
+  - Pedestrian Network Pattern:
+    - Pedestrian Network Pattern Overview: classes/PedestrianNetworkPattern.md
+    - Classes:
+      - Footpath: classes/Footpath.md
+      - Footpath Lane: classes/FootpathLane.md
+      - Footpath Link: classes/FootpathLink.md
+      - Footpath Network: classes/FootpathNetwork.md
+      - Footpath Section: classes/FootpathSection.md
+      - Footpath Segment: classes/FootpathSegment.md
+  - Public Transport System Pattern:
+    - Public Transport System Pattern Overview: classes/PublicTransportSystemPattern.md
+    - Classes:
+      - Group Of Lines: classes/GroupOfLines.md
+      - Point On Route: classes/PointOnRoute.md
+      - Public Transport Element: classes/PublicTransportElement.md
+      - Public Transport Line: classes/PublicTransportLine.md
+      - Public Transport Route: classes/PublicTransportRoute.md
+      - Public Transport System: classes/PublicTransportSystem.md
+      - Public Transport System Thing: classes/PublicTransportSystemThing.md
+      - Route Point: classes/RoutePoint.md
+    - Properties:
+      - direction: properties/direction.md
+      - index: properties/index.md
+      - isBorderCrossing: properties/isBorderCrossing.md
+      - isViaPoint: properties/isViaPoint.md
+      - PublicTransportSystemDataProperty: properties/PublicTransportSystemDataProperty.md
+      - PublicTransportSystemObjectProperty: properties/PublicTransportSystemObjectProperty.md
+      - routePoint: properties/routePoint.md
+      - routePoints: properties/routePoints.md
+      - routePointType: properties/routePointType.md
+  - Rail Network Pattern:
+    - Rail Network Pattern Overview: classes/RailNetworkPattern.md
+    - Classes:
+      - Rail Corridor: classes/RailCorridor.md
+      - Rail Network: classes/RailNetwork.md
+      - Rail Section: classes/RailSection.md
+      - Track Link: classes/TrackLink.md
+      - Track Segment: classes/TrackSegment.md
+  - Road Network Pattern:
+    - Road Network Pattern Overview: classes/RoadNetworkPattern.md
+    - Classes:
+      - Road: classes/Road.md
+      - Road Lane: classes/RoadLane.md
+      - Road Link: classes/RoadLink.md
+      - Road Link User Type: classes/RoadLinkUserType.md
+      - Road Network: classes/RoadNetwork.md
+      - Road Section: classes/RoadSection.md
+      - Road Segment: classes/RoadSegment.md
+      - Vehicle Flow Rate: classes/VehicleFlowRate.md
+    - Properties:
+      - capacity: properties/capacity.md
+      - maxLanes: properties/maxLanes.md
+      - next: properties/next.md
+      - numLanes: properties/numLanes.md
+      - pavementType: properties/pavementType.md
+      - previous: properties/previous.md
+      - primaryUser: properties/primaryUser.md
+      - RoadNetworkDataProperty: properties/RoadNetworkDataProperty.md
+      - RoadNetworkObjectProperty: properties/RoadNetworkObjectProperty.md
+      - speedLimit: properties/speedLimit.md
+      - travelTime: properties/travelTime.md
+      - usedBy: properties/usedBy.md
+      - userCategory: properties/userCategory.md
+      - uses: properties/uses.md
+      - width: properties/width.md
+  - Transport Alert Pattern:
+    - Transport Alert Pattern Overview: classes/TransportAlertPattern.md
+    - Classes:
+      - Transport Alert: classes/TransportAlert.md
+      - Transport Alert Thing: classes/TransportAlertThing.md
+    - Properties:
+      - affects: properties/affects.md
+      - TransportAlertObjectProperty: properties/TransportAlertObjectProperty.md
+  - Transport Network Pattern:
+    - Transport Network Pattern Overview: classes/TransportNetworkPattern.md
+    - Classes:
+      - Junction: classes/Junction.md
+      - Network Element: classes/NetworkElement.md
+      - Scheduled Code: classes/ScheduledCode.md
+      - Transport Network: classes/TransportNetwork.md
+      - Transport Network Thing: classes/TransportNetworkThing.md
+      - Transport Node: classes/TransportNode.md
+      - Travelled Way: classes/TravelledWay.md
+      - Travelled Way Lane: classes/TravelledWayLane.md
+      - Travelled Way Link: classes/TravelledWayLink.md
+      - Travelled Way Section: classes/TravelledWaySection.md
+      - Travelled Way Segment: classes/TravelledWaySegment.md
+    - Properties:
+      - allowedDirections: properties/allowedDirections.md
+      - designator: properties/designator.md
+      - egress: properties/egress.md
+      - from: properties/from.md
+      - ingress: properties/ingress.md
+      - status: properties/status.md
+      - timeInterval: properties/timeInterval.md
+      - to: properties/to.md
+      - TransportNetworkDataProperty: properties/TransportNetworkDataProperty.md
+      - TransportNetworkObjectProperty: properties/TransportNetworkObjectProperty.md
+      - travelCorridorSegment: properties/travelCorridorSegment.md
+  - Travel Corridor Pattern:
+    - Travel Corridor Pattern Overview: classes/TravelCorridorPattern.md
+    - Classes:
+      - Travel Corridor: classes/TravelCorridor.md
+      - Travel Corridor Link: classes/TravelCorridorLink.md
+      - Travel Corridor Segment: classes/TravelCorridorSegment.md
+    - Properties:
+      - corridorElement: properties/corridorElement.md
+      - TravelCorridorObjectProperty: properties/TravelCorridorObjectProperty.md
+      - TravelCorridorThing: properties/TravelCorridorThing.md
 site_url: https://isotc204.org/ontology-cdm-p3-v1
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
@@ -87,6 +145,8 @@ theme:
   - content.tooltips
   - icons
   - navigation.path
+  - navigation.tabs
+  - navigation.tabs.sticky
   - navigation.top
   icon:
     repo: fontawesome/brands/github

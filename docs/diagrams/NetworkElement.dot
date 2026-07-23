@@ -4,22 +4,28 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		cdm2_InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:InfrastructureElement</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/InfrastructureElement" margin=0]
+		geo_Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">geo:Feature</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/geo/latest/Feature" margin=0]
+		TransportNetworkThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportNetworkThing</TD></TR></TABLE>> URL="../TransportNetworkThing" margin=0]
+	}
+	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR><TR><TD ALIGN="LEFT">redefines cdm1:hasIdentifier : xsd:string [1]</TD></TR></TABLE>> URL="../NetworkElement" margin=0]
+	{
 		rank=max
-		NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">NetworkElement</TD></TR></TABLE>> URL="../NetworkElement.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		ScheduledCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ScheduledCode</TD></TR></TABLE>> URL="../ScheduledCode.md" margin=0]
+		ScheduledCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ScheduledCode</TD></TR></TABLE>> URL="../ScheduledCode" margin=0]
 	}
-	cdm2_InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:InfrastructureElement</TD></TR></TABLE>> margin=0]
 	NetworkElement -> cdm2_InfrastructureElement [arrowhead=onormal style=solid]
-	geo1_Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">geo1:Feature</TD></TR></TABLE>> margin=0]
-	NetworkElement -> geo1_Feature [arrowhead=onormal style=solid]
-	TransportNetworkThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportNetworkThing</TD></TR></TABLE>> URL="../TransportNetworkThing.md" margin=0]
+	NetworkElement -> geo_Feature [arrowhead=onormal style=solid]
 	NetworkElement -> TransportNetworkThing [arrowhead=onormal style=solid]
 	NetworkElement -> Invis [style=invis]
 	Invis -> ScheduledCode [style=invis]
-	NetworkElement -> ScheduledCode [label=" status 
- «only»  " arrowhead=normal style=solid]
+	ScheduledCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ScheduledCode</TD></TR></TABLE>> URL="../ScheduledCode" margin=0]
+	NetworkElement -> ScheduledCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">status</TD></TR></TABLE>> arrowhead=normal style=solid]
+	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../NetworkElement" margin=0]
+	NetworkElement -> NetworkElement [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR></TABLE>> arrowhead=normal style=solid]
+	NetworkElement -> NetworkElement [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR></TABLE>> arrowhead=normal style=dashed]
 }

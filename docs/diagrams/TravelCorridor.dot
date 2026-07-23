@@ -4,15 +4,23 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		TravelCorridorThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorThing</TD></TR></TABLE>> URL="../TravelCorridorThing" margin=0]
+		TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWay</TD></TR></TABLE>> URL="../TravelledWay" margin=0]
+	}
+	TravelCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridor</TD></TR></TABLE>> URL="../TravelCorridor" margin=0]
+	{
 		rank=max
-		TravelCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelCorridor</TD></TR></TABLE>> URL="../TravelCorridor.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TravelCorridorLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorLink</TD></TR></TABLE>> URL="../TravelCorridorLink" margin=0]
 	}
-	TravelCorridorThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorThing</TD></TR></TABLE>> margin=0]
 	TravelCorridor -> TravelCorridorThing [arrowhead=onormal style=solid]
-	TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWay</TD></TR></TABLE>> URL="../TravelledWay.md" margin=0]
 	TravelCorridor -> TravelledWay [arrowhead=onormal style=solid]
+	TravelCorridor -> Invis [style=invis]
+	Invis -> TravelCorridorLink [style=invis]
+	TravelCorridorLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorLink</TD></TR></TABLE>> URL="../TravelCorridorLink" margin=0]
+	TravelCorridor -> TravelCorridorLink [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=dashed]
 }

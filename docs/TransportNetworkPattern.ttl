@@ -1,0 +1,420 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part3/v1/TransportNetworkPattern/>
+    rdf:type                     owl:Ontology ;
+    dcterms:title                "Information technology - City data model - Part 3: Service-level concepts for transport - Transport network pattern" ;
+    skos:definition              "This ontology specifies the transport network pattern of the transport service of the city data model."@en ;
+    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    dcterms:creator              "Kenneth Vaughn" ;
+    dcterms:creator              "Mark Fox" ;
+    dcterms:creator              "Megan Katsumi" ;
+    dcterms:creator              "Tom Lusco" ;
+    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified             "2026-02-13"^^xsd:date ;
+    owl:versionInfo              "1.0.0" ;
+    owl:versionIRI               <https://w3id.org/citydata/part3/v1/TransportNetworkPattern/r0.0/> ;
+    owl:imports                  <https://w3id.org/citydata/part2/v1/TransportInfrastructurePattern/> ;
+    owl:imports                  <https://w3id.org/citydata/part3/v1/Core/> .
+
+
+# ================================================
+#                Object Properties
+# ================================================
+
+:TransportNetworkObjectProperty
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :ITSObjectProperty ;
+    skos:definition              "Added for organizational purposes, to identify all object properties defined in the Transport Network Pattern."@en .
+
+:allowedDirections
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   cdm2:Code ;
+    skos:definition              "A code list indicating the allowed directions for a particular line."@en .
+
+:egress
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   cdm2:TravelledWayLink ;
+    skos:definition              "An exit link from a node."@en .
+
+:from
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   cdm2:TransportNode ;
+    skos:definition              "the starting node of a link."@en .
+
+:ingress
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   cdm2:TravelledWayLink ;
+    skos:definition              "An entry link to a node."@en .
+
+:status
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   cdm2:Code ;
+    skos:definition              "The operational status."@en .
+
+:timeInterval
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   time:DateTimeInterval ;
+    skos:definition              "The time interval during which the code applies."@en .
+
+:to
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   cdm2:TransportNode ;
+    skos:definition              "The end node of a link."@en .
+
+:travelCorridorSegment
+    rdf:type                     owl:ObjectProperty ;
+    rdfs:subPropertyOf           :TransportNetworkObjectProperty ;
+    rdfs:range                   cdm2:TravelCorridorSegment ;
+    skos:definition              "TravelCorridorSegments to which this TravelledWaySegment is associated."@en .
+
+
+# ================================================
+#                Data Properties
+# ================================================
+
+:TransportNetworkDataProperty
+    rdf:type                     owl:DatatypeProperty ;
+    rdfs:subPropertyOf           :ITSDataProperty ;
+    skos:definition              "Added for organizational purposes, to identify all data properties defined in the Transport Network Pattern."@en .
+
+:designator
+    rdf:type                     owl:DatatypeProperty ;
+    rdfs:subPropertyOf           :TransportNetworkDataProperty ;
+    rdfs:range                   xsd:string ;
+    skos:definition              "A name assigned to the object."@en .
+
+
+# ================================================
+#                Classes
+# ================================================
+
+:Junction
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TransportNode ;
+    skos:definition              "A Junction is a TransportNode that allows a traveller to connect from one TravelledWayLink to another."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:NetworkElement
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              geo:Feature ;
+    rdfs:subClassOf              cdm2:InfrastructureElement ;
+    rdfs:subClassOf              :TransportNetworkThing ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasIdentifier ;
+        owl:allValuesFrom            xsd:string
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :status ;
+        owl:onClass                  :ScheduledCode
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :NetworkElement
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :NetworkElement
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasIdentifier ;
+        owl:onDataRange              xsd:string ;
+        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
+    ] ;
+    dash:abstract                true ;
+    skos:definition              "A NetworkElement represents any element of a transport network. It can be a part of another NetworkElement and can be decomposed into smaller NetworkElements."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:ScheduledCode
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              cdm2:Code ;
+    rdfs:subClassOf              :ITSThing ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :timeInterval ;
+        owl:onClass                  time:DateTimeInterval
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :timeInterval ;
+        owl:onClass                  time:DateTimeInterval ;
+        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "The operational status of an entity, e.g., open or closed."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:TransportNetwork
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :NetworkElement ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :TransportNetwork
+                :TransportNode
+                :TravelledWay
+                :TravelledWayLink
+                :TravelledWaySection
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork
+    ] ;
+    skos:definition              "A TransportNetwork is a NetworkElement that is a collection of other network elements that jointly represent a network of paths along which entities (e.g., vehicles, pedestrians) of a specified mode can operate."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:TransportNetworkThing
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :ITSThing ;
+    skos:definition              "The Transport Network Pattern models the core concepts involved in describing a transport network. This includes an identification of both physical and administrative characteristics. The most general class is that of the NetworkElement, which can be further classified as one of several types of NetworkElements. A key feature of this pattern is the formalization of the hasProperPart relationship from a NetworkElement to another NetworkElement. This allows for a representation of networks at multiple levels of detail. For example, at one level, a motorway interchange can be modelled as a single Node. But that node is a NetworkElement that can be defined to consist of an entire TransportNetwork that has a node for each junction within the interchange."@en .
+
+:TransportNode
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :NetworkElement ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :ingress ;
+        owl:onClass                  :TravelledWayLink
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :ingress ;
+        owl:onClass                  :TravelledWayLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :egress ;
+        owl:onClass                  :TravelledWayLink
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :egress ;
+        owl:onClass                  :TravelledWayLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "A TransportNode is a NetworkElement that represents a node on the transport network that can be used to designate an end to a link or to join links."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:TravelledWay
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              cdm2:TravelledWay ;
+    rdfs:subClassOf              :NetworkElement ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelledWayLink
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :designator ;
+        owl:allValuesFrom            xsd:string
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :designator ;
+        owl:onDataRange              xsd:string ;
+        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "A TravelledWay is a type of NetworkElement and transinfras:TravelledWay that represents the curvilinear length of a transport route that is identified by a specific designator."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:TravelledWayLane
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :NetworkElement ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TravelledWaySegment
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TravelledWaySegment ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "A TravelledWayLane is a NetworkElement that is a portion of TravelledWaySegment intended to accommodate a single line of moving material entities (e.g., vehicles) along its length."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:TravelledWayLink
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              cdm2:TravelledWayLink ;
+    rdfs:subClassOf              :NetworkElement ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :allowedDirections ;
+        owl:onClass                  cdm2:Code ;
+        owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :to ;
+        owl:onClass                  :TransportNode ;
+        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :from ;
+        owl:onClass                  :TransportNode ;
+        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :from ;
+        owl:onClass                  :TransportNode
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelledWaySegment
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :TransportNetwork
+                :TravelledWay
+                :TravelledWaySection
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :to ;
+        owl:onClass                  :TransportNode
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :allowedDirections ;
+        owl:onClass                  cdm2:Code
+    ] ;
+    skos:definition              "A TravelledWayLink is a type of NetworkElement and transinfras:TravelledWayLink. It represents a contiguous length of a TravelledWay between two TransportNodes of operational or managerial significance."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:TravelledWaySection
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :NetworkElement ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :TravelledWayLink
+                :TravelledWaySegment
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TransportNetwork
+    ] ;
+    skos:definition              "A TravelledWaySection is a type of NetworkElement that represents an aggregation of TravelledWayLinks and TravelledWaySegments that jointly represent a contiguous length of a path that shares the same management and operational strategies (within the scope of interest of the implementation)."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .
+
+:TravelledWaySegment
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              cdm2:TravelledWaySegment ;
+    rdfs:subClassOf              :NetworkElement ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               :travelCorridorSegment ;
+        owl:onClass                  :TravelCorridorSegment
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelledWayLane ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :TravelledWayLane
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :TravelledWayLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :TravelledWayLink
+                :TravelledWaySection
+            )
+        ]
+    ] ;
+    skos:definition              "A TravelledWaySegment is a type of a transinfras:TravelledWaySegment and NetworkElement that represents a contiguous length of a TravelledWayLink characterized by the same physical characteristics."@en ;
+    xsd:pattern                  "TransportNetworkPattern" .

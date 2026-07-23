@@ -1,0 +1,183 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part3/v1/PedestrianNetworkPattern/>
+    rdf:type                     owl:Ontology ;
+    dcterms:title                "Information technology - City data model - Part 3: Service-level concepts for transport - Pedestrian network pattern" ;
+    skos:definition              "This ontology specifies the pedestrian network pattern of the transport service in the city data model."@en ;
+    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    dcterms:creator              "Kenneth Vaughn" ;
+    dcterms:creator              "Mark Fox" ;
+    dcterms:creator              "Megan Katsumi" ;
+    dcterms:creator              "Tom Lusco" ;
+    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified             "2026-02-13"^^xsd:date ;
+    owl:versionInfo              "1.0.0" ;
+    owl:versionIRI               <https://w3id.org/citydata/part3/v1/PedestrianNetworkPattern/r0.0> ;
+    owl:imports                  <https://w3id.org/citydata/part3/v1/TransportNetworkPattern/> .
+
+
+# ================================================
+#                Classes
+# ================================================
+
+:Footpath
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelledWay ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :FootpathLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :FootpathNetwork
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :FootpathLink
+    ] ;
+    skos:definition              "A Footpath is a type of TravelledWay that is made up of FootpathLinks."@en ;
+    xsd:pattern                  "PedestrianNetworkPattern" .
+
+:FootpathLane
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelledWayLane ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :FootpathSegment
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :FootpathSegment ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "A FootpathLane is a type of TravelledWayLane that forms part of a FootpathSegment."@en ;
+    xsd:pattern                  "PedestrianNetworkPattern" .
+
+:FootpathLink
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelledWayLink ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :FootpathSegment ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :Footpath
+                :FootpathNetwork
+                :FootpathSection
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :FootpathSegment
+    ] ;
+    skos:definition              "A Footpath Link is a type of TravelledWayLink designed for pedestrians."@en ;
+    xsd:pattern                  "PedestrianNetworkPattern" .
+
+:FootpathNetwork
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TransportNetwork ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :Footpath
+                :FootpathLink
+                :FootpathSection
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :FootpathLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "A FootpathNetwork is a type of TransportNetwork designed for the use of pedestrians but may be used by others as well."@en ;
+    xsd:pattern                  "PedestrianNetworkPattern" .
+
+:FootpathSection
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelledWaySection ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :FootpathLink
+                :FootpathSegment
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :FootpathNetwork
+    ] ;
+    skos:definition              "A FootpathSection is a type of TravelledWaySection that groups FootpathLinks and FootpathSegments for a useful operational purpose."@en ;
+    xsd:pattern                  "PedestrianNetworkPattern" .
+
+:FootpathSegment
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :TravelledWaySegment ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :FootpathLink
+                :FootpathSection
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :FootpathLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :FootpathLane ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :FootpathLane
+    ] ;
+    skos:definition              "A FootpathSegment can be defined to be a part of a FootpathSection, especially when the FootpathSection does not span an entire FootpathLink."@en ;
+    xsd:pattern                  "PedestrianNetworkPattern" .

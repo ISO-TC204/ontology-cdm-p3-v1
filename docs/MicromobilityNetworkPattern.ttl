@@ -1,0 +1,183 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part3/v1/MicromobilityNetworkPattern/>
+    rdf:type                     owl:Ontology ;
+    dcterms:title                "Information technology - City data model - Part 3: Service-level concepts for transport - Micromobility network pattern" ;
+    skos:definition              "This ontology specifies the micromobility network pattern of the transport service of the city data model."@en ;
+    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    dcterms:creator              "Kenneth Vaughn" ;
+    dcterms:creator              "Mark Fox" ;
+    dcterms:creator              "Megan Katsumi" ;
+    dcterms:creator              "Tom Lusco" ;
+    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified             "2026-02-13"^^xsd:date ;
+    owl:versionInfo              "1.0.0" ;
+    owl:versionIRI               <https://w3id.org/citydata/part3/v1/MicromobilityNetworkPattern/r0.0> ;
+    owl:imports                  <https://w3id.org/citydata/part3/v1/TransportNetworkPattern/> .
+
+
+# ================================================
+#                Classes
+# ================================================
+
+:MicromobilityLane
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :RoadLane ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :MicromobilityPathSegment ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :MicromobilityPathSegment
+    ] ;
+    skos:definition              "A MicromobilityLane is a type of RoadLane that forms part of a MicromobilityPathSegment."@en ;
+    xsd:pattern                  "MicromobilityNetworkPattern" .
+
+:MicromobilityLink
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :RoadLink ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :MicromobilityNetwork
+                :MicromobilityPath
+                :MicromobilityPathSection
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :MicromobilityPathSegment ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :MicromobilityPathSegment
+    ] ;
+    skos:definition              "A MicromobilityLink is a type of RoadLink designed for micromobility vehicles."@en ;
+    xsd:pattern                  "MicromobilityNetworkPattern" .
+
+:MicromobilityNetwork
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :RoadNetwork ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :MicromobilityLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :MicromobilityLink
+                :MicromobilityPath
+                :MicromobilityPathSection
+            )
+        ]
+    ] ;
+    skos:definition              "A MicromobilityNetwork is a type of RoadNetwork designed for the use of micromobility vehicles, which have more limited performance characteristics than motor vehicles."@en ;
+    xsd:pattern                  "MicromobilityNetworkPattern" .
+
+:MicromobilityPath
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :Road ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :MicromobilityLink
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :MicromobilityLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :MicromobilityNetwork
+    ] ;
+    skos:definition              "A MicromobilityPath is a type of Road that is made up of MicromobilityPathLinks."@en ;
+    xsd:pattern                  "MicromobilityNetworkPattern" .
+
+:MicromobilityPathSection
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :RoadSection ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :MicromobilityNetwork
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :MicromobilityLink
+                :MicromobilityPathSegment
+            )
+        ]
+    ] ;
+    skos:definition              "A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLinks and MicromobilityPathSegments for a useful operational purpose (e.g., assigning a speed limit, designating areas of shared use)."@en ;
+    xsd:pattern                  "MicromobilityNetworkPattern" .
+
+:MicromobilityPathSegment
+    rdf:type                     owl:Class ;
+    rdfs:subClassOf              :RoadSegment ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :MicromobilityLane
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  [
+            rdf:type                     owl:Class ;
+            owl:unionOf                  (
+                :MicromobilityLink
+                :MicromobilityPathSection
+            )
+        ]
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:properPartOf ;
+        owl:onClass                  :MicromobilityLink ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    rdfs:subClassOf              [
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               cdm1:hasProperPart ;
+        owl:onClass                  :MicromobilityLane ;
+        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
+    ] ;
+    skos:definition              "A MicromobilityPathSegment can be defined to be a part of a MicromobilityPathSection, especially when the MicromobilityPathSection does not span an entire MicromobilityLink."@en ;
+    xsd:pattern                  "MicromobilityNetworkPattern" .

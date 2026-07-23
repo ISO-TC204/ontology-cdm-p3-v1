@@ -1,0 +1,107 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix cdm3: <https://w3id.org/citydata/part3/v1/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+:MicromobilityNetworkSHACL
+    rdf:type owl:Ontology ;
+    dcterms:title "City Data Model Part 3 - MicromobilityNetwork Pattern - SHACL constraints" ;
+    skos:definition "SHACL validation shapes for the MicromobilityNetwork Pattern module." ;
+    vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+    vann:preferredNamespacePrefix "cdm3" ;
+    owl:imports <https://w3id.org/citydata/part3/v1/MicromobilityNetworkPattern/> ;
+    owl:imports :CoreSHACL .
+
+:MicromobilityLaneShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :MicromobilityLane ;
+    sh:property [
+        sh:path cdm1:properPartOf ;
+        sh:node :MinOneShape ;
+        sh:class :MicromobilityPathSegment
+    ] .
+
+:MicromobilityLinkShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :MicromobilityLink ;
+    sh:property [
+        sh:path cdm1:hasProperPart ;
+        sh:node :MinOneShape ;
+        sh:class :MicromobilityPathSegment
+    ] ;
+    sh:property [
+        sh:path cdm1:properPartOf ;
+        sh:or (
+            [ sh:class :MicromobilityNetwork ]
+            [ sh:class :MicromobilityPath ]
+            [ sh:class :MicromobilityPathSection ]
+        )
+    ] .
+
+:MicromobilityNetworkShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :MicromobilityNetwork ;
+    sh:property [
+        sh:path cdm1:hasProperPart ;
+        sh:node :MinOneShape ;
+        sh:or (
+            [ sh:class :MicromobilityLink ]
+            [ sh:class :MicromobilityPath ]
+            [ sh:class :MicromobilityPathSection ]
+        )
+    ] .
+
+:MicromobilityPathShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :MicromobilityPath ;
+    sh:property [
+        sh:path cdm1:hasProperPart ;
+        sh:node :MinOneShape ;
+        sh:class :MicromobilityLink
+    ] ;
+    sh:property [
+        sh:path cdm1:properPartOf ;
+        sh:class :MicromobilityNetwork
+    ] .
+
+:MicromobilityPathSectionShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :MicromobilityPathSection ;
+    sh:property [
+        sh:path cdm1:hasProperPart ;
+        sh:or (
+            [ sh:class :MicromobilityLink ]
+            [ sh:class :MicromobilityPathSegment ]
+        )
+    ] ;
+    sh:property [
+        sh:path cdm1:properPartOf ;
+        sh:class :MicromobilityNetwork
+    ] .
+
+:MicromobilityPathSegmentShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass :MicromobilityPathSegment ;
+    sh:property [
+        sh:path cdm1:hasProperPart ;
+        sh:node :MinOneShape ;
+        sh:class :MicromobilityLane
+    ] ;
+    sh:property [
+        sh:path cdm1:properPartOf ;
+        sh:node :MinOneShape ;
+        sh:or (
+            [ sh:class :MicromobilityLink ]
+            [ sh:class :MicromobilityPathSection ]
+        )
+    ] .

@@ -4,13 +4,32 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../TravelledWaySegment" margin=0]
+	}
+	TrackSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackSegment</TD></TR></TABLE>> URL="../TrackSegment" margin=0]
+	{
 		rank=max
-		TrackSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TrackSegment</TD></TR></TABLE>> URL="../TrackSegment.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
+		RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailSection</TD></TR></TABLE>> URL="../RailSection" margin=0]
+		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackLink</TD></TR></TABLE>> URL="../TrackLink" margin=0]
 	}
-	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../TravelledWaySegment.md" margin=0]
 	TrackSegment -> TravelledWaySegment [arrowhead=onormal style=solid]
+	TrackSegment -> Invis [style=invis]
+	Invis -> owl_Thing [style=invis]
+	owl_Thing -> RailSection [style=invis]
+	RailSection -> TrackLink [style=invis]
+	n6cdb34b94ee24737adcb98601c0c2c6bb22 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailSection</TD></TR></TABLE>> URL="../RailSection" margin=0]
+	n6cdb34b94ee24737adcb98601c0c2c6bb22 -> RailSection [label=member arrowhead=normal style=dotted]
+	TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackLink</TD></TR></TABLE>> URL="../TrackLink" margin=0]
+	n6cdb34b94ee24737adcb98601c0c2c6bb22 -> TrackLink [label=member arrowhead=normal style=dotted]
+	TrackSegment -> n6cdb34b94ee24737adcb98601c0c2c6bb22 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	TrackSegment -> TrackLink [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
+	TrackSegment -> owl_Thing [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }
