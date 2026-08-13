@@ -2,7 +2,19 @@
 
 A boolean value that indicates whether the node is referenced as a part-way point on a route.
 
-**Range**: [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean)
+**IRI**: `https://w3id.org/citydata/part3/v1/isViaPoint`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PublicTransportSystemDataProperty](PublicTransportSystemDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ A boolean value that indicates whether the node is referenced as a part-way poin
 |-------|
 | [RoutePoint](../classes/RoutePoint.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/isViaPoint`

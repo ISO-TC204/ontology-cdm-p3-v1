@@ -2,6 +2,8 @@
 
 A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorridorSegments.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TravelCorridorLink`
+
 
 ## Diagram
 
@@ -72,7 +74,7 @@ A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorr
     </g>
     </g>
     <!-- TravelCorridorLink&#45;&gt;TravelCorridor -->
-    <g id="edge7" class="edge">
+    <g id="edge6" class="edge">
     <title>TravelCorridorLink&#45;&gt;TravelCorridor</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M115.58,-305.67C111.13,-268.94 100.51,-181.27 95.03,-136.05"/>
     <polygon fill="black" stroke="black" points="98.52,-135.76 93.84,-126.26 91.57,-136.6 98.52,-135.76"/>
@@ -91,7 +93,7 @@ A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorr
     </g>
     </g>
     <!-- TravelCorridorLink&#45;&gt;TravelCorridorSegment -->
-    <g id="edge6" class="edge">
+    <g id="edge7" class="edge">
     <title>TravelCorridorLink&#45;&gt;TravelCorridorSegment</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M168.91,-311.35C189.59,-304.06 211.41,-292.19 223.62,-273 234.96,-255.19 229.32,-245.83 223.62,-225.5 204.61,-157.64 149.82,-93.46 117.11,-59.69"/>
     <polygon fill="black" stroke="black" points="119.89,-57.52 110.37,-52.86 114.9,-62.43 119.89,-57.52"/>
@@ -116,8 +118,17 @@ A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorr
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TravelCorridor](TravelCorridor.md) |
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TravelCorridorSegment](TravelCorridorSegment.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [TravelCorridorSegment](https://w3id.org/citydata/part3/v1/TravelCorridorSegment) |
-| subClassOf | [TravelCorridorThing](https://w3id.org/citydata/part3/v1/TravelCorridorThing) |
+| subClassOf | [TravelCorridorThing](../properties/TravelCorridorThing.md) |
 | subClassOf | [TravelledWayLink](TravelledWayLink.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Travel Corridor (cdm1)](TravelCorridor.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
+| [Travel Corridor Segment (cdm1)](TravelCorridorSegment.md) | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) |
 

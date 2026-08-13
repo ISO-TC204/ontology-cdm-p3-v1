@@ -2,6 +2,8 @@
 
 A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/RoadLane`
+
 
 ## Diagram
 
@@ -44,7 +46,7 @@ A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.
     <polygon fill="none" stroke="black" points="102.5,-367.16 106,-377.16 109.5,-367.16 102.5,-367.16"/>
     </g>
     <!-- RoadLane&#45;&gt;RoadLane -->
-    <g id="edge7" class="edge">
+    <g id="edge5" class="edge">
     <title>RoadLane&#45;&gt;RoadLane</title>
     <path fill="none" stroke="black" d="M136.08,-326.92C146.1,-326.92 154.12,-325.78 154.12,-323.5 154.12,-322.18 151.44,-321.24 147.25,-320.69"/>
     <polygon fill="black" stroke="black" points="147.77,-317.21 137.59,-320.16 147.38,-324.2 147.77,-317.21"/>
@@ -52,7 +54,7 @@ A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.
     <text xml:space="preserve" text-anchor="start" x="158.12" y="-319.75" font-family="Arial" font-size="11.00">next</text>
     </g>
     <!-- RoadLane&#45;&gt;RoadLane -->
-    <g id="edge8" class="edge">
+    <g id="edge6" class="edge">
     <title>RoadLane&#45;&gt;RoadLane</title>
     <path fill="none" stroke="black" d="M135.86,-329.61C158.42,-331.6 182.38,-329.56 182.38,-323.5 182.38,-318.46 165.79,-316.2 147.23,-316.73"/>
     <polygon fill="black" stroke="black" points="147.15,-313.23 137.37,-317.31 147.56,-320.22 147.15,-313.23"/>
@@ -72,7 +74,7 @@ A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.
     </g>
     </g>
     <!-- RoadLane&#45;&gt;cdm1_Length -->
-    <g id="edge6" class="edge">
+    <g id="edge8" class="edge">
     <title>RoadLane&#45;&gt;cdm1_Length</title>
     <path fill="none" stroke="black" d="M102.16,-305.67C93.75,-268.86 73.65,-180.9 63.34,-135.76"/>
     <polygon fill="black" stroke="black" points="66.8,-135.2 61.16,-126.23 59.98,-136.76 66.8,-135.2"/>
@@ -91,7 +93,7 @@ A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.
     </g>
     </g>
     <!-- RoadLane&#45;&gt;RoadSegment -->
-    <g id="edge5" class="edge">
+    <g id="edge7" class="edge">
     <title>RoadLane&#45;&gt;RoadSegment</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M117.31,-305.91C122.93,-296.67 129.12,-284.69 132,-273 137.06,-252.5 134.21,-246.5 132,-225.5 125.52,-163.82 130.39,-144.64 103,-89 97.91,-78.67 90.4,-68.68 82.92,-60.16"/>
     <polygon fill="black" stroke="black" points="85.63,-57.93 76.27,-52.97 80.49,-62.69 85.63,-57.93"/>
@@ -122,11 +124,22 @@ A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [RoadSegment](RoadSegment.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 [RoadSegment](https://w3id.org/citydata/part3/v1/RoadSegment) |
+| [next](../properties/next.md) | only [RoadLane](RoadLane.md) |
 | [next](../properties/next.md) | only [RoadLane](https://w3id.org/citydata/part3/v1/RoadLane) |
+| [previous](../properties/previous.md) | only [RoadLane](RoadLane.md) |
 | [previous](../properties/previous.md) | only [RoadLane](https://w3id.org/citydata/part3/v1/RoadLane) |
 | [width](../properties/width.md) | exactly 1 |
 | [width](../properties/width.md) | exactly 1 [cdm1:Length](https://w3id.org/citydata/part1/v1/Length) |
 | subClassOf | [TravelledWayLane](TravelledWayLane.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Road Lane](RoadLane.md) | [next](../properties/next.md) |
+| [Road Lane](RoadLane.md) | [previous](../properties/previous.md) |
+| [Road Segment (cdm1)](RoadSegment.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 

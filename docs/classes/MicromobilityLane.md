@@ -2,6 +2,8 @@
 
 A MicromobilityLane is a type of RoadLane that forms part of a MicromobilityPathSegment.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/MicromobilityLane`
+
 
 ## Diagram
 
@@ -80,9 +82,16 @@ A MicromobilityLane is a type of RoadLane that forms part of a MicromobilityPath
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [MicromobilityPathSegment](MicromobilityPathSegment.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 [MicromobilityPathSegment](https://w3id.org/citydata/part3/v1/MicromobilityPathSegment) |
 | subClassOf | [RoadLane](RoadLane.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Micromobility Path Segment (cdm1)](MicromobilityPathSegment.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 
 ## Other annotations
 

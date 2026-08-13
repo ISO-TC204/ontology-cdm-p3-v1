@@ -2,6 +2,8 @@
 
 A RoadLinkUserType represents the unique combination of a RoadLink and a UserType such that speed limits and other characteristics can be defined to apply to specific user types when operating along a particular road link.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/RoadLinkUserType`
+
 
 ## Diagram
 
@@ -56,7 +58,7 @@ A RoadLinkUserType represents the unique combination of a RoadLink and a UserTyp
     </g>
     </g>
     <!-- RoadLinkUserType&#45;&gt;cdm1_CityUnits/Duration -->
-    <g id="edge7" class="edge">
+    <g id="edge10" class="edge">
     <title>RoadLinkUserType&#45;&gt;cdm1_CityUnits/Duration</title>
     <path fill="none" stroke="black" d="M157.64,-457.65C144.25,-449.49 129.89,-438.51 120.5,-425 95.55,-389.11 87.19,-337.97 84.39,-306.44"/>
     <polygon fill="black" stroke="black" points="87.89,-306.22 83.66,-296.51 80.91,-306.74 87.89,-306.22"/>
@@ -94,7 +96,7 @@ A RoadLinkUserType represents the unique combination of a RoadLink and a UserTyp
     </g>
     </g>
     <!-- RoadLinkUserType&#45;&gt;cdm2_Code -->
-    <g id="edge10" class="edge">
+    <g id="edge8" class="edge">
     <title>RoadLinkUserType&#45;&gt;cdm2_Code</title>
     <path fill="none" stroke="black" d="M217.16,-457.74C233.97,-444.35 253,-423.9 253,-400 253,-400 253,-400 253,-179 253,-136.7 200.65,-119.56 160.91,-112.64"/>
     <polygon fill="black" stroke="black" points="161.49,-109.19 151.07,-111.11 160.41,-116.1 161.49,-109.19"/>
@@ -113,7 +115,7 @@ A RoadLinkUserType represents the unique combination of a RoadLink and a UserTyp
     </g>
     </g>
     <!-- RoadLinkUserType&#45;&gt;RoadLink -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>RoadLinkUserType&#45;&gt;RoadLink</title>
     <path fill="none" stroke="black" d="M245.49,-471.55C292.68,-465.72 354,-448.76 354,-400 354,-400 354,-400 354,-106 354,-65.91 226.17,-46.26 159.88,-38.76"/>
     <polygon fill="black" stroke="black" points="160.47,-35.3 150.15,-37.7 159.71,-42.26 160.47,-35.3"/>
@@ -144,6 +146,14 @@ A RoadLinkUserType represents the unique combination of a RoadLink and a UserTyp
 | [travelTime](../properties/travelTime.md) | max 1 [cdm1:CityUnits/Duration](https://w3id.org/citydata/part1/v1/CityUnits/Duration) |
 | [userCategory](../properties/userCategory.md) | exactly 1 |
 | [userCategory](../properties/userCategory.md) | exactly 1 [cdm2:Code](https://w3id.org/citydata/part2/v1/Code) |
+| [uses](../properties/uses.md) | only [RoadLink](RoadLink.md) |
 | [uses](../properties/uses.md) | only [RoadLink](https://w3id.org/citydata/part3/v1/RoadLink) |
 | subClassOf | [ITSThing](ITSThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Road Link](RoadLink.md) | [primaryUser](../properties/primaryUser.md) |
+| [Road Link](RoadLink.md) | [usedBy](../properties/usedBy.md) |
 

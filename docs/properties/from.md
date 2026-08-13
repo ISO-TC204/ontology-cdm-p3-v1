@@ -2,7 +2,19 @@
 
 the starting node of a link.
 
-**Range**: [cdm2:TransportNode](https://w3id.org/citydata/part2/v1/TransportNode)
+**IRI**: `https://w3id.org/citydata/part3/v1/from`
+
+## Range
+
+| Class |
+|-------|
+| [TransportNode](../classes/TransportNode.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TransportNetworkObjectProperty](TransportNetworkObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ the starting node of a link.
 |-------|
 | [TravelledWayLink](../classes/TravelledWayLink.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/from`

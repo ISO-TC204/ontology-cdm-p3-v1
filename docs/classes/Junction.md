@@ -2,6 +2,8 @@
 
 A Junction is a TransportNode that allows a traveller to connect from one TravelledWayLink to another.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/Junction`
+
 
 ## Diagram
 

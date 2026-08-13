@@ -2,6 +2,8 @@
 
 The operational status of an entity, e.g., open or closed.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/ScheduledCode`
+
 
 ## Diagram
 
@@ -95,10 +97,17 @@ The operational status of an entity, e.g., open or closed.
 
 | Property | Constraint |
 |----------|------------|
+| [timeInterval](../properties/timeInterval.md) | only [time:DateTimeInterval](https://w3id.org/citydata/imported/time/DateTimeInterval) |
 | [timeInterval](../properties/timeInterval.md) | exactly 1 |
 | [timeInterval](../properties/timeInterval.md) | exactly 1 [time:DateTimeInterval](http://www.w3.org/2006/time#DateTimeInterval) |
 | subClassOf | [cdm2:Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [ITSThing](ITSThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Network Element](NetworkElement.md) | [status](../properties/status.md) |
 
 ## Other annotations
 

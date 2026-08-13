@@ -25,8 +25,8 @@ digraph {
 	PointOnRoute -> PublicTransportLine [style=invis]
 	PublicTransportLine [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportLine</TD></TR></TABLE>> URL="../PublicTransportLine" margin=0]
 	PublicTransportRoute -> PublicTransportLine [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=solid]
-	PointOnRoute [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointOnRoute</TD></TR></TABLE>> URL="../PointOnRoute" margin=0]
-	PublicTransportRoute -> PointOnRoute [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">routePoints</TD></TR><TR><TD ALIGN="CENTER">2..*</TD></TR></TABLE>> arrowhead=normal style=solid]
 	cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
 	PublicTransportRoute -> cdm2_Code [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">direction</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=solid]
+	PointOnRoute [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointOnRoute</TD></TR></TABLE>> URL="../PointOnRoute" margin=0]
+	PublicTransportRoute -> PointOnRoute [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">routePoints</TD></TR><TR><TD ALIGN="CENTER">2..*</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

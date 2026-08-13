@@ -2,6 +2,8 @@
 
 A TravelledWayLane is a NetworkElement that is a portion of TravelledWaySegment intended to accommodate a single line of moving material entities (e.g., vehicles) along its length.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TravelledWayLane`
+
 
 ## Diagram
 
@@ -88,9 +90,16 @@ A TravelledWayLane is a NetworkElement that is a portion of TravelledWaySegment 
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [TravelledWaySegment](TravelledWaySegment.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 [TravelledWaySegment](https://w3id.org/citydata/part3/v1/TravelledWaySegment) |
 | subClassOf | [NetworkElement](NetworkElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Travelled Way Segment (cdm1)](TravelledWaySegment.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 
 ## Other annotations
 

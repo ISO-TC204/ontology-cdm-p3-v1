@@ -2,7 +2,19 @@
 
 TravelCorridorSegments to which this TravelledWaySegment is associated.
 
-**Range**: [cdm2:TravelCorridorSegment](https://w3id.org/citydata/part2/v1/TravelCorridorSegment)
+**IRI**: `https://w3id.org/citydata/part3/v1/travelCorridorSegment`
+
+## Range
+
+| Class |
+|-------|
+| [TravelCorridorSegment](../classes/TravelCorridorSegment.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TransportNetworkObjectProperty](TransportNetworkObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ TravelCorridorSegments to which this TravelledWaySegment is associated.
 |-------|
 | [TravelledWaySegment](../classes/TravelledWaySegment.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/travelCorridorSegment`

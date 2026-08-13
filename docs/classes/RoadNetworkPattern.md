@@ -4,7 +4,7 @@ This ontology specifies the service-level concepts for road transport in the cit
 
 This pattern imports the following files:
 
-- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern/](https://w3id.org/citydata/part3/v1/TransportNetworkPattern/)
+- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern](https://w3id.org/citydata/part3/v1/TransportNetworkPattern)
 
 This pattern consists of the following classes:
 
@@ -16,6 +16,7 @@ This pattern consists of the following classes:
 - [Road Section](RoadSection.md)
 - [Road Segment](RoadSegment.md)
 - [Vehicle Flow Rate](VehicleFlowRate.md)
+
 This module defines the following properties:
 
 - [capacity](../properties/capacity.md)

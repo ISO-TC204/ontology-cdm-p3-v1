@@ -2,6 +2,8 @@
 
 A RoutePoint represents a point of interest along a PublicTransportRoute.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/RoutePoint`
+
 
 ## Diagram
 

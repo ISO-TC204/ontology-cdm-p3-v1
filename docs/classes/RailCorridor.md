@@ -2,6 +2,8 @@
 
 A RailCorridor is a type of TravelledWay that is made up of TrackLinks.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/RailCorridor`
+
 
 ## Diagram
 
@@ -100,8 +102,10 @@ A RailCorridor is a type of TravelledWay that is made up of TrackLinks.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TrackLink](TrackLink.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [TrackLink](https://w3id.org/citydata/part3/v1/TrackLink) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [RailNetwork](RailNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [RailNetwork](https://w3id.org/citydata/part3/v1/RailNetwork) |
 | subClassOf | [TravelledWay](TravelledWay.md) |
 

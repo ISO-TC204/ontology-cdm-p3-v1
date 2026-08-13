@@ -4,9 +4,12 @@ This ontology specifies the service-level concepts defined for the transport ser
 
 This pattern imports the following files:
 
-- [https://w3id.org/citydata/part2/v1/Core/](https://w3id.org/citydata/part2/v1/Core/)
+- [https://w3id.org/citydata/part2/v1/CorePattern](https://w3id.org/citydata/part2/v1/CorePattern)
 
-This pattern does not contain any classes.
+This pattern consists of the following classes:
+
+- [Its Thing](ITSThing.md)
+
 This module defines the following properties:
 
 - [ITSDataProperty](../properties/ITSDataProperty.md)

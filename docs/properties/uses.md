@@ -2,7 +2,19 @@
 
 The RoadLink a user category is associated with.
 
-**Range**: [cdm2:RoadLink](https://w3id.org/citydata/part2/v1/RoadLink)
+**IRI**: `https://w3id.org/citydata/part3/v1/uses`
+
+## Range
+
+| Class |
+|-------|
+| [cdm2:RoadLink](https://w3id.org/citydata/part2/v1/RoadLink) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [RoadNetworkObjectProperty](RoadNetworkObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ The RoadLink a user category is associated with.
 |-------|
 | [RoadLinkUserType](../classes/RoadLinkUserType.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/uses`

@@ -2,6 +2,8 @@
 
 A GroupOfLines is a logical grouping of PublicTransportLines for any useful purpose.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/GroupOfLines`
+
 
 ## Diagram
 
@@ -99,8 +101,10 @@ A GroupOfLines is a logical grouping of PublicTransportLines for any useful purp
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [PublicTransportLine](PublicTransportLine.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [PublicTransportLine](https://w3id.org/citydata/part3/v1/PublicTransportLine) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [PublicTransportSystem](PublicTransportSystem.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [PublicTransportSystem](https://w3id.org/citydata/part3/v1/PublicTransportSystem) |
 | subClassOf | [PublicTransportElement](PublicTransportElement.md) |
 

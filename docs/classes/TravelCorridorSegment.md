@@ -2,6 +2,8 @@
 
 A TravelCorridorSegment is a type of TravelledWaySegment that logically groups multiple TravelledWaySegments together as being co-located or side-by-side.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TravelCorridorSegment`
+
 
 ## Diagram
 
@@ -60,7 +62,7 @@ A TravelCorridorSegment is a type of TravelledWaySegment that logically groups m
     <polygon fill="none" stroke="black" points="171.55,-280.31 181.75,-283.19 175.57,-274.58 171.55,-280.31"/>
     </g>
     <!-- TravelCorridorSegment&#45;&gt;TravelledWaySegment -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>TravelCorridorSegment:e&#45;&gt;TravelledWaySegment:e</title>
     <path fill="none" stroke="black" d="M151.19,-187C221.49,-187 334.18,-288.92 284.84,-300.86"/>
     <polygon fill="black" stroke="black" points="284.79,-297.35 275.2,-301.85 285.5,-304.31 284.79,-297.35"/>
@@ -81,7 +83,7 @@ A TravelCorridorSegment is a type of TravelledWaySegment that logically groups m
     </g>
     </g>
     <!-- TravelCorridorSegment&#45;&gt;TravelCorridorLink -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>TravelCorridorSegment&#45;&gt;TravelCorridorLink</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M89.37,-169.33C92.74,-149.86 96.66,-116.76 91,-89 89.16,-79.98 85.75,-70.59 82.11,-62.23"/>
     <polygon fill="black" stroke="black" points="85.35,-60.89 77.95,-53.31 79,-63.85 85.35,-60.89"/>
@@ -104,9 +106,17 @@ A TravelCorridorSegment is a type of TravelledWaySegment that logically groups m
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [TravelCorridorLink](TravelCorridorLink.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [TravelCorridorLink](https://w3id.org/citydata/part3/v1/TravelCorridorLink) |
 | [corridorElement](../properties/corridorElement.md) | min 1 |
 | [corridorElement](../properties/corridorElement.md) | min 1 [TravelledWaySegment](https://w3id.org/citydata/part3/v1/TravelledWaySegment) |
-| subClassOf | [TravelCorridorThing](https://w3id.org/citydata/part3/v1/TravelCorridorThing) |
+| subClassOf | [TravelCorridorThing](../properties/TravelCorridorThing.md) |
 | subClassOf | [TravelledWaySegment](TravelledWaySegment.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Travel Corridor Link (cdm1)](TravelCorridorLink.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
+| [Travelled Way Segment](TravelledWaySegment.md) | [travelCorridorSegment](../properties/travelCorridorSegment.md) |
 

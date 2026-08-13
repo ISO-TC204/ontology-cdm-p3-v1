@@ -2,6 +2,8 @@
 
 A Road is a type of TravelledWay and cdm2:Road that is made up of RoadLinks. Roads form a proper part of RoadNetworks.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/Road`
+
 
 ## Diagram
 
@@ -72,7 +74,7 @@ A Road is a type of TravelledWay and cdm2:Road that is made up of RoadLinks. Roa
     </g>
     </g>
     <!-- Road&#45;&gt;RoadLink -->
-    <g id="edge7" class="edge">
+    <g id="edge6" class="edge">
     <title>Road&#45;&gt;RoadLink</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M102.27,-305.6C97.15,-282.58 87.63,-240.12 79,-204 73.51,-181.03 67,-155.05 62.14,-135.91"/>
     <polygon fill="black" stroke="black" points="65.59,-135.26 59.73,-126.43 58.8,-136.99 65.59,-135.26"/>
@@ -92,7 +94,7 @@ A Road is a type of TravelledWay and cdm2:Road that is made up of RoadLinks. Roa
     </g>
     </g>
     <!-- Road&#45;&gt;RoadNetwork -->
-    <g id="edge6" class="edge">
+    <g id="edge7" class="edge">
     <title>Road&#45;&gt;RoadNetwork</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M132.64,-316.32C156.55,-309.2 190.23,-294.93 206,-268.5 220.69,-243.88 216.22,-230.78 206,-204 182.33,-141.99 124.28,-88.31 87.44,-58.92"/>
     <polygon fill="black" stroke="black" points="89.8,-56.31 79.76,-52.91 85.48,-61.83 89.8,-56.31"/>
@@ -122,8 +124,10 @@ A Road is a type of TravelledWay and cdm2:Road that is made up of RoadLinks. Roa
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [RoadLink](RoadLink.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [RoadLink](https://w3id.org/citydata/part3/v1/RoadLink) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [RoadNetwork](RoadNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [RoadNetwork](https://w3id.org/citydata/part3/v1/RoadNetwork) |
 | subClassOf | [cdm2:Road](https://w3id.org/citydata/part2/v1/Road) |
 | subClassOf | [TravelledWay](TravelledWay.md) |

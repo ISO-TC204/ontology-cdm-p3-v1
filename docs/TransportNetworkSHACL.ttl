@@ -1,186 +1,168 @@
 @prefix : <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm3: <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
 
-:TransportNetworkSHACL
-    rdf:type owl:Ontology ;
-    dcterms:title "City Data Model Part 3 - TransportNetwork Pattern - SHACL constraints" ;
-    skos:definition "SHACL validation shapes for the TransportNetwork Pattern module." ;
-    vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
-    vann:preferredNamespacePrefix "cdm3" ;
-    owl:imports <https://w3id.org/citydata/part3/v1/TransportNetworkPattern/> ;
-    owl:imports :CoreSHACL .
+<https://w3id.org/citydata/part3/v1/TransportNetworkSHACL> rdf:type owl:Ontology ;
+                                                            owl:imports :CoreSHACL ,
+                                                                        :TransportNetworkPattern ;
+                                                            dcterms:title "City Data Model Part 3 - TransportNetwork Pattern - SHACL constraints" ;
+                                                            vann:preferredNamespacePrefix "cdm3" ;
+                                                            vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                            skos:definition "SHACL validation shapes for the TransportNetwork Pattern module." .
 
-:NetworkElementShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :NetworkElement ;
-    sh:property [
-        sh:path cdm1:hasIdentifier ;
-        sh:node :ExactlyOneShape ;
-        sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:class :NetworkElement
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:class :NetworkElement
-    ] ;
-    sh:property [
-        sh:path :status ;
-        sh:class :ScheduledCode
-    ] .
+#################################################################
+#    Shapes
+#################################################################
 
-:ScheduledCodeShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :ScheduledCode ;
-    sh:property [
-        sh:path :timeInterval ;
-        sh:node :ExactlyOneShape ;
-        sh:class time:DateTimeInterval
-    ] .
+###  https://w3id.org/citydata/part3/v1/NetworkElementShape
+:NetworkElementShape rdf:type sh:NodeShape ;
+                     sh:property [ sh:datatype xsd:string ;
+                                   sh:node :ExactlyOneShape ;
+                                   sh:path cdm1:hasIdentifier
+                                 ] ,
+                                 [ sh:class :NetworkElement ;
+                                   sh:path cdm1:hasProperPart
+                                 ] ,
+                                 [ sh:class :NetworkElement ;
+                                   sh:path cdm1:properPartOf
+                                 ] ,
+                                 [ sh:class :ScheduledCode ;
+                                   sh:path :status
+                                 ] ;
+                     sh:targetClass :NetworkElement .
 
-:TransportNetworkShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :TransportNetwork ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:or (
-            [ sh:class :TransportNetwork ]
-            [ sh:class :TransportNode ]
-            [ sh:class :TravelledWay ]
-            [ sh:class :TravelledWayLink ]
-            [ sh:class :TravelledWaySection ]
-        )
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:class :TransportNetwork
-    ] .
 
-:TransportNodeShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :TransportNode ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:class :TransportNetwork
-    ] ;
-    sh:property [
-        sh:path :egress ;
-        sh:node :MinOneShape ;
-        sh:class :TravelledWayLink
-    ] ;
-    sh:property [
-        sh:path :ingress ;
-        sh:node :MinOneShape ;
-        sh:class :TravelledWayLink
-    ] .
+###  https://w3id.org/citydata/part3/v1/ScheduledCodeShape
+:ScheduledCodeShape rdf:type sh:NodeShape ;
+                    sh:property [ sh:class time:DateTimeInterval ;
+                                  sh:node :ExactlyOneShape ;
+                                  sh:path :timeInterval
+                                ] ;
+                    sh:targetClass :ScheduledCode .
 
-:TravelledWayShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :TravelledWay ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:class :TravelledWayLink
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:class :TransportNetwork
-    ] ;
-    sh:property [
-        sh:path :designator ;
-        sh:node :ExactlyOneShape ;
-        sh:datatype xsd:string
-    ] .
 
-:TravelledWayLaneShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :TravelledWayLane ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:class :TravelledWaySegment
-    ] .
+###  https://w3id.org/citydata/part3/v1/TransportNetworkShape
+:TransportNetworkShape rdf:type sh:NodeShape ;
+                       sh:property [ sh:class :TransportNetwork ;
+                                     sh:path cdm1:properPartOf
+                                   ] ,
+                                   [ sh:or ( _:neac9b4aabffe4fa3ba8c2f91292082e8b8
+                                       _:neac9b4aabffe4fa3ba8c2f91292082e8b9
+                                       _:neac9b4aabffe4fa3ba8c2f91292082e8b10
+                                       _:neac9b4aabffe4fa3ba8c2f91292082e8b11
+                                       _:neac9b4aabffe4fa3ba8c2f91292082e8b12
+                                     ) ;
+                                     sh:path cdm1:hasProperPart
+                                   ] ;
+                       sh:targetClass :TransportNetwork .
 
-:TravelledWayLinkShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :TravelledWayLink ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:class :TravelledWaySegment
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:or (
-            [ sh:class :TransportNetwork ]
-            [ sh:class :TravelledWay ]
-            [ sh:class :TravelledWaySection ]
-        )
-    ] ;
-    sh:property [
-        sh:path :allowedDirections ;
-        sh:node :MaxOneShape ;
-        sh:class cdm2:Code
-    ] ;
-    sh:property [
-        sh:path :from ;
-        sh:node :ExactlyOneShape ;
-        sh:class :TransportNode
-    ] ;
-    sh:property [
-        sh:path :to ;
-        sh:node :ExactlyOneShape ;
-        sh:class :TransportNode
-    ] .
 
-:TravelledWaySectionShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :TravelledWaySection ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:or (
-            [ sh:class :TravelledWayLink ]
-            [ sh:class :TravelledWaySegment ]
-        )
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:class :TransportNetwork
-    ] .
+###  https://w3id.org/citydata/part3/v1/TransportNodeShape
+:TransportNodeShape rdf:type sh:NodeShape ;
+                    sh:property [ sh:class :TransportNetwork ;
+                                  sh:node :MinOneShape ;
+                                  sh:path cdm1:properPartOf
+                                ] ,
+                                [ sh:class :TravelledWayLink ;
+                                  sh:node :MinOneShape ;
+                                  sh:path :egress
+                                ] ,
+                                [ sh:class :TravelledWayLink ;
+                                  sh:node :MinOneShape ;
+                                  sh:path :ingress
+                                ] ;
+                    sh:targetClass :TransportNode .
 
-:TravelledWaySegmentShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :TravelledWaySegment ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:node :MinOneShape ;
-        sh:class :TravelledWayLane
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:or (
-            [ sh:class :TravelledWayLink ]
-            [ sh:class :TravelledWaySection ]
-        )
-    ] ;
-    sh:property [
-        sh:path :travelCorridorSegment ;
-        sh:class :TravelCorridorSegment
-    ] .
+
+###  https://w3id.org/citydata/part3/v1/TravelledWayLaneShape
+:TravelledWayLaneShape rdf:type sh:NodeShape ;
+                       sh:property [ sh:class :TravelledWaySegment ;
+                                     sh:node :MinOneShape ;
+                                     sh:path cdm1:properPartOf
+                                   ] ;
+                       sh:targetClass :TravelledWayLane .
+
+
+###  https://w3id.org/citydata/part3/v1/TravelledWayLinkShape
+:TravelledWayLinkShape rdf:type sh:NodeShape ;
+                       sh:property [ sh:class :TravelledWaySegment ;
+                                     sh:path cdm1:hasProperPart
+                                   ] ,
+                                   [ sh:node :MinOneShape ;
+                                     sh:or ( _:neac9b4aabffe4fa3ba8c2f91292082e8b24
+                                       _:neac9b4aabffe4fa3ba8c2f91292082e8b25
+                                       _:neac9b4aabffe4fa3ba8c2f91292082e8b26
+                                     ) ;
+                                     sh:path cdm1:properPartOf
+                                   ] ,
+                                   [ sh:class cdm2:Code ;
+                                     sh:node :MaxOneShape ;
+                                     sh:path :allowedDirections
+                                   ] ,
+                                   [ sh:class :TransportNode ;
+                                     sh:node :ExactlyOneShape ;
+                                     sh:path :from
+                                   ] ,
+                                   [ sh:class :TransportNode ;
+                                     sh:node :ExactlyOneShape ;
+                                     sh:path :to
+                                   ] ;
+                       sh:targetClass :TravelledWayLink .
+
+
+###  https://w3id.org/citydata/part3/v1/TravelledWaySectionShape
+:TravelledWaySectionShape rdf:type sh:NodeShape ;
+                          sh:property [ sh:or ( _:neac9b4aabffe4fa3ba8c2f91292082e8b34
+                                          _:neac9b4aabffe4fa3ba8c2f91292082e8b35
+                                        ) ;
+                                        sh:path cdm1:hasProperPart
+                                      ] ,
+                                      [ sh:class :TransportNetwork ;
+                                        sh:node :MinOneShape ;
+                                        sh:path cdm1:properPartOf
+                                      ] ;
+                          sh:targetClass :TravelledWaySection .
+
+
+###  https://w3id.org/citydata/part3/v1/TravelledWaySegmentShape
+:TravelledWaySegmentShape rdf:type sh:NodeShape ;
+                          sh:property [ sh:class :TravelledWayLane ;
+                                        sh:node :MinOneShape ;
+                                        sh:path cdm1:hasProperPart
+                                      ] ,
+                                      [ sh:node :MinOneShape ;
+                                        sh:or ( _:neac9b4aabffe4fa3ba8c2f91292082e8b41
+                                          _:neac9b4aabffe4fa3ba8c2f91292082e8b42
+                                        ) ;
+                                        sh:path cdm1:properPartOf
+                                      ] ,
+                                      [ sh:class :TravelCorridorSegment ;
+                                        sh:path :travelCorridorSegment
+                                      ] ;
+                          sh:targetClass :TravelledWaySegment .
+
+
+###  https://w3id.org/citydata/part3/v1/TravelledWayShape
+:TravelledWayShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:class :TravelledWayLink ;
+                                 sh:path cdm1:hasProperPart
+                               ] ,
+                               [ sh:class :TransportNetwork ;
+                                 sh:node :MinOneShape ;
+                                 sh:path cdm1:properPartOf
+                               ] ,
+                               [ sh:datatype xsd:string ;
+                                 sh:node :ExactlyOneShape ;
+                                 sh:path :designator
+                               ] ;
+                   sh:targetClass :TravelledWay .

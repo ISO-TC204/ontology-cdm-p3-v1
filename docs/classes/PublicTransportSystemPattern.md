@@ -4,7 +4,7 @@ This ontology specifies the service-level concepts for transport in the city dat
 
 This pattern imports the following files:
 
-- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern/](https://w3id.org/citydata/part3/v1/TransportNetworkPattern/)
+- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern](https://w3id.org/citydata/part3/v1/TransportNetworkPattern)
 
 This pattern consists of the following classes:
 
@@ -16,6 +16,7 @@ This pattern consists of the following classes:
 - [Public Transport System](PublicTransportSystem.md)
 - [Public Transport System Thing](PublicTransportSystemThing.md)
 - [Route Point](RoutePoint.md)
+
 This module defines the following properties:
 
 - [direction](../properties/direction.md)

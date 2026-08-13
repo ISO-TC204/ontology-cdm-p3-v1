@@ -2,7 +2,19 @@
 
 A name assigned to the object.
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+**IRI**: `https://w3id.org/citydata/part3/v1/designator`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TransportNetworkDataProperty](TransportNetworkDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ A name assigned to the object.
 |-------|
 | [TravelledWay](../classes/TravelledWay.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/designator`

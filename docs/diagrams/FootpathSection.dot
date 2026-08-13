@@ -7,7 +7,7 @@ digraph {
 		rank=source
 		TravelledWaySection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySection</TD></TR></TABLE>> URL="../TravelledWaySection" margin=0]
 	}
-	FootpathSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSection</TD></TR></TABLE>> URL="../FootpathSection" margin=0]
+	FootpathSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSection</TD></TR><TR><TD ALIGN="LEFT">cdm1:hasProperPart</TD></TR></TABLE>> URL="../FootpathSection" margin=0]
 	{
 		rank=max
 	}
@@ -23,12 +23,12 @@ digraph {
 	Invis -> FootpathLink [style=invis]
 	FootpathLink -> FootpathNetwork [style=invis]
 	FootpathNetwork -> FootpathSegment [style=invis]
-	nc63d9aeea9c24785938b813312b70530b20 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	n66601a8392594191afae18867b22fe37b20 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
 	FootpathLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathLink</TD></TR></TABLE>> URL="../FootpathLink" margin=0]
-	nc63d9aeea9c24785938b813312b70530b20 -> FootpathLink [label=member arrowhead=normal style=dotted]
+	n66601a8392594191afae18867b22fe37b20 -> FootpathLink [label=member arrowhead=normal style=dotted]
 	FootpathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSegment</TD></TR></TABLE>> URL="../FootpathSegment" margin=0]
-	nc63d9aeea9c24785938b813312b70530b20 -> FootpathSegment [label=member arrowhead=normal style=dotted]
-	FootpathSection -> nc63d9aeea9c24785938b813312b70530b20 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	n66601a8392594191afae18867b22fe37b20 -> FootpathSegment [label=member arrowhead=normal style=dotted]
+	FootpathSection -> n66601a8392594191afae18867b22fe37b20 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR></TABLE>> arrowhead=normal style=dashed]
 	FootpathNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathNetwork</TD></TR></TABLE>> URL="../FootpathNetwork" margin=0]
 	FootpathSection -> FootpathNetwork [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR></TABLE>> arrowhead=normal style=dashed]
 }

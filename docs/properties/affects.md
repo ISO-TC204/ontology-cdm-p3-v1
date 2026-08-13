@@ -2,7 +2,19 @@
 
 The NetworkElements affected by the effect
 
-**Range**: [NetworkElement](../classes/NetworkElement.md)
+**IRI**: `https://w3id.org/citydata/part3/v1/affects`
+
+## Range
+
+| Class |
+|-------|
+| [NetworkElement](../classes/NetworkElement.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TransportAlertObjectProperty](TransportAlertObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ The NetworkElements affected by the effect
 |-------|
 | [TransportAlert](../classes/TransportAlert.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/affects`

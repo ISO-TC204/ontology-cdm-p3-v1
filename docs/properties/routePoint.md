@@ -2,7 +2,19 @@
 
 A TransportNode that represents a point of interest along a PublicTransportRoute.
 
-**Range**: [RoutePoint](../classes/RoutePoint.md)
+**IRI**: `https://w3id.org/citydata/part3/v1/routePoint`
+
+## Range
+
+| Class |
+|-------|
+| [RoutePoint](../classes/RoutePoint.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PublicTransportSystemObjectProperty](PublicTransportSystemObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ A TransportNode that represents a point of interest along a PublicTransportRoute
 |-------|
 | [PointOnRoute](../classes/PointOnRoute.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/routePoint`

@@ -1,48 +1,44 @@
 @prefix : <https://w3id.org/citydata/part3/v1/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix schema: <http://schema.org/> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
 
-<https://w3id.org/citydata/part3/v1/>
-    rdf:type                     owl:Ontology ;
-    dcterms:title                "Information technology - City data model - Part 3: Service level concepts - Transport" ;
-    skos:definition              "This ontology specifies the service-level concepts defined for the transport service of the city data model."@en ;
-    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
-    vann:preferredNamespacePrefix "cdm3" ;
-    cdm1:mainModule              "true" ;
-    dcterms:creator              "Kenneth Vaughn" ;
-    dcterms:creator              "Mark Fox" ;
-    dcterms:creator              "Megan Katsumi" ;
-    dcterms:creator              "Tom Lusco" ;
-    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified             "2026-02-12"^^xsd:date ;
-    owl:versionInfo              "1.0.0" ;
-    owl:versionIRI               <https://w3id.org/citydata/part3/v1/Transport/r0.0> ;
-    rdfs:seeAlso                 <https://www.iso.org/standard/87441.html> ;
-    dcterms:bibliographicCitation "ISO/IEC 5087-3" ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/MicromobilityNetworkPattern/> ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/PedestrianNetworkPattern/> ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/> ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/RailNetworkPattern/> ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/RoadNetworkPattern/> ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/TransportAlertPattern/> ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/TravelCorridorPattern/> ;
-    owl:imports                  :CoreSHACL ;
-    owl:imports                  :MicromobilityNetworkSHACL ;
-    owl:imports                  :PedestrianNetworkSHACL ;
-    owl:imports                  :PublicTransportSystemSHACL ;
-    owl:imports                  :RailNetworkSHACL ;
-    owl:imports                  :RoadNetworkSHACL ;
-    owl:imports                  :TransportAlertSHACL ;
-    owl:imports                  :TransportNetworkSHACL ;
-    owl:imports                  :TravelCorridorSHACL .
+<https://w3id.org/citydata/part3/v1/> rdf:type owl:Ontology ;
+                                       owl:imports :CoreSHACL ,
+                                                   :MicromobilityNetworkPattern ,
+                                                   :MicromobilityNetworkSHACL ,
+                                                   :PedestrianNetworkPattern ,
+                                                   :PedestrianNetworkSHACL ,
+                                                   :PublicTransportSystemPattern ,
+                                                   :PublicTransportSystemSHACL ,
+                                                   :RailNetworkPattern ,
+                                                   :RailNetworkSHACL ,
+                                                   :RoadNetworkPattern ,
+                                                   :RoadNetworkSHACL ,
+                                                   :TransportAlertPattern ,
+                                                   :TransportAlertSHACL ,
+                                                   :TransportNetworkSHACL ,
+                                                   :TravelCorridorPattern ,
+                                                   :TravelCorridorSHACL ;
+                                       dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                       dcterms:creator "Kenneth Vaughn" ,
+                                                       "Mark Fox" ,
+                                                       "Megan Katsumi" ,
+                                                       "Tom Lusco" ;
+                                       dcterms:modified "2026-02-12"^^xsd:date ;
+                                       dcterms:title "Information technology - City data model - Part 3: Service level concepts - Transport" ;
+                                       dcterms:bibliographicCitation "ISO/IEC 5087-3" ;
+                                       vann:preferredNamespacePrefix "cdm3" ;
+                                       vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                       rdfs:seeAlso <https://www.iso.org/standard/87441.html> ;
+                                       owl:versionIRI <https://w3id.org/citydata/part3/v1/Transport/r0.0> ;
+                                       owl:versionInfo "1.0.0" ;
+                                       skos:definition "This ontology specifies the service-level concepts defined for the transport service of the city data model."@en ;
+                                       cdm1:mainModule true .

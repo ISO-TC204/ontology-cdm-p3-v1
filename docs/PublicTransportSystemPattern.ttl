@@ -1,247 +1,236 @@
 @prefix : <https://w3id.org/citydata/part3/v1/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix schema: <http://schema.org/> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
 @prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
 
-<https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/>
-    rdf:type                     owl:Ontology ;
-    dcterms:title                "Information technology - City data model - Part 3: Service-level concepts for transport - Transport network pattern" ;
-    skos:definition              "This ontology specifies the service-level concepts for transport in the city data model."@en ;
-    vann:preferredNamespaceUri   "https://w3id.org/citydata/part3/v1/" ;
-    vann:preferredNamespacePrefix "cdm3" ;
-    dcterms:creator              "Kenneth Vaughn" ;
-    dcterms:creator              "Mark Fox" ;
-    dcterms:creator              "Megan Katsumi" ;
-    dcterms:creator              "Tom Lusco" ;
-    dcterms:license              <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified             "2026-02-13"^^xsd:date ;
-    owl:versionInfo              "1.0.0" ;
-    owl:versionIRI               <https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/r0.0> ;
-    owl:imports                  <https://w3id.org/citydata/part3/v1/TransportNetworkPattern/> .
+<https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern> rdf:type owl:Ontology ;
+                                                                   owl:imports :TransportNetworkPattern ;
+                                                                   dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                                   dcterms:creator "Kenneth Vaughn" ,
+                                                                                   "Mark Fox" ,
+                                                                                   "Megan Katsumi" ,
+                                                                                   "Tom Lusco" ;
+                                                                   dcterms:modified "2026-02-13"^^xsd:date ;
+                                                                   dcterms:title "Information technology - City data model - Part 3: Service-level concepts for transport - Transport network pattern" ;
+                                                                   vann:preferredNamespacePrefix "cdm3" ;
+                                                                   vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                                   owl:versionIRI <https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/r0.0> ;
+                                                                   owl:versionInfo "1.0.0" ;
+                                                                   skos:definition "This ontology specifies the service-level concepts for transport in the city data model."@en .
 
+#################################################################
+#    Object Properties
+#################################################################
 
-# ================================================
-#                Object Properties
-# ================================================
-
-:PublicTransportSystemObjectProperty
-    rdf:type                     owl:ObjectProperty ;
-    rdfs:subPropertyOf           :ITSObjectProperty ;
-    skos:definition              "Added for organizational purposes, to identify all object properties defined in the Public Transport System Pattern."@en .
-
-:direction
-    rdf:type                     owl:ObjectProperty ;
-    rdfs:subPropertyOf           :PublicTransportSystemObjectProperty ;
-    rdfs:range                   cdm2:Code ;
-    skos:definition              "A code representing the direction of operation."@en .
-
-:routePoint
-    rdf:type                     owl:ObjectProperty ;
-    rdfs:subPropertyOf           :PublicTransportSystemObjectProperty ;
-    rdfs:range                   :RoutePoint ;
-    skos:definition              "A TransportNode that represents a point of interest along a PublicTransportRoute."@en .
-
-:routePointType
-    rdf:type                     owl:ObjectProperty ;
-    rdfs:subPropertyOf           :PublicTransportSystemObjectProperty ;
-    rdfs:range                   cdm2:Code ;
-    skos:definition              "An indication of the type of route point."@en .
-
-:routePoints
-    rdf:type                     owl:ObjectProperty ;
-    rdfs:subPropertyOf           :PublicTransportSystemObjectProperty ;
-    rdfs:range                   :PointOnRoute ;
-    skos:definition              "An ordered series of route points along a PublicTransportRoute."@en .
+###  https://w3id.org/citydata/part3/v1/PublicTransportSystemObjectProperty
+:PublicTransportSystemObjectProperty rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :ITSObjectProperty ;
+                                     skos:definition "Added for organizational purposes, to identify all object properties defined in the Public Transport System Pattern."@en .
 
 
-# ================================================
-#                Data Properties
-# ================================================
-
-:PublicTransportSystemDataProperty
-    rdf:type                     owl:DatatypeProperty ;
-    rdfs:subPropertyOf           :ITSDataProperty ;
-    skos:definition              "Added for organizational purposes, to identify all data properties defined in the Public Transport System Pattern."@en .
-
-:index
-    rdf:type                     owl:DatatypeProperty ;
-    rdfs:subPropertyOf           :PublicTransportSystemDataProperty ;
-    rdfs:range                   xsd:integer ;
-    skos:definition              "integer value that indicates the order of the item in a list"@en .
-
-:isBorderCrossing
-    rdf:type                     owl:DatatypeProperty ;
-    rdfs:subPropertyOf           :PublicTransportSystemDataProperty ;
-    rdfs:range                   xsd:boolean ;
-    skos:definition              "A boolean value that indicates whether the node serves as a border crossing."@en .
-
-:isViaPoint
-    rdf:type                     owl:DatatypeProperty ;
-    rdfs:subPropertyOf           :PublicTransportSystemDataProperty ;
-    rdfs:range                   xsd:boolean ;
-    skos:definition              "A boolean value that indicates whether the node is referenced as a part-way point on a route."@en .
+###  https://w3id.org/citydata/part3/v1/direction
+:direction rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :PublicTransportSystemObjectProperty ;
+           rdfs:range cdm2:Code ;
+           skos:definition "A code representing the direction of operation."@en .
 
 
-# ================================================
-#                Classes
-# ================================================
+###  https://w3id.org/citydata/part3/v1/routePoint
+:routePoint rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :PublicTransportSystemObjectProperty ;
+            rdfs:range :RoutePoint ;
+            skos:definition "A TransportNode that represents a point of interest along a PublicTransportRoute."@en .
 
-:GroupOfLines
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              :PublicTransportElement ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:hasProperPart ;
-        owl:onClass                  :PublicTransportLine
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:hasProperPart ;
-        owl:onClass                  :PublicTransportLine ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:properPartOf ;
-        owl:onClass                  :PublicTransportSystem
-    ] ;
-    skos:definition              "A GroupOfLines is a logical grouping of PublicTransportLines for any useful purpose."@en .
 
-:PointOnRoute
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              :PublicTransportElement ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :routePoint ;
-        owl:onClass                  :RoutePoint ;
-        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :index ;
-        owl:onDataRange              xsd:integer ;
-        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :routePointType ;
-        owl:onClass                  cdm2:Code
-    ] ;
-    skos:definition              "A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute."@en .
+###  https://w3id.org/citydata/part3/v1/routePointType
+:routePointType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :PublicTransportSystemObjectProperty ;
+                rdfs:range cdm2:Code ;
+                skos:definition "An indication of the type of route point."@en .
 
-:PublicTransportElement
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              cdm2:InfrastructureElement ;
-    rdfs:subClassOf              :PublicTransportSystemThing ;
-    skos:definition              "A PublicTransportElement represents any element of a public transport system. It can be a part of another PublicTransportElement and can be decomposed into smaller PublicTransportElement."@en .
 
-:PublicTransportLine
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              :PublicTransportElement ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:properPartOf ;
-        owl:onClass                  [
-            rdf:type                     owl:Class ;
-            owl:unionOf                  (
-                :GroupOfLines
-                :PublicTransportSystem
-            )
-        ]
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:hasProperPart ;
-        owl:onClass                  :PublicTransportRoute ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:hasProperPart ;
-        owl:onClass                  :PublicTransportRoute
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :allowedDirections ;
-        owl:onClass                  cdm2:Code ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition              "A PublicTransportLine is one or more routes used by public transport vehicles to transport passengers to and from designated locations."@en .
+###  https://w3id.org/citydata/part3/v1/routePoints
+:routePoints rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :PublicTransportSystemObjectProperty ;
+             rdfs:range :PointOnRoute ;
+             skos:definition "An ordered series of route points along a PublicTransportRoute."@en .
 
-:PublicTransportRoute
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              :PublicTransportElement ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:properPartOf ;
-        owl:onClass                  :PublicTransportLine ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :routePoints ;
-        owl:onClass                  :PointOnRoute ;
-        owl:minQualifiedCardinality  "2"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :direction ;
-        owl:onClass                  cdm2:Code ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:properPartOf ;
-        owl:onClass                  :PublicTransportLine
-    ] ;
-    skos:definition              "A PublicTransportRoute represents one specific path used by a public transport vehicle to transport passengers to and from designated locations."@en ;
-    skos:note                    "For example, a PublicTransportLine might use an alternate PublicTransportRoute to reach its next stop during periods of congestion." .
 
-:PublicTransportSystem
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              :PublicTransportElement ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               cdm1:hasProperPart ;
-        owl:onClass                  [
-            rdf:type                     owl:Class ;
-            owl:unionOf                  (
-                :GroupOfLines
-                :PublicTransportLine
-            )
-        ]
-    ] ;
-    skos:definition              "A PublicTransportSystem provides transport services to members of the public."@en .
+#################################################################
+#    Data properties
+#################################################################
 
-:PublicTransportSystemThing
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              :ITSThing ;
-    skos:definition              "Added for organizational purposes, to identify classes defined in the Public Transport System Pattern ontology."@en .
+###  https://w3id.org/citydata/part3/v1/PublicTransportSystemDataProperty
+:PublicTransportSystemDataProperty rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf :ITSDataProperty ;
+                                   skos:definition "Added for organizational purposes, to identify all data properties defined in the Public Transport System Pattern."@en .
 
-:RoutePoint
-    rdf:type                     owl:Class ;
-    rdfs:subClassOf              :PublicTransportElement ;
-    rdfs:subClassOf              :TransportNode ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :isViaPoint ;
-        owl:onDataRange              xsd:boolean ;
-        owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf              [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :isBorderCrossing ;
-        owl:onDataRange              xsd:boolean ;
-        owl:qualifiedCardinality     "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition              "A RoutePoint represents a point of interest along a PublicTransportRoute."@en .
+
+###  https://w3id.org/citydata/part3/v1/index
+:index rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :PublicTransportSystemDataProperty ;
+       rdfs:range xsd:integer ;
+       skos:definition "integer value that indicates the order of the item in a list"@en .
+
+
+###  https://w3id.org/citydata/part3/v1/isBorderCrossing
+:isBorderCrossing rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :PublicTransportSystemDataProperty ;
+                  rdfs:range xsd:boolean ;
+                  skos:definition "A boolean value that indicates whether the node serves as a border crossing."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/isViaPoint
+:isViaPoint rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :PublicTransportSystemDataProperty ;
+            rdfs:range xsd:boolean ;
+            skos:definition "A boolean value that indicates whether the node is referenced as a part-way point on a route."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/GroupOfLines
+:GroupOfLines rdf:type owl:Class ;
+              rdfs:subClassOf :PublicTransportElement ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:hasProperPart ;
+                                owl:allValuesFrom :PublicTransportLine
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:properPartOf ;
+                                owl:allValuesFrom :PublicTransportSystem
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:hasProperPart ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :PublicTransportLine
+                              ] ;
+              skos:definition "A GroupOfLines is a logical grouping of PublicTransportLines for any useful purpose."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/PointOnRoute
+:PointOnRoute rdf:type owl:Class ;
+              rdfs:subClassOf :PublicTransportElement ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :routePointType ;
+                                owl:allValuesFrom cdm2:Code
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :index ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:integer
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :routePoint ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :RoutePoint
+                              ] ;
+              skos:definition "A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/PublicTransportElement
+:PublicTransportElement rdf:type owl:Class ;
+                        rdfs:subClassOf cdm2:InfrastructureElement ,
+                                        :PublicTransportSystemThing ;
+                        skos:definition "A PublicTransportElement represents any element of a public transport system. It can be a part of another PublicTransportElement and can be decomposed into smaller PublicTransportElement."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/PublicTransportLine
+:PublicTransportLine rdf:type owl:Class ;
+                     rdfs:subClassOf :PublicTransportElement ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cdm1:hasProperPart ;
+                                       owl:allValuesFrom :PublicTransportRoute
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cdm1:properPartOf ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                         owl:unionOf ( :GroupOfLines
+                                           :PublicTransportSystem
+                                         )
+                                       ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :allowedDirections ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass cdm2:Code
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cdm1:hasProperPart ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :PublicTransportRoute
+                                     ] ;
+                     skos:definition "A PublicTransportLine is one or more routes used by public transport vehicles to transport passengers to and from designated locations."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/PublicTransportRoute
+:PublicTransportRoute rdf:type owl:Class ;
+                      rdfs:subClassOf :PublicTransportElement ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty cdm1:properPartOf ;
+                                        owl:allValuesFrom :PublicTransportLine
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :direction ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass cdm2:Code
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty cdm1:properPartOf ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :PublicTransportLine
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :routePoints ;
+                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :PointOnRoute
+                                      ] ;
+                      skos:definition "A PublicTransportRoute represents one specific path used by a public transport vehicle to transport passengers to and from designated locations."@en ;
+                      skos:note "For example, a PublicTransportLine might use an alternate PublicTransportRoute to reach its next stop during periods of congestion." .
+
+
+###  https://w3id.org/citydata/part3/v1/PublicTransportSystem
+:PublicTransportSystem rdf:type owl:Class ;
+                       rdfs:subClassOf :PublicTransportElement ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cdm1:hasProperPart ;
+                                         owl:allValuesFrom [ rdf:type owl:Class ;
+                                           owl:unionOf ( :GroupOfLines
+                                             :PublicTransportLine
+                                           )
+                                         ]
+                                       ] ;
+                       skos:definition "A PublicTransportSystem provides transport services to members of the public."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/PublicTransportSystemThing
+:PublicTransportSystemThing rdf:type owl:Class ;
+                            rdfs:subClassOf :ITSThing ;
+                            skos:definition "Added for organizational purposes, to identify classes defined in the Public Transport System Pattern ontology."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/RoutePoint
+:RoutePoint rdf:type owl:Class ;
+            rdfs:subClassOf :PublicTransportElement ,
+                            :TransportNode ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isBorderCrossing ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:boolean
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isViaPoint ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:boolean
+                            ] ;
+            skos:definition "A RoutePoint represents a point of interest along a PublicTransportRoute."@en .

@@ -25,9 +25,10 @@
 <g id="node2" class="node">
 <title>PublicTransportLine</title>
 <g id="a_node2"><a xlink:href="../PublicTransportLine" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="111.38,-451.38 111.38,-467.62 220.62,-467.62 220.62,-451.38 111.38,-451.38"/>
-<text xml:space="preserve" text-anchor="start" x="112.38" y="-455.38" font-family="Arial" font-size="12.00">PublicTransportLine</text>
-<polygon fill="none" stroke="black" points="110.38,-450.38 110.38,-468.62 221.62,-468.62 221.62,-450.38 110.38,-450.38"/>
+<polygon fill="lightgray" stroke="none" points="111.38,-459.5 111.38,-475.75 220.62,-475.75 220.62,-459.5 111.38,-459.5"/>
+<text xml:space="preserve" text-anchor="start" x="112.38" y="-463.5" font-family="Arial" font-size="12.00">PublicTransportLine</text>
+<text xml:space="preserve" text-anchor="start" x="112.38" y="-447.25" font-family="Arial" font-size="12.00">cdm1:properPartOf</text>
+<polygon fill="none" stroke="black" points="110.38,-442.25 110.38,-476.75 221.62,-476.75 221.62,-442.25 110.38,-442.25"/>
 </a>
 </g>
 </g>
@@ -69,7 +70,7 @@
 </g>
 </g>
 <!-- PublicTransportLine&#45;&gt;PublicTransportRoute -->
-<g id="edge10" class="edge">
+<g id="edge7" class="edge">
 <title>PublicTransportLine&#45;&gt;PublicTransportRoute</title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M188.22,-441.73C197.78,-433.13 207.9,-421.77 213,-409 220.83,-389.39 216.56,-382.31 213,-361.5 198.12,-274.63 192.98,-249.69 147,-174.5 137.56,-159.07 124.07,-144.22 112,-132.48"/>
 <polygon fill="black" stroke="black" points="114.71,-130.23 105.03,-125.93 109.91,-135.33 114.71,-130.23"/>
@@ -78,16 +79,16 @@
 <text xml:space="preserve" text-anchor="start" x="210.44" y="-288.5" font-family="Arial" font-size="11.00">cdm1:hasProperPart</text>
 <text xml:space="preserve" text-anchor="start" x="252.07" y="-267" font-family="Arial" font-size="11.00">1..*</text>
 </g>
-<!-- nc3144c12940a453680b2771f0254c15eb8 -->
+<!-- n5ea7745936ba4610886a1ff6ddb325abb9 -->
 <g id="node8" class="node">
-<title>nc3144c12940a453680b2771f0254c15eb8</title>
+<title>n5ea7745936ba4610886a1ff6ddb325abb9</title>
 <polygon fill="lightyellow" stroke="none" points="331.25,-283.12 331.25,-301.38 390.75,-301.38 390.75,-283.12 331.25,-283.12"/>
 <text xml:space="preserve" text-anchor="start" x="333.25" y="-288.12" font-family="Arial" font-size="12.00">«unionOf»</text>
 <polygon fill="none" stroke="black" points="331.25,-283.12 331.25,-301.38 390.75,-301.38 390.75,-283.12 331.25,-283.12"/>
 </g>
-<!-- PublicTransportLine&#45;&gt;nc3144c12940a453680b2771f0254c15eb8 -->
-<g id="edge9" class="edge">
-<title>PublicTransportLine&#45;&gt;nc3144c12940a453680b2771f0254c15eb8</title>
+<!-- PublicTransportLine&#45;&gt;n5ea7745936ba4610886a1ff6ddb325abb9 -->
+<g id="edge10" class="edge">
+<title>PublicTransportLine&#45;&gt;n5ea7745936ba4610886a1ff6ddb325abb9</title>
 <path fill="none" stroke="black" d="M209.66,-441.61C220.38,-436.55 231.49,-430.46 241,-423.5 282.25,-393.33 320.52,-347.43 342.29,-318.95"/>
 <polygon fill="black" stroke="black" points="344.9,-321.3 348.11,-311.21 339.3,-317.1 344.9,-321.3"/>
 <polygon fill="white" stroke="none" points="305.6,-372.25 305.6,-393.75 405.85,-393.75 405.85,-372.25 305.6,-372.25"/>
@@ -117,16 +118,16 @@
 </g>
 </g>
 <!-- PublicTransportRoute&#45;&gt;PublicTransportSystem -->
-<!-- nc3144c12940a453680b2771f0254c15eb8&#45;&gt;GroupOfLines -->
-<g id="edge7" class="edge">
-<title>nc3144c12940a453680b2771f0254c15eb8&#45;&gt;GroupOfLines</title>
+<!-- n5ea7745936ba4610886a1ff6ddb325abb9&#45;&gt;GroupOfLines -->
+<g id="edge8" class="edge">
+<title>n5ea7745936ba4610886a1ff6ddb325abb9&#45;&gt;GroupOfLines</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M340.38,-274.54C333.28,-269.35 325.07,-263.97 317,-260 262.17,-233.05 194.17,-214.42 148.84,-203.87"/>
 <polygon fill="black" stroke="black" points="149.82,-200.51 139.3,-201.7 148.27,-207.33 149.82,-200.51"/>
 <text xml:space="preserve" text-anchor="middle" x="291.13" y="-231.55" font-family="Arial" font-size="11.00">member</text>
 </g>
-<!-- nc3144c12940a453680b2771f0254c15eb8&#45;&gt;PublicTransportSystem -->
-<g id="edge8" class="edge">
-<title>nc3144c12940a453680b2771f0254c15eb8&#45;&gt;PublicTransportSystem</title>
+<!-- n5ea7745936ba4610886a1ff6ddb325abb9&#45;&gt;PublicTransportSystem -->
+<g id="edge9" class="edge">
+<title>n5ea7745936ba4610886a1ff6ddb325abb9&#45;&gt;PublicTransportSystem</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M349.99,-274.26C341.18,-261.2 328.18,-242.99 315,-228.5 251.64,-158.81 162.6,-92.37 114.35,-58.43"/>
 <polygon fill="black" stroke="black" points="116.42,-55.61 106.22,-52.76 112.42,-61.35 116.42,-55.61"/>
 <text xml:space="preserve" text-anchor="middle" x="258.55" y="-146.05" font-family="Arial" font-size="11.00">member</text>

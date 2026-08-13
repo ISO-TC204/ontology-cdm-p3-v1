@@ -4,13 +4,14 @@ This ontology specifies the service-level concepts for the travel corridor patte
 
 This pattern imports the following files:
 
-- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern/](https://w3id.org/citydata/part3/v1/TransportNetworkPattern/)
+- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern](https://w3id.org/citydata/part3/v1/TransportNetworkPattern)
 
 This pattern consists of the following classes:
 
 - [Travel Corridor](TravelCorridor.md)
 - [Travel Corridor Link](TravelCorridorLink.md)
 - [Travel Corridor Segment](TravelCorridorSegment.md)
+
 This module defines the following properties:
 
 - [corridorElement](../properties/corridorElement.md)

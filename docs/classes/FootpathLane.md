@@ -2,6 +2,8 @@
 
 A FootpathLane is a type of TravelledWayLane that forms part of a FootpathSegment.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/FootpathLane`
+
 
 ## Diagram
 
@@ -80,9 +82,16 @@ A FootpathLane is a type of TravelledWayLane that forms part of a FootpathSegmen
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [FootpathSegment](FootpathSegment.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 [FootpathSegment](https://w3id.org/citydata/part3/v1/FootpathSegment) |
 | subClassOf | [TravelledWayLane](TravelledWayLane.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Footpath Segment (cdm1)](FootpathSegment.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 
 ## Other annotations
 

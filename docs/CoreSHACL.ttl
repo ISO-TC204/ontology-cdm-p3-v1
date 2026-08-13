@@ -1,35 +1,36 @@
 @prefix : <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm3: <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/citydata/part3/v1/> .
 
-:CoreSHACL
-    rdf:type owl:Ontology ;
-    dcterms:title "City Data Model Part 3 - Core - SHACL constraints" ;
-    skos:definition "SHACL validation shapes for the Core pattern module, including reusable cardinality shapes." ;
-    vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
-    vann:preferredNamespacePrefix "cdm3" ;
-    owl:imports <https://w3id.org/citydata/part3/v1/Core/> .
+<https://w3id.org/citydata/part3/v1/CoreSHACL> rdf:type owl:Ontology ;
+                                                owl:imports :CorePattern ;
+                                                dcterms:title "City Data Model Part 3 - Core - SHACL constraints" ;
+                                                vann:preferredNamespacePrefix "cdm3" ;
+                                                vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                skos:definition "SHACL validation shapes for the Core pattern module, including reusable cardinality shapes." .
 
-:ExactlyOneShape
-    rdf:type sh:NodeShape ;
-    sh:minCount 1 ;
-    sh:maxCount 1 .
+#################################################################
+#    Shapes
+#################################################################
 
-:MinOneShape
-    rdf:type sh:NodeShape ;
-    sh:minCount 1 .
+###  https://w3id.org/citydata/part3/v1/ExactlyOneShape
+:ExactlyOneShape rdf:type sh:NodeShape ;
+                 sh:maxCount "1"^^xsd:integer ;
+                 sh:minCount "1"^^xsd:integer .
 
-:MaxOneShape
-    rdf:type sh:NodeShape ;
-    sh:maxCount 1 .
+
+###  https://w3id.org/citydata/part3/v1/MaxOneShape
+:MaxOneShape rdf:type sh:NodeShape ;
+             sh:maxCount "1"^^xsd:integer .
+
+
+###  https://w3id.org/citydata/part3/v1/MinOneShape
+:MinOneShape rdf:type sh:NodeShape ;
+             sh:minCount "1"^^xsd:integer .
