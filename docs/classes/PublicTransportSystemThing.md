@@ -2,6 +2,8 @@
 
 Added for organizational purposes, to identify classes defined in the Public Transport System Pattern ontology.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/PublicTransportSystemThing`
+
 
 ## Diagram
 

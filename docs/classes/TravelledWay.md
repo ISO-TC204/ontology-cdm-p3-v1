@@ -2,6 +2,8 @@
 
 A TravelledWay is a type of NetworkElement and transinfras:TravelledWay that represents the curvilinear length of a transport route that is identified by a specific designator.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TravelledWay`
+
 
 ## Diagram
 
@@ -127,7 +129,9 @@ A TravelledWay is a type of NetworkElement and transinfras:TravelledWay that rep
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TravelledWayLink](TravelledWayLink.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TravelledWayLink](https://w3id.org/citydata/part3/v1/TravelledWayLink) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [TransportNetwork](TransportNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 [TransportNetwork](https://w3id.org/citydata/part3/v1/TransportNetwork) |
 | [designator](../properties/designator.md) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |

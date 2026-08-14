@@ -2,7 +2,19 @@
 
 An NetworkElement that is considered to be part of the larger transport corridor.
 
-**Range**: [TravelledWaySegment](../classes/TravelledWaySegment.md)
+**IRI**: `https://w3id.org/citydata/part3/v1/corridorElement`
+
+## Range
+
+| Class |
+|-------|
+| [TravelledWaySegment](../classes/TravelledWaySegment.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TravelCorridorObjectProperty](TravelCorridorObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ An NetworkElement that is considered to be part of the larger transport corridor
 |-------|
 | [TravelCorridorSegment](../classes/TravelCorridorSegment.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/corridorElement`

@@ -25,9 +25,10 @@
 <g id="node2" class="node">
 <title>TravelledWaySection</title>
 <g id="a_node2"><a xlink:href="../TravelledWaySection" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="48,-358.88 48,-375.12 164,-375.12 164,-358.88 48,-358.88"/>
-<text xml:space="preserve" text-anchor="start" x="49" y="-362.88" font-family="Arial" font-size="12.00">TravelledWaySection</text>
-<polygon fill="none" stroke="black" points="47,-357.88 47,-376.12 165,-376.12 165,-357.88 47,-357.88"/>
+<polygon fill="lightgray" stroke="none" points="48,-367 48,-383.25 164,-383.25 164,-367 48,-367"/>
+<text xml:space="preserve" text-anchor="start" x="49" y="-371" font-family="Arial" font-size="12.00">TravelledWaySection</text>
+<text xml:space="preserve" text-anchor="start" x="49" y="-354.75" font-family="Arial" font-size="12.00">cdm1:hasProperPart</text>
+<polygon fill="none" stroke="black" points="47,-349.75 47,-384.25 165,-384.25 165,-349.75 47,-349.75"/>
 </a>
 </g>
 </g>
@@ -50,7 +51,7 @@
 </g>
 </g>
 <!-- TravelledWaySection&#45;&gt;TransportNetwork -->
-<g id="edge6" class="edge">
+<g id="edge9" class="edge">
 <title>TravelledWaySection&#45;&gt;TransportNetwork</title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M103.95,-349.15C100.34,-319.52 92.83,-257.82 88.42,-221.63"/>
 <polygon fill="black" stroke="black" points="91.93,-221.43 87.24,-211.92 84.98,-222.27 91.93,-221.43"/>
@@ -59,16 +60,16 @@
 <text xml:space="preserve" text-anchor="start" x="103.36" y="-276" font-family="Arial" font-size="11.00">cdm1:properPartOf</text>
 <text xml:space="preserve" text-anchor="start" x="141.23" y="-254.5" font-family="Arial" font-size="11.00">1..*</text>
 </g>
-<!-- na67ff0c3f5e2479bb14d81c2edd99102b44 -->
+<!-- n1c091741e9be41418e759d48b25318c1b43 -->
 <g id="node7" class="node">
-<title>na67ff0c3f5e2479bb14d81c2edd99102b44</title>
+<title>n1c091741e9be41418e759d48b25318c1b43</title>
 <polygon fill="lightyellow" stroke="none" points="158.25,-183.38 158.25,-201.62 217.75,-201.62 217.75,-183.38 158.25,-183.38"/>
 <text xml:space="preserve" text-anchor="start" x="160.25" y="-188.38" font-family="Arial" font-size="12.00">«unionOf»</text>
 <polygon fill="none" stroke="black" points="158.25,-183.38 158.25,-201.62 217.75,-201.62 217.75,-183.38 158.25,-183.38"/>
 </g>
-<!-- TravelledWaySection&#45;&gt;na67ff0c3f5e2479bb14d81c2edd99102b44 -->
-<g id="edge9" class="edge">
-<title>TravelledWaySection&#45;&gt;na67ff0c3f5e2479bb14d81c2edd99102b44</title>
+<!-- TravelledWaySection&#45;&gt;n1c091741e9be41418e759d48b25318c1b43 -->
+<g id="edge8" class="edge">
+<title>TravelledWaySection&#45;&gt;n1c091741e9be41418e759d48b25318c1b43</title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M124.67,-349.08C134.63,-339.14 146.38,-325.85 154,-312 169.87,-283.15 178.95,-246.19 183.66,-221.28"/>
 <polygon fill="black" stroke="black" points="187.08,-222.05 185.37,-211.59 180.18,-220.83 187.08,-222.05"/>
 <polygon fill="white" stroke="none" points="177.81,-258.25 177.81,-301.25 285.56,-301.25 285.56,-258.25 177.81,-258.25"/>
@@ -98,16 +99,16 @@
 </g>
 </g>
 <!-- TravelledWayLink&#45;&gt;TravelledWaySegment -->
-<!-- na67ff0c3f5e2479bb14d81c2edd99102b44&#45;&gt;TravelledWayLink -->
-<g id="edge7" class="edge">
-<title>na67ff0c3f5e2479bb14d81c2edd99102b44&#45;&gt;TravelledWayLink</title>
+<!-- n1c091741e9be41418e759d48b25318c1b43&#45;&gt;TravelledWayLink -->
+<g id="edge6" class="edge">
+<title>n1c091741e9be41418e759d48b25318c1b43&#45;&gt;TravelledWayLink</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M158.59,-176.57C142.62,-168.34 125.48,-159.24 122.25,-156.5 114.65,-150.06 107.61,-141.83 101.75,-133.98"/>
 <polygon fill="black" stroke="black" points="104.73,-132.12 96.1,-125.98 99.01,-136.16 104.73,-132.12"/>
 <text xml:space="preserve" text-anchor="middle" x="142.12" y="-146.05" font-family="Arial" font-size="11.00">member</text>
 </g>
-<!-- na67ff0c3f5e2479bb14d81c2edd99102b44&#45;&gt;TravelledWaySegment -->
-<g id="edge8" class="edge">
-<title>na67ff0c3f5e2479bb14d81c2edd99102b44&#45;&gt;TravelledWaySegment</title>
+<!-- n1c091741e9be41418e759d48b25318c1b43&#45;&gt;TravelledWaySegment -->
+<g id="edge7" class="edge">
+<title>n1c091741e9be41418e759d48b25318c1b43&#45;&gt;TravelledWaySegment</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M183.45,-174.63C177.09,-153.21 164.05,-115.84 144,-89 135.56,-77.71 124.3,-67.28 113.53,-58.67"/>
 <polygon fill="black" stroke="black" points="115.93,-56.1 105.86,-52.79 111.67,-61.65 115.93,-56.1"/>
 <text xml:space="preserve" text-anchor="middle" x="184.36" y="-103.3" font-family="Arial" font-size="11.00">member</text>

@@ -2,6 +2,8 @@
 
 A Footpath is a type of TravelledWay that is made up of FootpathLinks.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/Footpath`
+
 
 ## Diagram
 
@@ -100,8 +102,10 @@ A Footpath is a type of TravelledWay that is made up of FootpathLinks.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [FootpathLink](FootpathLink.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [FootpathLink](https://w3id.org/citydata/part3/v1/FootpathLink) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [FootpathNetwork](FootpathNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [FootpathNetwork](https://w3id.org/citydata/part3/v1/FootpathNetwork) |
 | subClassOf | [TravelledWay](TravelledWay.md) |
 

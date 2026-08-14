@@ -2,7 +2,19 @@
 
 An ordered series of route points along a PublicTransportRoute.
 
-**Range**: [PointOnRoute](../classes/PointOnRoute.md)
+**IRI**: `https://w3id.org/citydata/part3/v1/routePoints`
+
+## Range
+
+| Class |
+|-------|
+| [PointOnRoute](../classes/PointOnRoute.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PublicTransportSystemObjectProperty](PublicTransportSystemObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ An ordered series of route points along a PublicTransportRoute.
 |-------|
 | [PublicTransportRoute](../classes/PublicTransportRoute.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/routePoints`

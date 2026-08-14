@@ -2,6 +2,8 @@
 
 A TransportNode is a NetworkElement that represents a node on the transport network that can be used to designate an end to a link or to join links.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TransportNode`
+
 
 ## Diagram
 
@@ -13,7 +15,7 @@ A TransportNode is a NetworkElement that represents a node on the transport netw
     <svg width="319pt" height="423pt"
      viewBox="0.00 0.00 319.00 423.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 418.5)">
-    <polygon fill="white" stroke="none" points="-4,4 -4,-418.5 314.99,-418.5 314.99,4 -4,4"/>
+    <polygon fill="white" stroke="none" points="-4,4 -4,-418.5 315.47,-418.5 315.47,4 -4,4"/>
     <g id="clust3" class="cluster">
     <title>cluster_associated</title>
     </g>
@@ -80,18 +82,18 @@ A TransportNode is a NetworkElement that represents a node on the transport netw
     <title>TransportNode&#45;&gt;TravelledWayLink</title>
     <path fill="none" stroke="black" d="M192.08,-305.53C202.69,-295.96 214.31,-283.01 220,-268.5 230.46,-241.81 229.77,-230.95 220,-204 197.24,-141.22 137.88,-87.96 99.86,-58.83"/>
     <polygon fill="black" stroke="black" points="102,-56.06 91.9,-52.86 97.8,-61.66 102,-56.06"/>
-    <polygon fill="white" stroke="none" points="211.66,-143 211.66,-186 254.16,-186 254.16,-143 211.66,-143"/>
-    <text xml:space="preserve" text-anchor="start" x="215.66" y="-171.5" font-family="Arial" font-size="11.00">ingress</text>
-    <text xml:space="preserve" text-anchor="start" x="224.66" y="-150" font-family="Arial" font-size="11.00">1..&#42;</text>
+    <polygon fill="white" stroke="none" points="211.66,-143 211.66,-186 251.91,-186 251.91,-143 211.66,-143"/>
+    <text xml:space="preserve" text-anchor="start" x="215.66" y="-171.5" font-family="Arial" font-size="11.00">egress</text>
+    <text xml:space="preserve" text-anchor="start" x="223.53" y="-150" font-family="Arial" font-size="11.00">1..&#42;</text>
     </g>
     <!-- TransportNode&#45;&gt;TravelledWayLink -->
     <g id="edge6" class="edge">
     <title>TransportNode&#45;&gt;TravelledWayLink</title>
-    <path fill="none" stroke="black" d="M202.26,-305.59C215.92,-296.57 230.41,-284.09 238,-268.5 262.72,-217.72 285.95,-192.08 258,-143 230.38,-94.49 171.84,-66.19 126.61,-50.82"/>
-    <polygon fill="black" stroke="black" points="127.75,-47.51 117.16,-47.75 125.59,-54.17 127.75,-47.51"/>
-    <polygon fill="white" stroke="none" points="270.74,-143 270.74,-186 310.99,-186 310.99,-143 270.74,-143"/>
-    <text xml:space="preserve" text-anchor="start" x="274.74" y="-171.5" font-family="Arial" font-size="11.00">egress</text>
-    <text xml:space="preserve" text-anchor="start" x="282.61" y="-150" font-family="Arial" font-size="11.00">1..&#42;</text>
+    <path fill="none" stroke="black" d="M202.42,-305.67C216.12,-296.66 230.59,-284.17 238,-268.5 262.08,-217.56 283.64,-192.1 256,-143 228.92,-94.89 171.24,-66.58 126.5,-51.1"/>
+    <polygon fill="black" stroke="black" points="127.75,-47.83 117.16,-48.01 125.55,-54.48 127.75,-47.83"/>
+    <polygon fill="white" stroke="none" points="268.97,-143 268.97,-186 311.47,-186 311.47,-143 268.97,-143"/>
+    <text xml:space="preserve" text-anchor="start" x="272.97" y="-171.5" font-family="Arial" font-size="11.00">ingress</text>
+    <text xml:space="preserve" text-anchor="start" x="281.97" y="-150" font-family="Arial" font-size="11.00">1..&#42;</text>
     </g>
     <!-- Invis&#45;&gt;TransportNetwork -->
     <!-- TransportNetwork&#45;&gt;TravelledWayLink -->
@@ -116,13 +118,23 @@ A TransportNode is a NetworkElement that represents a node on the transport netw
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [TransportNetwork](TransportNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 [TransportNetwork](https://w3id.org/citydata/part3/v1/TransportNetwork) |
+| [egress](../properties/egress.md) | only [TravelledWayLink](TravelledWayLink.md) |
 | [egress](../properties/egress.md) | min 1 |
 | [egress](../properties/egress.md) | min 1 [TravelledWayLink](https://w3id.org/citydata/part3/v1/TravelledWayLink) |
+| [ingress](../properties/ingress.md) | only [TravelledWayLink](TravelledWayLink.md) |
 | [ingress](../properties/ingress.md) | min 1 |
 | [ingress](../properties/ingress.md) | min 1 [TravelledWayLink](https://w3id.org/citydata/part3/v1/TravelledWayLink) |
 | subClassOf | [NetworkElement](NetworkElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Travelled Way Link](TravelledWayLink.md) | [from](../properties/from.md) |
+| [Travelled Way Link](TravelledWayLink.md) | [to](../properties/to.md) |
 
 ## Other annotations
 

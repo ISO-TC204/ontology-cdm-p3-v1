@@ -1,119 +1,109 @@
 @prefix : <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm3: <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
 
-:PublicTransportSystemSHACL
-    rdf:type owl:Ontology ;
-    dcterms:title "City Data Model Part 3 - PublicTransportSystem Pattern - SHACL constraints" ;
-    skos:definition "SHACL validation shapes for the PublicTransportSystem Pattern module." ;
-    vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
-    vann:preferredNamespacePrefix "cdm3" ;
-    owl:imports <https://w3id.org/citydata/part3/v1/PublicTransportSystemPattern/> ;
-    owl:imports :CoreSHACL .
+<https://w3id.org/citydata/part3/v1/PublicTransportSystemSHACL> rdf:type owl:Ontology ;
+                                                                 owl:imports :CoreSHACL ,
+                                                                             :PublicTransportSystemPattern ;
+                                                                 dcterms:title "City Data Model Part 3 - PublicTransportSystem Pattern - SHACL constraints" ;
+                                                                 vann:preferredNamespacePrefix "cdm3" ;
+                                                                 vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                                 skos:definition "SHACL validation shapes for the PublicTransportSystem Pattern module." .
 
-:GroupOfLinesShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :GroupOfLines ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:node :MinOneShape ;
-        sh:class :PublicTransportLine
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:class :PublicTransportSystem
-    ] .
+#################################################################
+#    Shapes
+#################################################################
 
-:PointOnRouteShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :PointOnRoute ;
-    sh:property [
-        sh:path :index ;
-        sh:node :ExactlyOneShape ;
-        sh:datatype xsd:integer
-    ] ;
-    sh:property [
-        sh:path :routePoint ;
-        sh:node :ExactlyOneShape ;
-        sh:class :RoutePoint
-    ] ;
-    sh:property [
-        sh:path :routePointType ;
-        sh:class cdm2:Code
-    ] .
+###  https://w3id.org/citydata/part3/v1/GroupOfLinesShape
+:GroupOfLinesShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:class :PublicTransportLine ;
+                                 sh:node :MinOneShape ;
+                                 sh:path cdm1:hasProperPart
+                               ] ,
+                               [ sh:class :PublicTransportSystem ;
+                                 sh:path cdm1:properPartOf
+                               ] ;
+                   sh:targetClass :GroupOfLines .
 
-:PublicTransportLineShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :PublicTransportLine ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:node :MinOneShape ;
-        sh:class :PublicTransportRoute
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:or (
-            [ sh:class :GroupOfLines ]
-            [ sh:class :PublicTransportSystem ]
-        )
-    ] ;
-    sh:property [
-        sh:path :allowedDirections ;
-        sh:node :MinOneShape ;
-        sh:class cdm2:Code
-    ] .
 
-:PublicTransportRouteShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :PublicTransportRoute ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:class :PublicTransportLine
-    ] ;
-    sh:property [
-        sh:path :direction ;
-        sh:node :MinOneShape ;
-        sh:class cdm2:Code
-    ] ;
-    sh:property [
-        sh:path :routePoints ;
-        sh:minCount "2"^^xsd:integer ;
-        sh:class :PointOnRoute
-    ] .
+###  https://w3id.org/citydata/part3/v1/PointOnRouteShape
+:PointOnRouteShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:datatype xsd:integer ;
+                                 sh:node :ExactlyOneShape ;
+                                 sh:path :index
+                               ] ,
+                               [ sh:class :RoutePoint ;
+                                 sh:node :ExactlyOneShape ;
+                                 sh:path :routePoint
+                               ] ,
+                               [ sh:class cdm2:Code ;
+                                 sh:path :routePointType
+                               ] ;
+                   sh:targetClass :PointOnRoute .
 
-:PublicTransportSystemShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :PublicTransportSystem ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:or (
-            [ sh:class :GroupOfLines ]
-            [ sh:class :PublicTransportLine ]
-        )
-    ] .
 
-:RoutePointShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :RoutePoint ;
-    sh:property [
-        sh:path :isBorderCrossing ;
-        sh:node :ExactlyOneShape ;
-        sh:datatype xsd:boolean
-    ] ;
-    sh:property [
-        sh:path :isViaPoint ;
-        sh:node :MaxOneShape ;
-        sh:datatype xsd:boolean
-    ] .
+###  https://w3id.org/citydata/part3/v1/PublicTransportLineShape
+:PublicTransportLineShape rdf:type sh:NodeShape ;
+                          sh:property [ sh:class cdm2:Code ;
+                                        sh:node :MinOneShape ;
+                                        sh:path :allowedDirections
+                                      ] ,
+                                      [ sh:class :PublicTransportRoute ;
+                                        sh:node :MinOneShape ;
+                                        sh:path cdm1:hasProperPart
+                                      ] ,
+                                      [ sh:or ( _:n2770de68fe6046f0b4cae109154c5d35b9
+                                          _:n2770de68fe6046f0b4cae109154c5d35b10
+                                        ) ;
+                                        sh:path cdm1:properPartOf
+                                      ] ;
+                          sh:targetClass :PublicTransportLine .
+
+
+###  https://w3id.org/citydata/part3/v1/PublicTransportRouteShape
+:PublicTransportRouteShape rdf:type sh:NodeShape ;
+                           sh:property [ sh:class :PublicTransportLine ;
+                                         sh:node :MinOneShape ;
+                                         sh:path cdm1:properPartOf
+                                       ] ,
+                                       [ sh:class cdm2:Code ;
+                                         sh:node :MinOneShape ;
+                                         sh:path :direction
+                                       ] ,
+                                       [ sh:class :PointOnRoute ;
+                                         sh:minCount "2"^^xsd:integer ;
+                                         sh:path :routePoints
+                                       ] ;
+                           sh:targetClass :PublicTransportRoute .
+
+
+###  https://w3id.org/citydata/part3/v1/PublicTransportSystemShape
+:PublicTransportSystemShape rdf:type sh:NodeShape ;
+                            sh:property [ sh:or ( _:n2770de68fe6046f0b4cae109154c5d35b17
+                                            _:n2770de68fe6046f0b4cae109154c5d35b18
+                                          ) ;
+                                          sh:path cdm1:hasProperPart
+                                        ] ;
+                            sh:targetClass :PublicTransportSystem .
+
+
+###  https://w3id.org/citydata/part3/v1/RoutePointShape
+:RoutePointShape rdf:type sh:NodeShape ;
+                 sh:property [ sh:datatype xsd:boolean ;
+                               sh:node :ExactlyOneShape ;
+                               sh:path :isBorderCrossing
+                             ] ,
+                             [ sh:datatype xsd:boolean ;
+                               sh:node :MaxOneShape ;
+                               sh:path :isViaPoint
+                             ] ;
+                 sh:targetClass :RoutePoint .

@@ -4,8 +4,8 @@ This ontology specifies the transport network pattern of the transport service o
 
 This pattern imports the following files:
 
-- [https://w3id.org/citydata/part2/v1/TransportInfrastructurePattern/](https://w3id.org/citydata/part2/v1/TransportInfrastructurePattern/)
-- [https://w3id.org/citydata/part3/v1/Core/](https://w3id.org/citydata/part3/v1/Core/)
+- [https://w3id.org/citydata/part2/v1/TransportInfrastructurePattern](https://w3id.org/citydata/part2/v1/TransportInfrastructurePattern)
+- [https://w3id.org/citydata/part3/v1/CorePattern](https://w3id.org/citydata/part3/v1/CorePattern)
 
 This pattern consists of the following classes:
 
@@ -20,6 +20,7 @@ This pattern consists of the following classes:
 - [Travelled Way Link](TravelledWayLink.md)
 - [Travelled Way Section](TravelledWaySection.md)
 - [Travelled Way Segment](TravelledWaySegment.md)
+
 This module defines the following properties:
 
 - [allowedDirections](../properties/allowedDirections.md)

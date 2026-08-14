@@ -2,7 +2,19 @@
 
 integer value that indicates the order of the item in a list
 
-**Range**: [xsd:integer](https://w3id.org/citydata/imported/xsd/integer)
+**IRI**: `https://w3id.org/citydata/part3/v1/index`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:integer](https://w3id.org/citydata/imported/xsd/integer) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PublicTransportSystemDataProperty](PublicTransportSystemDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ integer value that indicates the order of the item in a list
 |-------|
 | [PointOnRoute](../classes/PointOnRoute.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/index`

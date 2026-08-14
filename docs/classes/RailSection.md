@@ -2,6 +2,8 @@
 
 A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackSegments for a useful operational purpose (e.g., assigning a speed limit, designating a traffic control scheme).
 
+**IRI**: `https://w3id.org/citydata/part3/v1/RailSection`
+
 
 ## Diagram
 
@@ -31,9 +33,10 @@ A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackS
     <g id="node2" class="node">
     <title>RailSection</title>
     <g id="a_node2"><a xlink:href="../RailSection" xlink:title="&lt;TABLE&gt;">
-    <polygon fill="lightgray" stroke="none" points="73.88,-337.38 73.88,-353.62 138.12,-353.62 138.12,-337.38 73.88,-337.38"/>
-    <text xml:space="preserve" text-anchor="start" x="74.88" y="-341.38" font-family="Arial" font-size="12.00">RailSection</text>
-    <polygon fill="none" stroke="black" points="72.88,-336.38 72.88,-354.62 139.12,-354.62 139.12,-336.38 72.88,-336.38"/>
+    <polygon fill="lightgray" stroke="none" points="50.25,-345.5 50.25,-361.75 161.75,-361.75 161.75,-345.5 50.25,-345.5"/>
+    <text xml:space="preserve" text-anchor="start" x="74.88" y="-349.5" font-family="Arial" font-size="12.00">RailSection</text>
+    <text xml:space="preserve" text-anchor="start" x="51.25" y="-333.25" font-family="Arial" font-size="12.00">cdm1:hasProperPart</text>
+    <polygon fill="none" stroke="black" points="49.25,-328.25 49.25,-362.75 162.75,-362.75 162.75,-328.25 49.25,-328.25"/>
     </a>
     </g>
     </g>
@@ -64,16 +67,16 @@ A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackS
     <text xml:space="preserve" text-anchor="start" x="121.07" y="-276" font-family="Arial" font-size="11.00">redefines</text>
     <text xml:space="preserve" text-anchor="start" x="97.07" y="-254.5" font-family="Arial" font-size="11.00">cdm1:properPartOf</text>
     </g>
-    <!-- n6cdb34b94ee24737adcb98601c0c2c6bb11 -->
+    <!-- n07c1fe2cc8ba44aab7f111e85edd4de9b11 -->
     <g id="node7" class="node">
-    <title>n6cdb34b94ee24737adcb98601c0c2c6bb11</title>
+    <title>n07c1fe2cc8ba44aab7f111e85edd4de9b11</title>
     <polygon fill="lightyellow" stroke="none" points="114.25,-183.38 114.25,-201.62 173.75,-201.62 173.75,-183.38 114.25,-183.38"/>
     <text xml:space="preserve" text-anchor="start" x="116.25" y="-188.38" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="114.25,-183.38 114.25,-201.62 173.75,-201.62 173.75,-183.38 114.25,-183.38"/>
     </g>
-    <!-- RailSection&#45;&gt;n6cdb34b94ee24737adcb98601c0c2c6bb11 -->
+    <!-- RailSection&#45;&gt;n07c1fe2cc8ba44aab7f111e85edd4de9b11 -->
     <g id="edge8" class="edge">
-    <title>RailSection&#45;&gt;n6cdb34b94ee24737adcb98601c0c2c6bb11</title>
+    <title>RailSection&#45;&gt;n07c1fe2cc8ba44aab7f111e85edd4de9b11</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M113.45,-327.62C115.77,-321.94 118.19,-315.52 120,-309.5 128.88,-279.98 135.59,-245.27 139.62,-221.56"/>
     <polygon fill="black" stroke="black" points="143.07,-222.18 141.24,-211.74 136.16,-221.04 143.07,-222.18"/>
     <polygon fill="white" stroke="none" points="134.84,-247.5 134.84,-290.5 242.59,-290.5 242.59,-247.5 134.84,-247.5"/>
@@ -103,16 +106,16 @@ A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackS
     </g>
     </g>
     <!-- TrackLink&#45;&gt;TrackSegment -->
-    <!-- n6cdb34b94ee24737adcb98601c0c2c6bb11&#45;&gt;TrackLink -->
+    <!-- n07c1fe2cc8ba44aab7f111e85edd4de9b11&#45;&gt;TrackLink -->
     <g id="edge6" class="edge">
-    <title>n6cdb34b94ee24737adcb98601c0c2c6bb11&#45;&gt;TrackLink</title>
+    <title>n07c1fe2cc8ba44aab7f111e85edd4de9b11&#45;&gt;TrackLink</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M114.43,-175.83C105.74,-170.41 96.6,-163.83 89.25,-156.5 82.74,-150.01 76.88,-141.94 72.04,-134.26"/>
     <polygon fill="black" stroke="black" points="75.17,-132.68 67.07,-125.85 69.15,-136.24 75.17,-132.68"/>
     <text xml:space="preserve" text-anchor="middle" x="109.12" y="-146.05" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- n6cdb34b94ee24737adcb98601c0c2c6bb11&#45;&gt;TrackSegment -->
+    <!-- n07c1fe2cc8ba44aab7f111e85edd4de9b11&#45;&gt;TrackSegment -->
     <g id="edge7" class="edge">
-    <title>n6cdb34b94ee24737adcb98601c0c2c6bb11&#45;&gt;TrackSegment</title>
+    <title>n07c1fe2cc8ba44aab7f111e85edd4de9b11&#45;&gt;TrackSegment</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M140.03,-174.94C137.46,-165.38 133.71,-153.25 129,-143 115.2,-112.99 93.61,-81.95 77.66,-60.89"/>
     <polygon fill="black" stroke="black" points="80.58,-58.94 71.71,-53.15 75.03,-63.21 80.58,-58.94"/>
     <text xml:space="preserve" text-anchor="middle" x="139.1" y="-103.3" font-family="Arial" font-size="11.00">member</text>
@@ -131,6 +134,9 @@ A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackS
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TrackLink](TrackLink.md) or [TrackSegment](TrackSegment.md) |
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |  |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [RailNetwork](RailNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [RailNetwork](https://w3id.org/citydata/part3/v1/RailNetwork) |
 | subClassOf | [TravelledWaySection](TravelledWaySection.md) |
 

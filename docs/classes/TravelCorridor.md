@@ -4,6 +4,8 @@ A TravelCorridor is a type of TravelledWay that is made up of TravelCorridorLink
 
 NOTE: The extent of a TravelCorridor is defined by the extent of the path that shares the designator assigned to the TravelCorridor.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TravelCorridor`
+
 
 ## Diagram
 
@@ -98,8 +100,15 @@ NOTE: The extent of a TravelCorridor is defined by the extent of the path that s
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TravelCorridorLink](TravelCorridorLink.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [TravelCorridorLink](https://w3id.org/citydata/part3/v1/TravelCorridorLink) |
-| subClassOf | [TravelCorridorThing](https://w3id.org/citydata/part3/v1/TravelCorridorThing) |
+| subClassOf | [TravelCorridorThing](../properties/TravelCorridorThing.md) |
 | subClassOf | [TravelledWay](TravelledWay.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Travel Corridor Link (cdm1)](TravelCorridorLink.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 

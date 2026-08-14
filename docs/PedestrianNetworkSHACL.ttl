@@ -1,107 +1,97 @@
 @prefix : <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm3: <https://w3id.org/citydata/part3/v1/> .
-@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
 
-:PedestrianNetworkSHACL
-    rdf:type owl:Ontology ;
-    dcterms:title "City Data Model Part 3 - PedestrianNetwork Pattern - SHACL constraints" ;
-    skos:definition "SHACL validation shapes for the PedestrianNetwork Pattern module." ;
-    vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
-    vann:preferredNamespacePrefix "cdm3" ;
-    owl:imports <https://w3id.org/citydata/part3/v1/PedestrianNetworkPattern/> ;
-    owl:imports :CoreSHACL .
+<https://w3id.org/citydata/part3/v1/PedestrianNetworkSHACL> rdf:type owl:Ontology ;
+                                                             owl:imports :CoreSHACL ,
+                                                                         :PedestrianNetworkPattern ;
+                                                             dcterms:title "City Data Model Part 3 - PedestrianNetwork Pattern - SHACL constraints" ;
+                                                             vann:preferredNamespacePrefix "cdm3" ;
+                                                             vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                             skos:definition "SHACL validation shapes for the PedestrianNetwork Pattern module." .
 
-:FootpathShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Footpath ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:node :MinOneShape ;
-        sh:class :FootpathLink
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:class :FootpathNetwork
-    ] .
+#################################################################
+#    Shapes
+#################################################################
 
-:FootpathLaneShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :FootpathLane ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:class :FootpathSegment
-    ] .
+###  https://w3id.org/citydata/part3/v1/FootpathLaneShape
+:FootpathLaneShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:class :FootpathSegment ;
+                                 sh:node :MinOneShape ;
+                                 sh:path cdm1:properPartOf
+                               ] ;
+                   sh:targetClass :FootpathLane .
 
-:FootpathLinkShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :FootpathLink ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:node :MinOneShape ;
-        sh:class :FootpathSegment
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:or (
-            [ sh:class :Footpath ]
-            [ sh:class :FootpathNetwork ]
-            [ sh:class :FootpathSection ]
-        )
-    ] .
 
-:FootpathNetworkShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :FootpathNetwork ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:node :MinOneShape ;
-        sh:or (
-            [ sh:class :Footpath ]
-            [ sh:class :FootpathLink ]
-            [ sh:class :FootpathSection ]
-        )
-    ] .
+###  https://w3id.org/citydata/part3/v1/FootpathLinkShape
+:FootpathLinkShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:class :FootpathSegment ;
+                                 sh:node :MinOneShape ;
+                                 sh:path cdm1:hasProperPart
+                               ] ,
+                               [ sh:or ( _:n395e4e4681eb4d5ba4cc52f22343687db4
+                                   _:n395e4e4681eb4d5ba4cc52f22343687db5
+                                   _:n395e4e4681eb4d5ba4cc52f22343687db6
+                                 ) ;
+                                 sh:path cdm1:properPartOf
+                               ] ;
+                   sh:targetClass :FootpathLink .
 
-:FootpathSectionShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :FootpathSection ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:or (
-            [ sh:class :FootpathLink ]
-            [ sh:class :FootpathSegment ]
-        )
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:class :FootpathNetwork
-    ] .
 
-:FootpathSegmentShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :FootpathSegment ;
-    sh:property [
-        sh:path cdm1:hasProperPart ;
-        sh:node :MinOneShape ;
-        sh:class :FootpathLane
-    ] ;
-    sh:property [
-        sh:path cdm1:properPartOf ;
-        sh:node :MinOneShape ;
-        sh:or (
-            [ sh:class :FootpathLink ]
-            [ sh:class :FootpathSection ]
-        )
-    ] .
+###  https://w3id.org/citydata/part3/v1/FootpathNetworkShape
+:FootpathNetworkShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:node :MinOneShape ;
+                                    sh:or ( _:n395e4e4681eb4d5ba4cc52f22343687db11
+                                      _:n395e4e4681eb4d5ba4cc52f22343687db12
+                                      _:n395e4e4681eb4d5ba4cc52f22343687db13
+                                    ) ;
+                                    sh:path cdm1:hasProperPart
+                                  ] ;
+                      sh:targetClass :FootpathNetwork .
+
+
+###  https://w3id.org/citydata/part3/v1/FootpathSectionShape
+:FootpathSectionShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:or ( _:n395e4e4681eb4d5ba4cc52f22343687db18
+                                      _:n395e4e4681eb4d5ba4cc52f22343687db19
+                                    ) ;
+                                    sh:path cdm1:hasProperPart
+                                  ] ,
+                                  [ sh:class :FootpathNetwork ;
+                                    sh:path cdm1:properPartOf
+                                  ] ;
+                      sh:targetClass :FootpathSection .
+
+
+###  https://w3id.org/citydata/part3/v1/FootpathSegmentShape
+:FootpathSegmentShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:class :FootpathLane ;
+                                    sh:node :MinOneShape ;
+                                    sh:path cdm1:hasProperPart
+                                  ] ,
+                                  [ sh:node :MinOneShape ;
+                                    sh:or ( _:n395e4e4681eb4d5ba4cc52f22343687db25
+                                      _:n395e4e4681eb4d5ba4cc52f22343687db26
+                                    ) ;
+                                    sh:path cdm1:properPartOf
+                                  ] ;
+                      sh:targetClass :FootpathSegment .
+
+
+###  https://w3id.org/citydata/part3/v1/FootpathShape
+:FootpathShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :FootpathLink ;
+                             sh:node :MinOneShape ;
+                             sh:path cdm1:hasProperPart
+                           ] ,
+                           [ sh:class :FootpathNetwork ;
+                             sh:path cdm1:properPartOf
+                           ] ;
+               sh:targetClass :Footpath .

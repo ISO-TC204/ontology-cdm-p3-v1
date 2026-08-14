@@ -2,6 +2,8 @@
 
 A MicromobilityPath is a type of Road that is made up of MicromobilityPathLinks.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/MicromobilityPath`
+
 
 ## Diagram
 
@@ -100,8 +102,10 @@ A MicromobilityPath is a type of Road that is made up of MicromobilityPathLinks.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [MicromobilityLink](MicromobilityLink.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [MicromobilityLink](https://w3id.org/citydata/part3/v1/MicromobilityLink) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [MicromobilityNetwork](MicromobilityNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [MicromobilityNetwork](https://w3id.org/citydata/part3/v1/MicromobilityNetwork) |
 | subClassOf | [Road](Road.md) |
 

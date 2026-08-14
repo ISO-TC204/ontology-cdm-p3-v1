@@ -2,6 +2,8 @@
 
 A TransportNetwork is a NetworkElement that is a collection of other network elements that jointly represent a network of paths along which entities (e.g., vehicles, pedestrians) of a specified mode can operate.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TransportNetwork`
+
 
 ## Diagram
 
@@ -54,16 +56,16 @@ A TransportNetwork is a NetworkElement that is a collection of other network ele
     </g>
     <!-- Invis -->
     <!-- TransportNetwork&#45;&gt;Invis -->
-    <!-- na67ff0c3f5e2479bb14d81c2edd99102b9 -->
+    <!-- n1c091741e9be41418e759d48b25318c1b9 -->
     <g id="node8" class="node">
-    <title>na67ff0c3f5e2479bb14d81c2edd99102b9</title>
+    <title>n1c091741e9be41418e759d48b25318c1b9</title>
     <polygon fill="lightyellow" stroke="none" points="162.25,-341.88 162.25,-360.12 221.75,-360.12 221.75,-341.88 162.25,-341.88"/>
     <text xml:space="preserve" text-anchor="start" x="164.25" y="-346.88" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="162.25,-341.88 162.25,-360.12 221.75,-360.12 221.75,-341.88 162.25,-341.88"/>
     </g>
-    <!-- TransportNetwork&#45;&gt;na67ff0c3f5e2479bb14d81c2edd99102b9 -->
+    <!-- TransportNetwork&#45;&gt;n1c091741e9be41418e759d48b25318c1b9 -->
     <g id="edge12" class="edge">
-    <title>TransportNetwork&#45;&gt;na67ff0c3f5e2479bb14d81c2edd99102b9</title>
+    <title>TransportNetwork&#45;&gt;n1c091741e9be41418e759d48b25318c1b9</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M83.49,-451.69C77.68,-433.55 72.18,-404.85 87.25,-387 104.34,-366.76 120.97,-385.66 146,-377 148.71,-376.06 151.44,-374.98 154.16,-373.8"/>
     <polygon fill="black" stroke="black" points="155.58,-377 163.09,-369.52 152.56,-370.68 155.58,-377"/>
     <polygon fill="white" stroke="none" points="87.25,-387 87.25,-430 195,-430 195,-387 87.25,-387"/>
@@ -114,37 +116,37 @@ A TransportNetwork is a NetworkElement that is a collection of other network ele
     </g>
     </g>
     <!-- TravelledWayLink&#45;&gt;TravelledWaySection -->
-    <!-- na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TransportNetwork -->
+    <!-- n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TransportNetwork -->
     <g id="edge7" class="edge">
-    <title>na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TransportNetwork</title>
+    <title>n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TransportNetwork</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M199.4,-368.87C205.61,-385.89 211.64,-412.13 199,-430 187.62,-446.09 168.92,-455.51 150.2,-460.99"/>
     <polygon fill="black" stroke="black" points="149.52,-457.55 140.7,-463.42 151.25,-464.34 149.52,-457.55"/>
     <text xml:space="preserve" text-anchor="middle" x="226.29" y="-404.8" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TransportNode -->
+    <!-- n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TransportNode -->
     <g id="edge8" class="edge">
-    <title>na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TransportNode</title>
+    <title>n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TransportNode</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M162.43,-338.68C156.99,-336.71 151.34,-334.74 146,-333 118,-323.89 104.93,-333.77 82.25,-315 75.47,-309.39 70.41,-301.41 66.71,-293.53"/>
     <polygon fill="black" stroke="black" points="70.05,-292.46 63.05,-284.5 63.56,-295.09 70.05,-292.46"/>
     <text xml:space="preserve" text-anchor="middle" x="102.12" y="-304.55" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TravelledWay -->
+    <!-- n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TravelledWay -->
     <g id="edge9" class="edge">
-    <title>na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TravelledWay</title>
+    <title>n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TravelledWay</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M181.05,-333.18C161.86,-303.69 122.02,-242.49 99.15,-207.34"/>
     <polygon fill="black" stroke="black" points="102.12,-205.49 93.73,-199.02 96.25,-209.31 102.12,-205.49"/>
     <text xml:space="preserve" text-anchor="middle" x="167.81" y="-261.8" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TravelledWayLink -->
+    <!-- n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TravelledWayLink -->
     <g id="edge10" class="edge">
-    <title>na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TravelledWayLink</title>
+    <title>n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TravelledWayLink</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M194.61,-333.17C197.17,-312.45 199.45,-276.43 190,-247.5 174.81,-201 136.54,-158.22 109.9,-132.62"/>
     <polygon fill="black" stroke="black" points="112.49,-130.26 102.8,-125.97 107.7,-135.36 112.49,-130.26"/>
     <text xml:space="preserve" text-anchor="middle" x="202.51" y="-219.05" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TravelledWaySection -->
+    <!-- n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TravelledWaySection -->
     <g id="edge11" class="edge">
-    <title>na67ff0c3f5e2479bb14d81c2edd99102b9&#45;&gt;TravelledWaySection</title>
+    <title>n1c091741e9be41418e759d48b25318c1b9&#45;&gt;TravelledWaySection</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M216.95,-333.25C236,-318.26 259,-294.38 259,-266.5 259,-266.5 259,-266.5 259,-106 259,-80.55 196.94,-60.71 144.9,-48.55"/>
     <polygon fill="black" stroke="black" points="145.98,-45.21 135.45,-46.41 144.43,-52.03 145.98,-45.21"/>
     <text xml:space="preserve" text-anchor="middle" x="278.88" y="-176.3" font-family="Arial" font-size="11.00">member</text>
@@ -172,8 +174,20 @@ A TransportNetwork is a NetworkElement that is a collection of other network ele
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TransportNetwork](TransportNetwork.md) or [TransportNode](TransportNode.md) or [TravelledWayLink](TravelledWayLink.md) or [TravelledWaySection](TravelledWaySection.md) or [TravelledWay](TravelledWay.md) |
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |  |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [TransportNetwork](TransportNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [TransportNetwork](https://w3id.org/citydata/part3/v1/TransportNetwork) |
 | subClassOf | [NetworkElement](NetworkElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Transport Network (cdm1)](TransportNetwork.md) | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) |
+| [Transport Node (cdm1)](TransportNode.md) | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) |
+| [Travelled Way (cdm1)](TravelledWay.md) | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) |
+| [Travelled Way Section (cdm1)](TravelledWaySection.md) | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) |
 
 ## Other annotations
 

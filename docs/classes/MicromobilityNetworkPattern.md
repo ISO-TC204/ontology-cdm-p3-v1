@@ -4,7 +4,7 @@ This ontology specifies the micromobility network pattern of the transport servi
 
 This pattern imports the following files:
 
-- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern/](https://w3id.org/citydata/part3/v1/TransportNetworkPattern/)
+- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern](https://w3id.org/citydata/part3/v1/TransportNetworkPattern)
 
 This pattern consists of the following classes:
 

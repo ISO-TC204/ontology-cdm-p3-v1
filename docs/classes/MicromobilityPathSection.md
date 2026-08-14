@@ -2,6 +2,8 @@
 
 A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLinks and MicromobilityPathSegments for a useful operational purpose (e.g., assigning a speed limit, designating areas of shared use).
 
+**IRI**: `https://w3id.org/citydata/part3/v1/MicromobilityPathSection`
+
 
 ## Diagram
 
@@ -31,9 +33,10 @@ A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLi
     <g id="node2" class="node">
     <title>MicromobilityPathSection</title>
     <g id="a_node2"><a xlink:href="../MicromobilityPathSection" xlink:title="&lt;TABLE&gt;">
-    <polygon fill="lightgray" stroke="none" points="73.12,-414.38 73.12,-430.62 210.88,-430.62 210.88,-414.38 73.12,-414.38"/>
-    <text xml:space="preserve" text-anchor="start" x="74.12" y="-418.38" font-family="Arial" font-size="12.00">MicromobilityPathSection</text>
-    <polygon fill="none" stroke="black" points="72.12,-413.38 72.12,-431.62 211.88,-431.62 211.88,-413.38 72.12,-413.38"/>
+    <polygon fill="lightgray" stroke="none" points="73.12,-422.5 73.12,-438.75 210.88,-438.75 210.88,-422.5 73.12,-422.5"/>
+    <text xml:space="preserve" text-anchor="start" x="74.12" y="-426.5" font-family="Arial" font-size="12.00">MicromobilityPathSection</text>
+    <text xml:space="preserve" text-anchor="start" x="74.12" y="-410.25" font-family="Arial" font-size="12.00">cdm1:hasProperPart</text>
+    <polygon fill="none" stroke="black" points="72.12,-405.25 72.12,-439.75 211.88,-439.75 211.88,-405.25 72.12,-405.25"/>
     </a>
     </g>
     </g>
@@ -56,7 +59,7 @@ A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLi
     </g>
     </g>
     <!-- MicromobilityPathSection&#45;&gt;MicromobilityNetwork -->
-    <g id="edge6" class="edge">
+    <g id="edge9" class="edge">
     <title>MicromobilityPathSection&#45;&gt;MicromobilityNetwork</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M141.54,-404.66C140.09,-356.36 134.99,-218.04 123,-174.5 119.23,-160.8 112.58,-146.57 106.24,-134.8"/>
     <polygon fill="black" stroke="black" points="109.29,-133.09 101.34,-126.09 103.19,-136.52 109.29,-133.09"/>
@@ -64,16 +67,16 @@ A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLi
     <text xml:space="preserve" text-anchor="start" x="163.12" y="-257" font-family="Arial" font-size="11.00">redefines</text>
     <text xml:space="preserve" text-anchor="start" x="139.12" y="-235.5" font-family="Arial" font-size="11.00">cdm1:properPartOf</text>
     </g>
-    <!-- n357fc98d4b3b4002a740b57da5623563b21 -->
+    <!-- n08b901a28ea24e5d929e965f217f15e3b20 -->
     <g id="node7" class="node">
-    <title>n357fc98d4b3b4002a740b57da5623563b21</title>
+    <title>n08b901a28ea24e5d929e965f217f15e3b20</title>
     <polygon fill="lightyellow" stroke="none" points="235.25,-298.38 235.25,-316.62 294.75,-316.62 294.75,-298.38 235.25,-298.38"/>
     <text xml:space="preserve" text-anchor="start" x="237.25" y="-303.38" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="235.25,-298.38 235.25,-316.62 294.75,-316.62 294.75,-298.38 235.25,-298.38"/>
     </g>
-    <!-- MicromobilityPathSection&#45;&gt;n357fc98d4b3b4002a740b57da5623563b21 -->
-    <g id="edge9" class="edge">
-    <title>MicromobilityPathSection&#45;&gt;n357fc98d4b3b4002a740b57da5623563b21</title>
+    <!-- MicromobilityPathSection&#45;&gt;n08b901a28ea24e5d929e965f217f15e3b20 -->
+    <g id="edge8" class="edge">
+    <title>MicromobilityPathSection&#45;&gt;n08b901a28ea24e5d929e965f217f15e3b20</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M160.41,-404.58C181.09,-385.58 214.84,-354.59 238.38,-332.95"/>
     <polygon fill="black" stroke="black" points="240.75,-335.53 245.75,-326.19 236.01,-330.38 240.75,-335.53"/>
     <polygon fill="white" stroke="none" points="225.21,-343.5 225.21,-386.5 332.96,-386.5 332.96,-343.5 225.21,-343.5"/>
@@ -103,16 +106,16 @@ A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLi
     </g>
     </g>
     <!-- MicromobilityNetwork&#45;&gt;MicromobilityPathSegment -->
-    <!-- n357fc98d4b3b4002a740b57da5623563b21&#45;&gt;MicromobilityLink -->
-    <g id="edge7" class="edge">
-    <title>n357fc98d4b3b4002a740b57da5623563b21&#45;&gt;MicromobilityLink</title>
+    <!-- n08b901a28ea24e5d929e965f217f15e3b20&#45;&gt;MicromobilityLink -->
+    <g id="edge6" class="edge">
+    <title>n08b901a28ea24e5d929e965f217f15e3b20&#45;&gt;MicromobilityLink</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M265.09,-289.58C264.22,-271.76 259.96,-244.14 243,-228.5 225.91,-212.74 169.32,-203.51 124.48,-198.53"/>
     <polygon fill="black" stroke="black" points="124.89,-195.05 114.58,-197.48 124.16,-202.02 124.89,-195.05"/>
     <text xml:space="preserve" text-anchor="middle" x="282.86" y="-246.3" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- n357fc98d4b3b4002a740b57da5623563b21&#45;&gt;MicromobilityPathSegment -->
-    <g id="edge8" class="edge">
-    <title>n357fc98d4b3b4002a740b57da5623563b21&#45;&gt;MicromobilityPathSegment</title>
+    <!-- n08b901a28ea24e5d929e965f217f15e3b20&#45;&gt;MicromobilityPathSegment -->
+    <g id="edge7" class="edge">
+    <title>n08b901a28ea24e5d929e965f217f15e3b20&#45;&gt;MicromobilityPathSegment</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M291.62,-289.63C297.42,-284.56 302.79,-278.47 306,-271.5 314,-254.15 313.57,-246.05 306,-228.5 271.42,-148.38 184.65,-88.05 132.21,-57.44"/>
     <polygon fill="black" stroke="black" points="134.25,-54.58 123.84,-52.65 130.78,-60.65 134.25,-54.58"/>
     <text xml:space="preserve" text-anchor="middle" x="277.79" y="-146.05" font-family="Arial" font-size="11.00">member</text>
@@ -131,6 +134,9 @@ A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLi
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [MicromobilityLink](MicromobilityLink.md) or [MicromobilityPathSegment](MicromobilityPathSegment.md) |
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |  |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [MicromobilityNetwork](MicromobilityNetwork.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [MicromobilityNetwork](https://w3id.org/citydata/part3/v1/MicromobilityNetwork) |
 | subClassOf | [RoadSection](RoadSection.md) |
 

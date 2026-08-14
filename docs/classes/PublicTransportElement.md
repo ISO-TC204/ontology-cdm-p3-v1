@@ -2,6 +2,8 @@
 
 A PublicTransportElement represents any element of a public transport system. It can be a part of another PublicTransportElement and can be decomposed into smaller PublicTransportElement.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/PublicTransportElement`
+
 
 ## Diagram
 

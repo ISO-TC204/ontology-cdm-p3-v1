@@ -4,6 +4,8 @@ A PublicTransportRoute represents one specific path used by a public transport v
 
 NOTE: For example, a PublicTransportLine might use an alternate PublicTransportRoute to reach its next stop during periods of congestion.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/PublicTransportRoute`
+
 
 ## Diagram
 
@@ -58,7 +60,7 @@ NOTE: For example, a PublicTransportLine might use an alternate PublicTransportR
     </g>
     </g>
     <!-- PublicTransportRoute&#45;&gt;cdm2_Code -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>PublicTransportRoute&#45;&gt;cdm2_Code</title>
     <path fill="none" stroke="black" d="M135.21,-364.36C130.44,-354.9 124.68,-342.73 120.5,-331.5 105.42,-290.94 93.08,-242.24 86.14,-212.33"/>
     <polygon fill="black" stroke="black" points="89.55,-211.56 83.92,-202.59 82.72,-213.11 89.55,-211.56"/>
@@ -77,7 +79,7 @@ NOTE: For example, a PublicTransportLine might use an alternate PublicTransportR
     </g>
     </g>
     <!-- PublicTransportRoute&#45;&gt;PointOnRoute -->
-    <g id="edge7" class="edge">
+    <g id="edge8" class="edge">
     <title>PublicTransportRoute&#45;&gt;PointOnRoute</title>
     <path fill="none" stroke="black" d="M154.88,-364.35C160.28,-355.09 166.23,-343.11 169,-331.5 173.89,-310.96 172.86,-304.76 169,-284 158.38,-226.87 150.59,-212.59 122,-162 116.42,-152.13 109.16,-142.11 102.25,-133.43"/>
     <polygon fill="black" stroke="black" points="105.01,-131.26 95.95,-125.77 99.6,-135.71 105.01,-131.26"/>
@@ -121,6 +123,7 @@ NOTE: For example, a PublicTransportLine might use an alternate PublicTransportR
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [PublicTransportLine](PublicTransportLine.md) |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | min 1 [PublicTransportLine](https://w3id.org/citydata/part3/v1/PublicTransportLine) |
 | [direction](../properties/direction.md) | min 1 |
@@ -128,4 +131,10 @@ NOTE: For example, a PublicTransportLine might use an alternate PublicTransportR
 | [routePoints](../properties/routePoints.md) | min 2 |
 | [routePoints](../properties/routePoints.md) | min 2 [PointOnRoute](https://w3id.org/citydata/part3/v1/PointOnRoute) |
 | subClassOf | [PublicTransportElement](PublicTransportElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Public Transport Line (cdm1)](PublicTransportLine.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 

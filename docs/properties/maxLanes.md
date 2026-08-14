@@ -2,7 +2,19 @@
 
 The maximum number of lanes available for the RoadLink within any RoadSegment within the RoadLink.
 
-**Range**: [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger)
+**IRI**: `https://w3id.org/citydata/part3/v1/maxLanes`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [RoadNetworkDataProperty](RoadNetworkDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ The maximum number of lanes available for the RoadLink within any RoadSegment wi
 |-------|
 | [RoadLink](../classes/RoadLink.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/maxLanes`

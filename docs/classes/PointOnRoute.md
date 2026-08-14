@@ -2,6 +2,8 @@
 
 A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/PointOnRoute`
+
 
 ## Diagram
 
@@ -57,7 +59,7 @@ A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute.
     </g>
     </g>
     <!-- PointOnRoute&#45;&gt;cdm2_Code -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>PointOnRoute&#45;&gt;cdm2_Code</title>
     <path fill="none" stroke="black" d="M100.98,-277.06C95.6,-258.96 86.79,-229.42 79,-204 71.97,-181.05 63.84,-155.06 57.82,-135.92"/>
     <polygon fill="black" stroke="black" points="61.17,-134.91 54.82,-126.42 54.49,-137.01 61.17,-134.91"/>
@@ -75,7 +77,7 @@ A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute.
     </g>
     </g>
     <!-- PointOnRoute&#45;&gt;RoutePoint -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>PointOnRoute&#45;&gt;RoutePoint</title>
     <path fill="none" stroke="black" d="M146.64,-277.07C158.6,-269.95 170.27,-260.39 177,-248 186.34,-230.82 183.17,-222.56 177,-204 157.42,-145.11 108.29,-90.28 77.2,-59.84"/>
     <polygon fill="black" stroke="black" points="79.67,-57.37 70.04,-52.97 74.83,-62.42 79.67,-57.37"/>
@@ -103,6 +105,7 @@ A PointOnRoute represents an ordered RoutePoint for a PublicTransportRoute.
 | [index](../properties/index.md) | exactly 1 xsd:integer |
 | [routePoint](../properties/routePoint.md) | exactly 1 |
 | [routePoint](../properties/routePoint.md) | exactly 1 [RoutePoint](https://w3id.org/citydata/part3/v1/RoutePoint) |
+| [routePointType](../properties/routePointType.md) | only [cdm2:Code](https://w3id.org/citydata/part2/v1/Code) |
 | [routePointType](../properties/routePointType.md) | only [cdm2:Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [PublicTransportElement](PublicTransportElement.md) |
 

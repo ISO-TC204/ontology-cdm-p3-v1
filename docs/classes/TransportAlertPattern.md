@@ -4,13 +4,14 @@ This ontology specifies the city-level concepts for the transport alert pattern 
 
 This pattern imports the following files:
 
-- [https://w3id.org/citydata/part2/v1/AlertPattern/](https://w3id.org/citydata/part2/v1/AlertPattern/)
-- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern/](https://w3id.org/citydata/part3/v1/TransportNetworkPattern/)
+- [https://w3id.org/citydata/part2/v1/AlertPattern](https://w3id.org/citydata/part2/v1/AlertPattern)
+- [https://w3id.org/citydata/part3/v1/TransportNetworkPattern](https://w3id.org/citydata/part3/v1/TransportNetworkPattern)
 
 This pattern consists of the following classes:
 
 - [Transport Alert](TransportAlert.md)
 - [Transport Alert Thing](TransportAlertThing.md)
+
 This module defines the following properties:
 
 - [affects](../properties/affects.md)

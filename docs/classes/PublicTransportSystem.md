@@ -2,6 +2,8 @@
 
 A PublicTransportSystem provides transport services to members of the public.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/PublicTransportSystem`
+
 
 ## Diagram
 
@@ -31,9 +33,10 @@ A PublicTransportSystem provides transport services to members of the public.
     <g id="node2" class="node">
     <title>PublicTransportSystem</title>
     <g id="a_node2"><a xlink:href="../PublicTransportSystem" xlink:title="&lt;TABLE&gt;">
-    <polygon fill="lightgray" stroke="none" points="73.12,-299.38 73.12,-315.62 198.88,-315.62 198.88,-299.38 73.12,-299.38"/>
-    <text xml:space="preserve" text-anchor="start" x="74.12" y="-303.38" font-family="Arial" font-size="12.00">PublicTransportSystem</text>
-    <polygon fill="none" stroke="black" points="72.12,-298.38 72.12,-316.62 199.88,-316.62 199.88,-298.38 72.12,-298.38"/>
+    <polygon fill="lightgray" stroke="none" points="73.12,-307.5 73.12,-323.75 198.88,-323.75 198.88,-307.5 73.12,-307.5"/>
+    <text xml:space="preserve" text-anchor="start" x="74.12" y="-311.5" font-family="Arial" font-size="12.00">PublicTransportSystem</text>
+    <text xml:space="preserve" text-anchor="start" x="74.12" y="-295.25" font-family="Arial" font-size="12.00">cdm1:hasProperPart</text>
+    <polygon fill="none" stroke="black" points="72.12,-290.25 72.12,-324.75 199.88,-324.75 199.88,-290.25 72.12,-290.25"/>
     </a>
     </g>
     </g>
@@ -45,16 +48,16 @@ A PublicTransportSystem provides transport services to members of the public.
     </g>
     <!-- Invis -->
     <!-- PublicTransportSystem&#45;&gt;Invis -->
-    <!-- nc3144c12940a453680b2771f0254c15eb19 -->
+    <!-- n5ea7745936ba4610886a1ff6ddb325abb19 -->
     <g id="node6" class="node">
-    <title>nc3144c12940a453680b2771f0254c15eb19</title>
+    <title>n5ea7745936ba4610886a1ff6ddb325abb19</title>
     <polygon fill="lightyellow" stroke="none" points="144.25,-183.38 144.25,-201.62 203.75,-201.62 203.75,-183.38 144.25,-183.38"/>
     <text xml:space="preserve" text-anchor="start" x="146.25" y="-188.38" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="144.25,-183.38 144.25,-201.62 203.75,-201.62 203.75,-183.38 144.25,-183.38"/>
     </g>
-    <!-- PublicTransportSystem&#45;&gt;nc3144c12940a453680b2771f0254c15eb19 -->
+    <!-- PublicTransportSystem&#45;&gt;n5ea7745936ba4610886a1ff6ddb325abb19 -->
     <g id="edge7" class="edge">
-    <title>PublicTransportSystem&#45;&gt;nc3144c12940a453680b2771f0254c15eb19</title>
+    <title>PublicTransportSystem&#45;&gt;n5ea7745936ba4610886a1ff6ddb325abb19</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M141.61,-289.83C147.7,-271.72 157.52,-242.5 164.76,-220.99"/>
     <polygon fill="black" stroke="black" points="168.02,-222.27 167.89,-211.68 161.38,-220.04 168.02,-222.27"/>
     <polygon fill="white" stroke="none" points="161.71,-228.5 161.71,-271.5 269.46,-271.5 269.46,-228.5 161.71,-228.5"/>
@@ -83,16 +86,16 @@ A PublicTransportSystem provides transport services to members of the public.
     </g>
     </g>
     <!-- GroupOfLines&#45;&gt;PublicTransportLine -->
-    <!-- nc3144c12940a453680b2771f0254c15eb19&#45;&gt;GroupOfLines -->
+    <!-- n5ea7745936ba4610886a1ff6ddb325abb19&#45;&gt;GroupOfLines -->
     <g id="edge5" class="edge">
-    <title>nc3144c12940a453680b2771f0254c15eb19&#45;&gt;GroupOfLines</title>
+    <title>n5ea7745936ba4610886a1ff6ddb325abb19&#45;&gt;GroupOfLines</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M144.37,-175.9C135.67,-170.48 126.55,-163.88 119.25,-156.5 112.92,-150.1 107.27,-142.14 102.63,-134.53"/>
     <polygon fill="black" stroke="black" points="105.68,-132.82 97.68,-125.87 99.6,-136.29 105.68,-132.82"/>
     <text xml:space="preserve" text-anchor="middle" x="139.12" y="-146.05" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- nc3144c12940a453680b2771f0254c15eb19&#45;&gt;PublicTransportLine -->
+    <!-- n5ea7745936ba4610886a1ff6ddb325abb19&#45;&gt;PublicTransportLine -->
     <g id="edge6" class="edge">
-    <title>nc3144c12940a453680b2771f0254c15eb19&#45;&gt;PublicTransportLine</title>
+    <title>n5ea7745936ba4610886a1ff6ddb325abb19&#45;&gt;PublicTransportLine</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M171.03,-174.86C166.56,-153.37 156.45,-115.56 137,-89 128.67,-77.63 117.43,-67.18 106.65,-58.57"/>
     <polygon fill="black" stroke="black" points="109.04,-56 98.97,-52.71 104.8,-61.56 109.04,-56"/>
     <text xml:space="preserve" text-anchor="middle" x="175.68" y="-103.3" font-family="Arial" font-size="11.00">member</text>
@@ -111,5 +114,13 @@ A PublicTransportSystem provides transport services to members of the public.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [GroupOfLines](GroupOfLines.md) or [PublicTransportLine](PublicTransportLine.md) |
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |  |
 | subClassOf | [PublicTransportElement](PublicTransportElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Group Of Lines (cdm1)](GroupOfLines.md) | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) |
 

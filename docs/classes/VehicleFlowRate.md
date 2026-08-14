@@ -2,6 +2,8 @@
 
 A flow rate measured in vehicles per unit time.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/VehicleFlowRate`
+
 
 ## Diagram
 

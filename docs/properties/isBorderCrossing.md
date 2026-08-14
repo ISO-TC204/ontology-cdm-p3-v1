@@ -2,7 +2,19 @@
 
 A boolean value that indicates whether the node serves as a border crossing.
 
-**Range**: [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean)
+**IRI**: `https://w3id.org/citydata/part3/v1/isBorderCrossing`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PublicTransportSystemDataProperty](PublicTransportSystemDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ A boolean value that indicates whether the node serves as a border crossing.
 |-------|
 | [RoutePoint](../classes/RoutePoint.md) |
 
-**IRI**: `https://w3id.org/citydata/part3/v1/isBorderCrossing`

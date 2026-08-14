@@ -2,6 +2,8 @@
 
 A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/MicromobilityLink`
+
 
 ## Diagram
 
@@ -31,9 +33,10 @@ A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.
     <g id="node2" class="node">
     <title>MicromobilityLink</title>
     <g id="a_node2"><a xlink:href="../MicromobilityLink" xlink:title="&lt;TABLE&gt;">
-    <polygon fill="lightgray" stroke="none" points="147.5,-508.88 147.5,-525.12 242.5,-525.12 242.5,-508.88 147.5,-508.88"/>
-    <text xml:space="preserve" text-anchor="start" x="148.5" y="-512.88" font-family="Arial" font-size="12.00">MicromobilityLink</text>
-    <polygon fill="none" stroke="black" points="146.5,-507.88 146.5,-526.12 243.5,-526.12 243.5,-507.88 146.5,-507.88"/>
+    <polygon fill="lightgray" stroke="none" points="143.75,-517 143.75,-533.25 246.25,-533.25 246.25,-517 143.75,-517"/>
+    <text xml:space="preserve" text-anchor="start" x="148.5" y="-521" font-family="Arial" font-size="12.00">MicromobilityLink</text>
+    <text xml:space="preserve" text-anchor="start" x="144.75" y="-504.75" font-family="Arial" font-size="12.00">cdm1:properPartOf</text>
+    <polygon fill="none" stroke="black" points="142.75,-499.75 142.75,-534.25 247.25,-534.25 247.25,-499.75 142.75,-499.75"/>
     </a>
     </g>
     </g>
@@ -56,25 +59,25 @@ A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.
     </g>
     </g>
     <!-- MicromobilityLink&#45;&gt;MicromobilityPathSegment -->
-    <g id="edge11" class="edge">
+    <g id="edge7" class="edge">
     <title>MicromobilityLink&#45;&gt;MicromobilityPathSegment</title>
-    <path fill="none" stroke="black" stroke-dasharray="5,2" d="M243.4,-509.91C262.41,-505.08 282.79,-496.44 296,-481 318.89,-454.23 310,-438.22 310,-403 310,-403 310,-403 310,-106 310,-76.33 236.6,-57.24 174.59,-46.42"/>
+    <path fill="none" stroke="black" stroke-dasharray="5,2" d="M247.06,-508.93C264.98,-503.95 283.64,-495.46 296,-481 318.89,-454.23 310,-438.22 310,-403 310,-403 310,-403 310,-106 310,-76.33 236.6,-57.24 174.59,-46.42"/>
     <polygon fill="black" stroke="black" points="175.5,-43.02 165.06,-44.81 174.33,-49.92 175.5,-43.02"/>
     <polygon fill="white" stroke="none" points="310,-216 310,-280.5 417.75,-280.5 417.75,-216 310,-216"/>
     <text xml:space="preserve" text-anchor="start" x="341.75" y="-266" font-family="Arial" font-size="11.00">redefines</text>
     <text xml:space="preserve" text-anchor="start" x="314" y="-244.5" font-family="Arial" font-size="11.00">cdm1:hasProperPart</text>
     <text xml:space="preserve" text-anchor="start" x="355.62" y="-223" font-family="Arial" font-size="11.00">1..&#42;</text>
     </g>
-    <!-- n357fc98d4b3b4002a740b57da5623563b4 -->
+    <!-- n08b901a28ea24e5d929e965f217f15e3b5 -->
     <g id="node8" class="node">
-    <title>n357fc98d4b3b4002a740b57da5623563b4</title>
+    <title>n08b901a28ea24e5d929e965f217f15e3b5</title>
     <polygon fill="lightyellow" stroke="none" points="180.25,-392.88 180.25,-411.12 239.75,-411.12 239.75,-392.88 180.25,-392.88"/>
     <text xml:space="preserve" text-anchor="start" x="182.25" y="-397.88" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="180.25,-392.88 180.25,-411.12 239.75,-411.12 239.75,-392.88 180.25,-392.88"/>
     </g>
-    <!-- MicromobilityLink&#45;&gt;n357fc98d4b3b4002a740b57da5623563b4 -->
-    <g id="edge10" class="edge">
-    <title>MicromobilityLink&#45;&gt;n357fc98d4b3b4002a740b57da5623563b4</title>
+    <!-- MicromobilityLink&#45;&gt;n08b901a28ea24e5d929e965f217f15e3b5 -->
+    <g id="edge11" class="edge">
+    <title>MicromobilityLink&#45;&gt;n08b901a28ea24e5d929e965f217f15e3b5</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M193.35,-499.07C192.22,-483.15 191.59,-458.71 195.75,-438 196.25,-435.49 196.93,-432.93 197.73,-430.4"/>
     <polygon fill="black" stroke="black" points="200.98,-431.7 201.18,-421.11 194.42,-429.26 200.98,-431.7"/>
     <polygon fill="white" stroke="none" points="195.75,-438 195.75,-481 296,-481 296,-438 195.75,-438"/>
@@ -115,23 +118,23 @@ A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.
     </g>
     <!-- MicromobilityPath&#45;&gt;MicromobilityPathSection -->
     <!-- MicromobilityPathSection&#45;&gt;MicromobilityPathSegment -->
-    <!-- n357fc98d4b3b4002a740b57da5623563b4&#45;&gt;MicromobilityNetwork -->
-    <g id="edge7" class="edge">
-    <title>n357fc98d4b3b4002a740b57da5623563b4&#45;&gt;MicromobilityNetwork</title>
+    <!-- n08b901a28ea24e5d929e965f217f15e3b5&#45;&gt;MicromobilityNetwork -->
+    <g id="edge8" class="edge">
+    <title>n08b901a28ea24e5d929e965f217f15e3b5&#45;&gt;MicromobilityNetwork</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M180.43,-385.95C178.94,-385.27 177.46,-384.62 176,-384 153.98,-374.63 144.96,-379.58 125.25,-366 116.39,-359.89 108.3,-351.42 101.68,-343.26"/>
     <polygon fill="black" stroke="black" points="104.63,-341.35 95.78,-335.52 99.06,-345.6 104.63,-341.35"/>
     <text xml:space="preserve" text-anchor="middle" x="145.12" y="-355.55" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- n357fc98d4b3b4002a740b57da5623563b4&#45;&gt;MicromobilityPath -->
-    <g id="edge8" class="edge">
-    <title>n357fc98d4b3b4002a740b57da5623563b4&#45;&gt;MicromobilityPath</title>
+    <!-- n08b901a28ea24e5d929e965f217f15e3b5&#45;&gt;MicromobilityPath -->
+    <g id="edge9" class="edge">
+    <title>n08b901a28ea24e5d929e965f217f15e3b5&#45;&gt;MicromobilityPath</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M201.01,-384.1C180.85,-346.19 131.87,-254.08 107.4,-208.08"/>
     <polygon fill="black" stroke="black" points="110.51,-206.48 102.73,-199.29 104.33,-209.76 110.51,-206.48"/>
     <text xml:space="preserve" text-anchor="middle" x="194.22" y="-312.8" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- n357fc98d4b3b4002a740b57da5623563b4&#45;&gt;MicromobilityPathSection -->
-    <g id="edge9" class="edge">
-    <title>n357fc98d4b3b4002a740b57da5623563b4&#45;&gt;MicromobilityPathSection</title>
+    <!-- n08b901a28ea24e5d929e965f217f15e3b5&#45;&gt;MicromobilityPathSection -->
+    <g id="edge10" class="edge">
+    <title>n08b901a28ea24e5d929e965f217f15e3b5&#45;&gt;MicromobilityPathSection</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M214.4,-384.08C219.02,-363.57 224.78,-328.08 218,-298.5 202.95,-232.82 192.24,-216.05 152,-162 143.92,-151.15 133.44,-140.73 123.56,-131.99"/>
     <polygon fill="black" stroke="black" points="126.14,-129.59 116.26,-125.76 121.59,-134.91 126.14,-129.59"/>
     <text xml:space="preserve" text-anchor="middle" x="233.46" y="-244.55" font-family="Arial" font-size="11.00">member</text>
@@ -150,9 +153,18 @@ A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [MicromobilityPathSegment](MicromobilityPathSegment.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | min 1 [MicromobilityPathSegment](https://w3id.org/citydata/part3/v1/MicromobilityPathSegment) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | only [MicromobilityNetwork](MicromobilityNetwork.md) or [MicromobilityPathSection](MicromobilityPathSection.md) or [MicromobilityPath](MicromobilityPath.md) |
+| [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) |  |
 | subClassOf | [RoadLink](RoadLink.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Micromobility Path (cdm1)](MicromobilityPath.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 
 ## Other annotations
 

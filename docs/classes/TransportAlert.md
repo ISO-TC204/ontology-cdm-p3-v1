@@ -2,6 +2,8 @@
 
 A TransportAlert is a type of alert that can be used to notify people of important transport information.
 
+**IRI**: `https://w3id.org/citydata/part3/v1/TransportAlert`
+
 
 ## Diagram
 
@@ -78,8 +80,9 @@ A TransportAlert is a type of alert that can be used to notify people of importa
 
 | Property | Constraint |
 |----------|------------|
+| [affects](../properties/affects.md) | only [NetworkElement](NetworkElement.md) |
 | [affects](../properties/affects.md) | only [NetworkElement](https://w3id.org/citydata/part3/v1/NetworkElement) |
-| subClassOf | [Alert](https://w3id.org/citydata/part3/v1/Alert) |
+| subClassOf | Alert |
 
 ## Other annotations
 

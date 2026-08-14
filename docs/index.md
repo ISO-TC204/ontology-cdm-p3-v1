@@ -2,6 +2,8 @@
 
 This ontology specifies the service-level concepts defined for the transport service of the city data model.
 
+**License**: [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/)
+
 The Information technology - City data model - Part 3: Service level concepts - Transport consists of the following patterns:
 
 - [Core](classes/CorePattern.md)
