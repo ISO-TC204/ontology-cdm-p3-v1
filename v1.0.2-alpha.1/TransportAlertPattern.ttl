@@ -1,0 +1,64 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
+
+<https://w3id.org/citydata/part3/v1/TransportAlertPattern> rdf:type owl:Ontology ;
+                                                            owl:imports cdm2:AlertPattern ,
+                                                                        :TransportNetworkPattern ;
+                                                            dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                            dcterms:creator "Kenneth Vaughn" ,
+                                                                            "Mark Fox" ,
+                                                                            "Megan Katsumi" ,
+                                                                            "Tom Lusco" ;
+                                                            dcterms:modified "2026-02-13"^^xsd:date ;
+                                                            dcterms:title "Information technology - City data model - Part 3: Service-level concepts - Transport - Transport Alert pattern" ;
+                                                            vann:preferredNamespacePrefix "cdm3" ;
+                                                            vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                            owl:versionIRI <https://w3id.org/citydata/part3/v1/TransportAlertPattern/r0.0/> ;
+                                                            owl:versionInfo "1.0.0" ;
+                                                            skos:definition "This ontology specifies the city-level concepts for the transport alert pattern for the transport domain."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/TransportAlertObjectProperty
+:TransportAlertObjectProperty rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :ITSObjectProperty ;
+                              skos:definition "Added for organizational purposes, to identify all object properties defined in the Transport Alert Pattern."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/affects
+:affects rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :TransportAlertObjectProperty ;
+         rdfs:range :NetworkElement ;
+         skos:definition "The NetworkElements affected by the effect"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/TransportAlert
+:TransportAlert rdf:type owl:Class ;
+                rdfs:subClassOf :Alert ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :affects ;
+                                  owl:allValuesFrom :NetworkElement
+                                ] ;
+                skos:definition "A TransportAlert is a type of alert that can be used to notify people of important transport information."@en ;
+                xsd:pattern "TransportAlertPattern" .
+
+
+###  https://w3id.org/citydata/part3/v1/TransportAlertThing
+:TransportAlertThing rdf:type owl:Class ;
+                     rdfs:subClassOf :ITSThing ;
+                     skos:definition "The transport alert pattern addresses the need for public agencies to alert groups to unusual transport-related conditions. Most of the features of the transport alert pattern can also be used for other types of alerts (e.g., meteorological events) and as such, its design includes the definition of a generalized alert."@en .

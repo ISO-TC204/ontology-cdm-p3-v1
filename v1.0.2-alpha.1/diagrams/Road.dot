@@ -1,0 +1,30 @@
+// Diagram for Road
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		cdm2_Road [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Road</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Road" margin=0]
+		TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWay</TD></TR></TABLE>> URL="../TravelledWay" margin=0]
+	}
+	Road [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Road</TD></TR></TABLE>> URL="../Road" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../RoadLink" margin=0]
+		RoadNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadNetwork</TD></TR></TABLE>> URL="../RoadNetwork" margin=0]
+	}
+	Road -> cdm2_Road [arrowhead=onormal style=solid]
+	Road -> TravelledWay [arrowhead=onormal style=solid]
+	Road -> Invis [style=invis]
+	Invis -> RoadLink [style=invis]
+	RoadLink -> RoadNetwork [style=invis]
+	RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../RoadLink" margin=0]
+	Road -> RoadLink [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	RoadNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadNetwork</TD></TR></TABLE>> URL="../RoadNetwork" margin=0]
+	Road -> RoadNetwork [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR></TABLE>> arrowhead=normal style=dashed]
+}

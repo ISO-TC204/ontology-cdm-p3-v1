@@ -1,0 +1,28 @@
+// Diagram for PointOnRoute
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		PublicTransportElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportElement</TD></TR></TABLE>> URL="../PublicTransportElement" margin=0]
+	}
+	PointOnRoute [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointOnRoute</TD></TR><TR><TD ALIGN="LEFT">index : xsd:integer [1]</TD></TR></TABLE>> URL="../PointOnRoute" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
+		RoutePoint [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoutePoint</TD></TR></TABLE>> URL="../RoutePoint" margin=0]
+	}
+	PointOnRoute -> PublicTransportElement [arrowhead=onormal style=solid]
+	PointOnRoute -> Invis [style=invis]
+	Invis -> cdm2_Code [style=invis]
+	cdm2_Code -> RoutePoint [style=invis]
+	cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
+	PointOnRoute -> cdm2_Code [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">routePointType</TD></TR></TABLE>> arrowhead=normal style=solid]
+	RoutePoint [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoutePoint</TD></TR></TABLE>> URL="../RoutePoint" margin=0]
+	PointOnRoute -> RoutePoint [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">routePoint</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

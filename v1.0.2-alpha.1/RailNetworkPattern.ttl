@@ -1,0 +1,129 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
+
+<https://w3id.org/citydata/part3/v1/RailNetworkPattern> rdf:type owl:Ontology ;
+                                                         owl:imports :TransportNetworkPattern ;
+                                                         dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                         dcterms:creator "Kenneth Vaughn" ,
+                                                                         "Mark Fox" ,
+                                                                         "Megan Katsumi" ,
+                                                                         "Tom Lusco" ;
+                                                         dcterms:modified "2026-02-13"^^xsd:date ;
+                                                         dcterms:title "Information technology - City data model - Part 3: Service-level concepts for transport - Rail network pattern" ;
+                                                         vann:preferredNamespacePrefix "cdm3" ;
+                                                         vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                         owl:versionIRI <https://w3id.org/citydata/part3/v1/RailNetworkPattern/r0.0> ;
+                                                         owl:versionInfo "1.0.0" ;
+                                                         skos:definition "This ontology specifies the service-level concepts for rail transport in the city data model."@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/RailCorridor
+:RailCorridor rdf:type owl:Class ;
+              rdfs:subClassOf :TravelledWay ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:hasProperPart ;
+                                owl:allValuesFrom :TrackLink
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:properPartOf ;
+                                owl:allValuesFrom :RailNetwork
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:hasProperPart ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :TrackLink
+                              ] ;
+              skos:definition "A RailCorridor is a type of TravelledWay that is made up of TrackLinks."@en ;
+              xsd:pattern "RailNetworkPattern" .
+
+
+###  https://w3id.org/citydata/part3/v1/RailNetwork
+:RailNetwork rdf:type owl:Class ;
+             rdfs:subClassOf :TransportNetwork ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                 owl:unionOf ( :RailCorridor
+                                   :RailSection
+                                   :TrackLink
+                                 )
+                               ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :TrackLink
+                             ] ;
+             skos:definition "A RailNetwork is a type of TransportNetwork using rails on a stabilized base."@en ;
+             xsd:pattern "RailNetworkPattern" .
+
+
+###  https://w3id.org/citydata/part3/v1/RailSection
+:RailSection rdf:type owl:Class ;
+             rdfs:subClassOf :TravelledWaySection ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                 owl:unionOf ( :TrackLink
+                                   :TrackSegment
+                                 )
+                               ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:properPartOf ;
+                               owl:allValuesFrom :RailNetwork
+                             ] ;
+             skos:definition "A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackSegments for a useful operational purpose (e.g., assigning a speed limit, designating a traffic control scheme)."@en ;
+             xsd:pattern "RailNetworkPattern" .
+
+
+###  https://w3id.org/citydata/part3/v1/TrackLink
+:TrackLink rdf:type owl:Class ;
+           rdfs:subClassOf :TravelledWayLink ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty cdm1:hasProperPart ;
+                             owl:allValuesFrom :TrackSegment
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty cdm1:properPartOf ;
+                             owl:allValuesFrom [ rdf:type owl:Class ;
+                               owl:unionOf ( :RailCorridor
+                                 :RailNetwork
+                                 :RailSection
+                               )
+                             ]
+                           ] ;
+           skos:definition "Due to the nature of rail, each TrackLink consists of a single lane, but multiple TrackLinks can exist along the same RailCorridor."@en ;
+           xsd:pattern "RailNetworkPattern" .
+
+
+###  https://w3id.org/citydata/part3/v1/TrackSegment
+:TrackSegment rdf:type owl:Class ;
+              rdfs:subClassOf :TravelledWaySegment ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:properPartOf ;
+                                owl:allValuesFrom [ rdf:type owl:Class ;
+                                  owl:unionOf ( :RailSection
+                                    :TrackLink
+                                  )
+                                ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cdm1:properPartOf ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :TrackLink
+                              ] ;
+              skos:definition "A TrackSegment is a type of TravelledWaySegment that represents a portion of a TrackLink with common physical characteristics."@en ;
+              xsd:pattern "RailNetworkPattern" .

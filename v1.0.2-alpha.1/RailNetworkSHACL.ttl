@@ -1,0 +1,83 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
+
+<https://w3id.org/citydata/part3/v1/RailNetworkSHACL> rdf:type owl:Ontology ;
+                                                       owl:imports :CoreSHACL ,
+                                                                   :RailNetworkPattern ;
+                                                       dcterms:title "City Data Model Part 3 - RailNetwork Pattern - SHACL constraints" ;
+                                                       vann:preferredNamespacePrefix "cdm3" ;
+                                                       vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                       skos:definition "SHACL validation shapes for the RailNetwork Pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/RailCorridorShape
+:RailCorridorShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:class :TrackLink ;
+                                 sh:node :MinOneShape ;
+                                 sh:path cdm1:hasProperPart
+                               ] ,
+                               [ sh:class :RailNetwork ;
+                                 sh:path cdm1:properPartOf
+                               ] ;
+                   sh:targetClass :RailCorridor .
+
+
+###  https://w3id.org/citydata/part3/v1/RailNetworkShape
+:RailNetworkShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:node :MinOneShape ;
+                                sh:or ( _:n2430142aa8f34916b4cf0aa1cd2a18f8b4
+                                  _:n2430142aa8f34916b4cf0aa1cd2a18f8b5
+                                  _:n2430142aa8f34916b4cf0aa1cd2a18f8b6
+                                ) ;
+                                sh:path cdm1:hasProperPart
+                              ] ;
+                  sh:targetClass :RailNetwork .
+
+
+###  https://w3id.org/citydata/part3/v1/RailSectionShape
+:RailSectionShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:or ( _:n2430142aa8f34916b4cf0aa1cd2a18f8b11
+                                  _:n2430142aa8f34916b4cf0aa1cd2a18f8b12
+                                ) ;
+                                sh:path cdm1:hasProperPart
+                              ] ,
+                              [ sh:class :RailNetwork ;
+                                sh:path cdm1:properPartOf
+                              ] ;
+                  sh:targetClass :RailSection .
+
+
+###  https://w3id.org/citydata/part3/v1/TrackLinkShape
+:TrackLinkShape rdf:type sh:NodeShape ;
+                sh:property [ sh:class :TrackSegment ;
+                              sh:path cdm1:hasProperPart
+                            ] ,
+                            [ sh:or ( _:n2430142aa8f34916b4cf0aa1cd2a18f8b18
+                                _:n2430142aa8f34916b4cf0aa1cd2a18f8b19
+                                _:n2430142aa8f34916b4cf0aa1cd2a18f8b20
+                              ) ;
+                              sh:path cdm1:properPartOf
+                            ] ;
+                sh:targetClass :TrackLink .
+
+
+###  https://w3id.org/citydata/part3/v1/TrackSegmentShape
+:TrackSegmentShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:node :ExactlyOneShape ;
+                                 sh:or ( _:n2430142aa8f34916b4cf0aa1cd2a18f8b25
+                                   _:n2430142aa8f34916b4cf0aa1cd2a18f8b26
+                                 ) ;
+                                 sh:path cdm1:properPartOf
+                               ] ;
+                   sh:targetClass :TrackSegment .

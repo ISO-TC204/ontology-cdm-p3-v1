@@ -1,0 +1,158 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
+
+<https://w3id.org/citydata/part3/v1/RoadNetworkSHACL> rdf:type owl:Ontology ;
+                                                       owl:imports :CoreSHACL ,
+                                                                   :RoadNetworkPattern ;
+                                                       dcterms:title "City Data Model Part 3 - RoadNetwork Pattern - SHACL constraints" ;
+                                                       vann:preferredNamespacePrefix "cdm3" ;
+                                                       vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                       skos:definition "SHACL validation shapes for the RoadNetwork Pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/RoadLaneShape
+:RoadLaneShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :RoadSegment ;
+                             sh:node :MinOneShape ;
+                             sh:path cdm1:properPartOf
+                           ] ,
+                           [ sh:class :RoadLane ;
+                             sh:path :next
+                           ] ,
+                           [ sh:class :RoadLane ;
+                             sh:path :previous
+                           ] ,
+                           [ sh:class cdm1:Length ;
+                             sh:node :ExactlyOneShape ;
+                             sh:path :width
+                           ] ;
+               sh:targetClass :RoadLane .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadLinkShape
+:RoadLinkShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :VehicleFlowRate ;
+                             sh:node :ExactlyOneShape ;
+                             sh:path :capacity
+                           ] ,
+                           [ sh:datatype xsd:nonNegativeInteger ;
+                             sh:node :ExactlyOneShape ;
+                             sh:path :maxLanes
+                           ] ,
+                           [ sh:class :RoadLinkUserType ;
+                             sh:path :primaryUser
+                           ] ,
+                           [ sh:class <https://w3id.org/citydata/part1/v1/CityUnits/Duration> ;
+                             sh:node :MaxOneShape ;
+                             sh:path :travelTime
+                           ] ,
+                           [ sh:class :RoadLinkUserType ;
+                             sh:path :usedBy
+                           ] ,
+                           [ sh:class :RoadSegment ;
+                             sh:path cdm1:hasProperPart
+                           ] ,
+                           [ sh:or ( _:nd9619b6ae45144af93c3876d7461706eb7
+                               _:nd9619b6ae45144af93c3876d7461706eb8
+                               _:nd9619b6ae45144af93c3876d7461706eb9
+                             ) ;
+                             sh:path cdm1:properPartOf
+                           ] ;
+               sh:targetClass :RoadLink .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadLinkUserTypeShape
+:RoadLinkUserTypeShape rdf:type sh:NodeShape ;
+                       sh:property [ sh:class <https://w3id.org/citydata/part1/v1/CityUnits/Speed> ;
+                                     sh:node :MaxOneShape ;
+                                     sh:path :speedLimit
+                                   ] ,
+                                   [ sh:class <https://w3id.org/citydata/part1/v1/CityUnits/Duration> ;
+                                     sh:node :MaxOneShape ;
+                                     sh:path :travelTime
+                                   ] ,
+                                   [ sh:class cdm2:Code ;
+                                     sh:node :ExactlyOneShape ;
+                                     sh:path :userCategory
+                                   ] ,
+                                   [ sh:class :RoadLink ;
+                                     sh:path :uses
+                                   ] ;
+                       sh:targetClass :RoadLinkUserType .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadNetworkShape
+:RoadNetworkShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:node :MinOneShape ;
+                                sh:or ( _:nd9619b6ae45144af93c3876d7461706eb23
+                                  _:nd9619b6ae45144af93c3876d7461706eb24
+                                  _:nd9619b6ae45144af93c3876d7461706eb25
+                                ) ;
+                                sh:path cdm1:hasProperPart
+                              ] ;
+                  sh:targetClass :RoadNetwork .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadSectionShape
+:RoadSectionShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:or ( _:nd9619b6ae45144af93c3876d7461706eb30
+                                  _:nd9619b6ae45144af93c3876d7461706eb31
+                                ) ;
+                                sh:path cdm1:hasProperPart
+                              ] ,
+                              [ sh:class :RoadNetwork ;
+                                sh:path cdm1:properPartOf
+                              ] ;
+                  sh:targetClass :RoadSection .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadSegmentShape
+:RoadSegmentShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:class :RoadLane ;
+                                sh:node :MinOneShape ;
+                                sh:path cdm1:hasProperPart
+                              ] ,
+                              [ sh:node :ExactlyOneShape ;
+                                sh:or ( _:nd9619b6ae45144af93c3876d7461706eb37
+                                  _:nd9619b6ae45144af93c3876d7461706eb38
+                                ) ;
+                                sh:path cdm1:properPartOf
+                              ] ,
+                              [ sh:datatype xsd:nonNegativeInteger ;
+                                sh:node :ExactlyOneShape ;
+                                sh:path :numLanes
+                              ] ,
+                              [ sh:class cdm2:Code ;
+                                sh:node :MaxOneShape ;
+                                sh:path :pavementType
+                              ] ,
+                              [ sh:class cdm1:Length ;
+                                sh:node :ExactlyOneShape ;
+                                sh:path :width
+                              ] ;
+                  sh:targetClass :RoadSegment .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadShape
+:RoadShape rdf:type sh:NodeShape ;
+           sh:property [ sh:class :RoadLink ;
+                         sh:node :MinOneShape ;
+                         sh:path cdm1:hasProperPart
+                       ] ,
+                       [ sh:class :RoadNetwork ;
+                         sh:path cdm1:properPartOf
+                       ] ;
+           sh:targetClass :Road .

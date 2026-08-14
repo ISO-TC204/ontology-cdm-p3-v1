@@ -1,0 +1,41 @@
+// Diagram for TravelledWaySegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		cdm2_TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:TravelledWaySegment</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/TravelledWaySegment" margin=0]
+		NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../NetworkElement" margin=0]
+	}
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR><TR><TD ALIGN="LEFT">cdm1:properPartOf [1..*]</TD></TR></TABLE>> URL="../TravelledWaySegment" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TravelCorridorSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorSegment</TD></TR></TABLE>> URL="../TravelCorridorSegment" margin=0]
+		TravelledWayLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLane</TD></TR></TABLE>> URL="../TravelledWayLane" margin=0]
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../TravelledWayLink" margin=0]
+		TravelledWaySection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySection</TD></TR></TABLE>> URL="../TravelledWaySection" margin=0]
+	}
+	TravelledWaySegment -> cdm2_TravelledWaySegment [arrowhead=onormal style=solid]
+	TravelledWaySegment -> NetworkElement [arrowhead=onormal style=solid]
+	TravelledWaySegment -> Invis [style=invis]
+	Invis -> TravelCorridorSegment [style=invis]
+	TravelCorridorSegment -> TravelledWayLane [style=invis]
+	TravelledWayLane -> TravelledWayLink [style=invis]
+	TravelledWayLink -> TravelledWaySection [style=invis]
+	TravelledWayLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLane</TD></TR></TABLE>> URL="../TravelledWayLane" margin=0]
+	TravelledWaySegment -> TravelledWayLane [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	n1c091741e9be41418e759d48b25318c1b50 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../TravelledWayLink" margin=0]
+	n1c091741e9be41418e759d48b25318c1b50 -> TravelledWayLink [label=member arrowhead=normal style=dotted]
+	TravelledWaySection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySection</TD></TR></TABLE>> URL="../TravelledWaySection" margin=0]
+	n1c091741e9be41418e759d48b25318c1b50 -> TravelledWaySection [label=member arrowhead=normal style=dotted]
+	TravelledWaySegment -> n1c091741e9be41418e759d48b25318c1b50 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	TravelCorridorSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorSegment</TD></TR></TABLE>> URL="../TravelCorridorSegment" margin=0]
+	TravelledWaySegment -> TravelCorridorSegment [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">travelCorridorSegment</TD></TR></TABLE>> arrowhead=normal style=solid]
+	TravelledWaySegment -> TravelledWayLink [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=dashed]
+}

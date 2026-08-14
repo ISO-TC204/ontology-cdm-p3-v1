@@ -1,0 +1,345 @@
+@prefix : <https://w3id.org/citydata/part3/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix i72: <https://w3id.org/citydata/21972/v1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@base <https://w3id.org/citydata/part3/v1/> .
+
+<https://w3id.org/citydata/part3/v1/RoadNetworkPattern> rdf:type owl:Ontology ;
+                                                         owl:imports :TransportNetworkPattern ;
+                                                         dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                         dcterms:creator "Kenneth Vaughn" ,
+                                                                         "Mark Fox" ,
+                                                                         "Megan Katsumi" ,
+                                                                         "Tom Lusco" ;
+                                                         dcterms:modified "2026-02-13"^^xsd:date ;
+                                                         dcterms:title "Information technology - City data model - Part 3: Service-level concepts for transport - Road network pattern" ;
+                                                         vann:preferredNamespacePrefix "cdm3" ;
+                                                         vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
+                                                         owl:versionIRI <https://w3id.org/citydata/part3/v1/RoadNetworkPattern/r0.0> ;
+                                                         owl:versionInfo "1.0.0" ;
+                                                         skos:definition "This ontology specifies the service-level concepts for road transport in the city data model."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/RoadNetworkObjectProperty
+:RoadNetworkObjectProperty rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :TransportNetworkObjectProperty ;
+                           skos:definition "Added for organizational purposes, to identify all object properties defined in the Road Network Pattern."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/capacity
+:capacity rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+          rdfs:range :VehicleFlowRate ;
+          skos:definition "The rated capacity of the object."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/next
+:next rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+      skos:definition "The next sequential object in a series."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/pavementType
+:pavementType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+              rdfs:range cdm2:Code ;
+              skos:definition "Code indicating the type of material used for the surfacing of the roadway."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/previous
+:previous rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+          owl:inverseOf :next ;
+          skos:definition "The previous sequential object in a series."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/primaryUser
+:primaryUser rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+             rdfs:range cdm2:Code ;
+             skos:definition "A code indicating the type of user for which the described object was primarily designed. Other users may be allowed."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/speedLimit
+:speedLimit rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+            rdfs:range cdm1:Speed ;
+            skos:definition "The maximum legal speed."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/travelTime
+:travelTime rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+            rdfs:range cdm1:Duration ;
+            skos:definition "The time to travel the length of the object."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/usedBy
+:usedBy rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+        rdfs:range :RoadLinkUserType ;
+        skos:definition "The categories of users that use the RoadLink"@en .
+
+
+###  https://w3id.org/citydata/part3/v1/userCategory
+:userCategory rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+              rdfs:range cdm2:Code ;
+              skos:definition "A code indicating the type of user."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/uses
+:uses rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+      rdfs:range cdm2:RoadLink ;
+      skos:definition "The RoadLink a user category is associated with."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/width
+:width rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :RoadNetworkObjectProperty ;
+       rdfs:range cdm1:Length ;
+       skos:definition "The width of the object."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/RoadNetworkDataProperty
+:RoadNetworkDataProperty rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :TransportNetworkDataProperty ;
+                         skos:definition "Added for organizational purposes, to identify all data properties defined in the Road Network Pattern."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/maxLanes
+:maxLanes rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :RoadNetworkDataProperty ;
+          rdfs:range xsd:nonNegativeInteger ;
+          skos:definition "The maximum number of lanes available for the RoadLink within any RoadSegment within the RoadLink."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/numLanes
+:numLanes rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :RoadNetworkDataProperty ;
+          rdfs:range xsd:nonNegativeInteger ;
+          skos:definition "The number of lanes within the RoadSegment."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/citydata/part3/v1/Road
+:Road rdf:type owl:Class ;
+      rdfs:subClassOf cdm2:Road ,
+                      :TravelledWay ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty cdm1:hasProperPart ;
+                        owl:allValuesFrom :RoadLink
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty cdm1:properPartOf ;
+                        owl:allValuesFrom :RoadNetwork
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty cdm1:hasProperPart ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :RoadLink
+                      ] ;
+      skos:definition "A Road is a type of TravelledWay and cdm2:Road that is made up of RoadLinks. Roads form a proper part of RoadNetworks."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadLane
+:RoadLane rdf:type owl:Class ;
+          rdfs:subClassOf :TravelledWayLane ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :next ;
+                            owl:allValuesFrom :RoadLane
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :previous ;
+                            owl:allValuesFrom :RoadLane
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty cdm1:properPartOf ;
+                            owl:allValuesFrom :RoadSegment
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty cdm1:properPartOf ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :RoadSegment
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :width ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass cdm1:Length
+                          ] ;
+          skos:definition "A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadLink
+:RoadLink rdf:type owl:Class ;
+          rdfs:subClassOf cdm2:RoadLink ,
+                          :TravelledWayLink ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty cdm1:hasProperPart ;
+                            owl:allValuesFrom :RoadSegment
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :primaryUser ;
+                            owl:allValuesFrom :RoadLinkUserType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty cdm1:properPartOf ;
+                            owl:allValuesFrom [ rdf:type owl:Class ;
+                              owl:unionOf ( :Road
+                                :RoadNetwork
+                                :RoadSection
+                              )
+                            ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :usedBy ;
+                            owl:allValuesFrom :RoadLinkUserType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :capacity ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :VehicleFlowRate
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :maxLanes ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :travelTime ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass <https://w3id.org/citydata/part1/v1/CityUnits/Duration>
+                          ] ;
+          skos:definition "A RoadLink is a type of TravelledWayLink and cdm2:RoadLink using a stabilized base designed for the movement of vehicles that conform to a specified set of requirements but may be used by others as well."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadLinkUserType
+:RoadLinkUserType rdf:type owl:Class ;
+                  rdfs:subClassOf :ITSThing ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :uses ;
+                                    owl:allValuesFrom :RoadLink
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :userCategory ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass cdm2:Code
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :speedLimit ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass <https://w3id.org/citydata/part1/v1/CityUnits/Speed>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :travelTime ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass <https://w3id.org/citydata/part1/v1/CityUnits/Duration>
+                                  ] ;
+                  skos:definition "A RoadLinkUserType represents the unique combination of a RoadLink and a UserType such that speed limits and other characteristics can be defined to apply to specific user types when operating along a particular road link."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadNetwork
+:RoadNetwork rdf:type owl:Class ;
+             rdfs:subClassOf :TransportNetwork ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Road
+                                   :RoadLink
+                                   :RoadSection
+                                 )
+                               ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :RoadLink
+                             ] ;
+             skos:definition "Roads are most commonly associated with motor vehicles, but can be designed for other types of vehicles (e.g., micromobility vehicles)."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadSection
+:RoadSection rdf:type owl:Class ;
+             rdfs:subClassOf :TravelledWaySection ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                 owl:unionOf ( :RoadLink
+                                   :RoadSegment
+                                 )
+                               ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:properPartOf ;
+                               owl:allValuesFrom :RoadNetwork
+                             ] ;
+             skos:definition "A RoadSection is a type of TravelledWaySection that groups RoadLinks and RoadSegments for a useful operational purpose (e.g., assigning a speed limit, designating a traffic control scheme)."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/RoadSegment
+:RoadSegment rdf:type owl:Class ;
+             rdfs:subClassOf cdm2:RoadSegment ,
+                             :TravelledWaySegment ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:allValuesFrom :RoadLane
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:properPartOf ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                 owl:unionOf ( :RoadLink
+                                   :RoadSection
+                                 )
+                               ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:hasProperPart ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :RoadLane
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :numLanes ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cdm1:properPartOf ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :RoadLink
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :width ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass cdm1:Length
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :pavementType ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass cdm2:Code
+                             ] ;
+             skos:definition "A RoadSegment can be defined to be a part of a RoadSection, for example, when the RoadSection does not span an entire RoadLink."@en .
+
+
+###  https://w3id.org/citydata/part3/v1/VehicleFlowRate
+:VehicleFlowRate rdf:type owl:Class ;
+                 rdfs:subClassOf i72:Measure ;
+                 skos:definition "A flow rate measured in vehicles per unit time."@en .

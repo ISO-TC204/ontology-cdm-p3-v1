@@ -1,0 +1,38 @@
+// Diagram for FootpathLink
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../TravelledWayLink" margin=0]
+	}
+	FootpathLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathLink</TD></TR><TR><TD ALIGN="LEFT">cdm1:properPartOf</TD></TR></TABLE>> URL="../FootpathLink" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Footpath [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Footpath</TD></TR></TABLE>> URL="../Footpath" margin=0]
+		FootpathNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathNetwork</TD></TR></TABLE>> URL="../FootpathNetwork" margin=0]
+		FootpathSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSection</TD></TR></TABLE>> URL="../FootpathSection" margin=0]
+		FootpathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSegment</TD></TR></TABLE>> URL="../FootpathSegment" margin=0]
+	}
+	FootpathLink -> TravelledWayLink [arrowhead=onormal style=solid]
+	FootpathLink -> Invis [style=invis]
+	Invis -> Footpath [style=invis]
+	Footpath -> FootpathNetwork [style=invis]
+	FootpathNetwork -> FootpathSection [style=invis]
+	FootpathSection -> FootpathSegment [style=invis]
+	FootpathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSegment</TD></TR></TABLE>> URL="../FootpathSegment" margin=0]
+	FootpathLink -> FootpathSegment [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	n66601a8392594191afae18867b22fe37b8 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Footpath [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Footpath</TD></TR></TABLE>> URL="../Footpath" margin=0]
+	n66601a8392594191afae18867b22fe37b8 -> Footpath [label=member arrowhead=normal style=dotted]
+	FootpathNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathNetwork</TD></TR></TABLE>> URL="../FootpathNetwork" margin=0]
+	n66601a8392594191afae18867b22fe37b8 -> FootpathNetwork [label=member arrowhead=normal style=dotted]
+	FootpathSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSection</TD></TR></TABLE>> URL="../FootpathSection" margin=0]
+	n66601a8392594191afae18867b22fe37b8 -> FootpathSection [label=member arrowhead=normal style=dotted]
+	FootpathLink -> n66601a8392594191afae18867b22fe37b8 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:properPartOf</TD></TR></TABLE>> arrowhead=normal style=dashed]
+}
