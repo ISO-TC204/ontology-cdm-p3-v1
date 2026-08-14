@@ -32,13 +32,14 @@
                                                        "Mark Fox" ,
                                                        "Megan Katsumi" ,
                                                        "Tom Lusco" ;
-                                       dcterms:modified "2026-02-12"^^xsd:date ;
+                                       dcterms:modified "2026-08-14"^^xsd:date ;
                                        dcterms:title "Information technology - City data model - Part 3: Service level concepts - Transport" ;
                                        dcterms:bibliographicCitation "ISO/IEC 5087-3" ;
                                        vann:preferredNamespacePrefix "cdm3" ;
                                        vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
                                        rdfs:seeAlso <https://www.iso.org/standard/87441.html> ;
-                                       owl:versionIRI <https://w3id.org/citydata/part3/v1/Transport/r0.0> ;
-                                       owl:versionInfo "1.0.0" ;
+                                       owl:versionIRI <https://w3id.org/citydata/part3/v1/1.0.2-alpha.1> ;
+    owl:priorVersion               <https://w3id.org/citydata/part3/v1/1.0.1> ;
+                                       owl:versionInfo "1.0.2-alpha.1" ;
                                        skos:definition "This ontology specifies the service-level concepts defined for the transport service of the city data model."@en ;
                                        cdm1:mainModule true .

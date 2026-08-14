@@ -19,12 +19,13 @@
                                                                          "Mark Fox" ,
                                                                          "Megan Katsumi" ,
                                                                          "Tom Lusco" ;
-                                                         dcterms:modified "2026-02-13"^^xsd:date ;
+                                                         dcterms:modified "2026-08-14"^^xsd:date ;
                                                          dcterms:title "Information technology - City data model - Part 3: Service-level concepts for transport - Road network pattern" ;
                                                          vann:preferredNamespacePrefix "cdm3" ;
                                                          vann:preferredNamespaceUri "https://w3id.org/citydata/part3/v1/" ;
-                                                         owl:versionIRI <https://w3id.org/citydata/part3/v1/RoadNetworkPattern/r0.0> ;
-                                                         owl:versionInfo "1.0.0" ;
+                                                         owl:versionIRI <https://w3id.org/citydata/part3/v1/1.0.2-alpha.1> ;
+    owl:priorVersion               <https://w3id.org/citydata/part3/v1/1.0.1> ;
+                                                         owl:versionInfo "1.0.2-alpha.1" ;
                                                          skos:definition "This ontology specifies the service-level concepts for road transport in the city data model."@en .
 
 #################################################################
